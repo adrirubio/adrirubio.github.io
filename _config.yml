@@ -1,6 +1,6 @@
 title: Adrian Rubio
 description: This is my blog where I share my coding journey, my experiences, challenges, and discoveries in the ever-evolving world of programming.
-url: "http://localhost:4000"
+url: "https://adrirubio.github.io"
 baseurl: ""
 paginate_path: "blog/page:num/"
 permalink: "blog/:title/"
