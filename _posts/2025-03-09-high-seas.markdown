@@ -1,0 +1,20 @@
+---
+layout: post
+title:  "High Seas"
+date:   25/03/8
+---
+
+<p class="intro"><span class="dropcap">H</span>ello, and welcome to a recap of what High Seas was and what happened during it. In this post, we’ll dive into what High Seas was all about. I’m still catching up with my blog posts, so consider this a look back as I work my way to the present.</p>
+
+To start, High Seas was another Hack Club activity, similar to Arcade, designed to get more young teens involved in coding. In High Seas, you installed a tool called Hackatime, which tracked your coding hours and connected to the High Seas website. Your project would then be matched against others with a similar number of hours, and they would “battle” by going up for votes. People would vote for their favorite project, and in return, they had to cast votes on 12 projects to see how many doubloons (High Seas’ currency) they earned. The better your project performed in the votes, the more doubloons you received.
+
+<a href="https://highseas.hackclub.com/">Visit High Seas</a>
+
+<img src="/assets/img/high-seas.jpg" alt="">
+
+Both my brother and I worked on projects during High Seas, but balancing school made it more challenging since it took place during the winter. In the end, I logged 18 hours and earned around 200 doubloons—solid results overall. I’ll dive into what I worked on during this time in my next post, but for now, all you need to know is that my project was Mindful, an AI therapist. With my doubloons, I redeemed some GitHub keycaps for my keyboard and a logic analyzer.
+
+<img src="/assets/img/coding-time.jpg" alt="">
+<img src="/assets/img/keycaps.jpg" alt="">
+<img src="/assets/img/logic-analizer.jpg" alt="">
+<img src="/assets/img/k6-keycaps.jpg" alt="">

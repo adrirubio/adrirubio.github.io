@@ -1,41 +1,35 @@
-title: Long Haul
-description: Long Form Jekyll theme built with SASS
-
-url: https://long-haul.netlify.app
-# Only necessary when hosting your site in a sub-directory. Project sites hosted on GitHub Pages are the common use-case of this variable.
-baseurl: # Ex: /project-page
+title: Adrian Rubio
+description: This is my blog where I share my coding journey, my experiences, challenges, and discoveries in the ever-evolving world of programming.
+url: "http://localhost:4000"
+baseurl: ""
 paginate_path: "blog/page:num/"
-permalink: blog/:title/
+permalink: "blog/:title/"
 
 # Header Option
 # header: large
 
 sass:
-    style: compressed
+  style: compressed
 
 markdown: kramdown
 highlighter: rouge
-plugins: [jekyll-paginate]
+plugins:
+  - jekyll-paginate
 paginate: 5
 
 navigation:
-    - title: Home
-      url: /index.html
-    - title: About
-      url: /about
-    - title: Contact
-      url: /contact
+  - title: "Home"
+    url: "/index.html"
+  - title: "About"
+    url: "/about"
+  - title: "Contact"
+    url: "/contact"
 
 social:
-    github: brianmaierjr
-    twitter: brianmaierjr
-    facebook: brianmaierjr
-    email: brimaidesigns@gmail.com
-    linkedin: brianmaierjr
-    youtube: RickAstleyYT
-    tumblr: i-am-a-fish
+  github: "adrirubio"
+  email: "adrian.rubio.punal@gmail.com"
 
 google_analytics: "UA-58263416-1"
 
 disqus:
-    shortname: brianmaierjr
+  shortname: "adri"
