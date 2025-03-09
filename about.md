@@ -10,6 +10,9 @@ title: About Long Haul
   </p>
   <p>
     My coding adventure began when my dad introduced me to the fascinating world of programming. I was instantly captivated by the rhythm of typing, the satisfaction of solving a bug, and the constant drive to learn something new every day.
+<center>
+    <img src="/assets/img/hacker.jpg" alt="Centered Image">
+</center>
   </p>
   <h3>What You'll Find</h3>
   <ul>
