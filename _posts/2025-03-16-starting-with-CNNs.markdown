@@ -6,9 +6,9 @@ date:   25/03/16
 
 <p class="intro"><span class="dropcap">H</span>ello and welcome! This week, I wrapped up work on the blog and began working on the ML-Rover project.</p>
 
-Dark mode:
-
 I started the week by refining the blog, adding dark mode, and making a few minor improvements. For now, the blog is complete, except for the weekly post summarizing my coding progress.
+
+Dark mode:
 
 <img src="/assets/img/dark-mode.jpg" alt="">
 
