@@ -35,7 +35,7 @@ Once a feature map was generated for each convolutional layer, the next step was
 
 <img src="/assets/img/default-boxes.jpg" alt="">
 
-Now, we are ready to predict the bounding box adjustments and class probabilities for the input image. This step is often referred to as the "prediction head." Within the SSD model, I defined a sequence of convolutional layers responsible for predicting the bounding box offsets and class probabilities for each default box.
+Now, we are ready to predict the bounding box adjustments and class probabilities for the input image. This step is often referred to as the "prediction head". Within the SSD model, I defined a sequence of convolutional layers responsible for predicting the bounding box offsets and class probabilities for each default box.
 
 In the forward pass, the input image is passed through these convolutional layers, which produce feature maps at different scales. These feature maps are then used to generate predictions for each default box. For each default box, the network predicts two things: the offsets (or adjustments) for the bounding box coordinates and the class probabilities for the object within the box.
 
