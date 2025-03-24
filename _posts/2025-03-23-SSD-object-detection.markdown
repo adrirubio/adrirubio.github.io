@@ -31,7 +31,7 @@ The first step was to load the first and second convolutional layers from a pret
 
 <img src="/assets/img/conv-layers.jpg" alt="">
 
-Once a feature map was generated for each convolutional layer, the next step was to add random default anchor boxes at every index of the feature maps. I defined anchor box configurations for each feature map and then created a function with a nested loop. This function iterates through every index in the feature map, traversing its rows and columns to locate the center of each grid cell. At each center, it places default boxes of various sizes and aspect ratios, ensuring robust multi-scale object detection.
+Once a feature map was generated for each convolutional layer, the next step was to add random default anchor boxes at every index of the feature maps. I defined anchor box configurations for each feature map and then created a function with a nested loop. This function iterates through every index in the feature map, traversing its rows and columns to locate the center of each grid cell. It places default boxes of various sizes and aspect ratios surrounding the the center, ensuring robust multi-scale object detection.
 
 <img src="/assets/img/default-boxes.jpg" alt="">
 
