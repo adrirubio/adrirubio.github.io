@@ -12,3 +12,20 @@ First, I instantiated the model we defined last week and began working on the lo
 
 <img src="/assets/img/box-iou-encoder.jpg" alt=""><br>
 <img src="/assets/img/SSD-loss.jpg" alt=""><br>
+
+Next, I initialized the SSD loss function and froze the first 10 layers of the VGG backbone to preserve low-level feature extraction, prevent overfitting, and speed up training by focusing updates on the higher layers that learn task-specific features. Additionally, I defined the Adam optimizer with a lower learning rate for the first and second convolution layers of the backbone to ensure more stable and gradual updates in the early feature extraction stages.
+
+<img src="/assets/img/SSD-freezing-layers-and-optimizer.jpg" alt=""><br>
+
+Now, it was time for the actual training loop. The loop processes batches of images, computes the loss using the SSDLoss function, backpropagates gradients, and updates the model parameters using the optimizer. After each epoch, it evaluates the model on the validation set without updating weights, records the average training and validation losses, and prints the epoch's performance metrics. The goal is to optimize the model’s parameters by minimizing training loss while tracking validation performance to ensure generalization.
+
+<img src="/assets/img/SSD-training-loop.jpg" alt=""><br>
+
+Finally, I added basic loss plotting to visualize the learning curve, along with code to save the trained model. I also conducted several debugging sessions to refine and improve various aspects of the code.
+
+<img src="/assets/img/SSD-loss-plotting-and-model-saving.jpg" alt=""><br>
+
+This post documents the state of the SSD model as of the 30th of March, 2025.<br>
+To see the current state of the model visit:
+
+<a href="https://github.com/adrirubio/ml-rover/blob/main/ssd/ssd-object-detection.py">SSD object detection model</a>
