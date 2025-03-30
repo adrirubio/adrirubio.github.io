@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "SSD Loss and Training Loop"
-date:   25/03/30
+date:   25/03/29
 ---
 
 <p class="intro"><span class="dropcap">H</span>ello, and welcome! This week, I made significant progress on the SSD object detection model, nearly completing it by implementing the loss function, training loop, loss plotting, and model saving.</p>
