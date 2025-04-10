@@ -20,9 +20,8 @@ And so, I began training.
 
 The model trained for 35 epochs, finishing with a final loss of 1740.8066 and a best loss of 1648.3888. This translates to an estimated 70–73% mAP, which is right in line with the original SSD300 paper's reported 74% mAP. Training didn’t take long, and the results were genuinely promising.
 
-But I wasn’t finished. I knew I could do better.
-
-... Completed in 0:00:06.431447 <br>
+... <br>
+Completed in 0:00:06.431447 <br>
 Epoch 8/35 <br>
 Batch 20/157 - Loss: 3314.0496 <br>
 Batch 40/157 - Loss: 3511.7007 <br>
@@ -36,7 +35,8 @@ Epoch 8 completed in 0:00:06.913375 <br>
 Train Loss: 3302.9789 <br>
 Val Loss: 3030.0992 <br>
 Saving best model with validation loss: 3030.0992 <br>
-... Epoch 35/35 <br>
+... <br>
+Epoch 35/35 <br>
 Batch 20/157 - Loss: 1721.4296 <br>
 Batch 40/157 - Loss: 1765.3861 <br>
 Batch 60/157 - Loss: 1596.6831 <br>
@@ -52,11 +52,13 @@ Final model saved to ssd_pascal_voc_final.pth <br>
 
 <img src="/assets/img/ssd-loss-plot-old.jpg" alt=""><br>
 
+But I wasn’t finished. I knew I could do better.
+
 So, using insights from the previous results, I made a few key changes. I enabled mixed precision training with AMP to speed up computation and reduce memory usage, and I replaced the standard loss function with Focal Loss to better address class imbalance. I also optimized the learning rate strategy by starting with lower initial values and extended the training duration from 35 to 100 epochs, aiming to improve stability and enhance detection accuracy, especially for harder-to-detect objects.
 
 The results did not disappoint.
 
-The model completed its training beautifully! It achieved a final validation loss of 1928.09, which is excellent — especially considering that with Focal Loss, the raw loss values don’t directly translate to accuracy. Based on this, the model is estimated to reach around 82–84% mAP on the Pascal VOC dataset, marking a significant improvement over the initial run.
+The model completed its training beautifully! It achieved a final validation loss of 1928.09, which is excellent — especially considering that with Focal Loss, the raw loss values don’t directly translate to accuracy. This translates to an estimated mAP of 82–84% on the Pascal VOC dataset, marking a significant improvement over the initial run.
 
 Here’s what Claude had to say about the model:
 
