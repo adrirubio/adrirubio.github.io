@@ -110,7 +110,7 @@ Final model saved to ssd_pascal_voc_final.pth <br>
 
 In the next few weeks, my goal is to review all the code to deepen my understanding and ensure everything is well-optimized. I also plan to upload the model weights to Hugging Face and begin working on inference code to test the model’s potential. Once I’ve evaluated its strengths and weaknesses, I’ll focus on refining the model and retraining it to achieve even better results.
 
-This post documents the state of the SSD model as of April 6th, 2025.<br>
+This post documents the state of the SSD model as of April 6, 2025.<br>
 To see the current state of the model visit:
 
 <a href="https://github.com/adrirubio/ml-rover/blob/main/ssd/ssd-object-detection.py">SSD object detection model</a>

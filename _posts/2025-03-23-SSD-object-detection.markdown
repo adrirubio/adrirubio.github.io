@@ -41,7 +41,7 @@ In the forward pass, the input image is passed through these convolutional layer
 
 <img src="/assets/img/forward-function.jpg" alt="">
 
-This post documents the state of the SSD model as of the 23rd of March, 2025.<br>
+This post documents the state of the SSD model as of March 23, 2025.<br>
 To see the current state of the model visit:
 
 <a href="https://github.com/adrirubio/ml-rover/blob/main/ssd/ssd-object-detection.py">SSD object detection model</a>

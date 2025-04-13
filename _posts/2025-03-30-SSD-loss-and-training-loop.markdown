@@ -25,7 +25,7 @@ Finally, I added basic loss plotting to visualize the learning curve, along with
 
 <img src="/assets/img/SSD-loss-plotting-and-model-saving.jpg" alt=""><br>
 
-This post documents the state of the SSD model as of the 30th of March, 2025.<br>
+This post documents the state of the SSD model as of March 30, 2025.<br>
 To see the current state of the model visit:
 
 <a href="https://github.com/adrirubio/ml-rover/blob/main/ssd/ssd-object-detection.py">SSD object detection model</a>
