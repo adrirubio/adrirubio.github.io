@@ -50,7 +50,7 @@ Train Loss: 1740.8066 <br>
 Val Loss: 1648.3888 <br>
 Final model saved to ssd_pascal_voc_final.pth <br>
 
-<img src="/assets/img/ssd-loss-plot-old.jpg" alt=""><br>
+<img src="/assets/img/ssd/ssd-loss-plot-old.jpg" alt=""><br>
 
 But I wasn’t finished. I knew I could do better.
 
@@ -106,7 +106,7 @@ Train Loss: 2037.4231 <br>
 Val Loss: 1928.0867 <br>
 Final model saved to ssd_pascal_voc_final.pth <br>
 
-<img src="/assets/img/ssd-loss-plot-new.jpg" alt=""><br>
+<img src="/assets/img/ssd/ssd-loss-plot-new.jpg" alt=""><br>
 
 In the next few weeks, my goal is to review all the code to deepen my understanding and ensure everything is well-optimized. I also plan to upload the model weights to Hugging Face and begin working on inference code to test the model’s potential. Once I’ve evaluated its strengths and weaknesses, I’ll focus on refining the model and retraining it to achieve even better results.
 

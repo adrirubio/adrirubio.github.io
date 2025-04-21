@@ -14,9 +14,9 @@ Of course, Mindful was built for educational purposes, so its results aren’t p
 For Mindful, I used Nebius to set up a virtual machine with an NVIDIA H100, as training the model would have been impossible without it. Initially, I had two fine-tuned models, but I later removed the second one. After troubleshooting and fixing a few frustrating bugs in the inference code, the model finally ran successfully for the first time.
 I then spent time testing and tweaking the parameters until I was satisfied with the responses. Here are some of the best (and funniest) results I got after experimenting for a while!
 
-<img src="/assets/img/mindful1.jpg" alt=""><br>
-<img src="/assets/img/mindful2.jpg" alt=""><br>
-<img src="/assets/img/mindful3.jpg" alt=""><br>
-<img src="/assets/img/mindful4.jpg" alt=""><br>
-<img src="/assets/img/mindful5.jpg" alt=""><br>
-<img src="/assets/img/mindful6.jpg" alt="">
+<img src="/assets/img/mindful/mindful1.jpg" alt=""><br>
+<img src="/assets/img/mindful/mindful2.jpg" alt=""><br>
+<img src="/assets/img/mindful/mindful3.jpg" alt=""><br>
+<img src="/assets/img/mindful/mindful4.jpg" alt=""><br>
+<img src="/assets/img/mindful/mindful5.jpg" alt=""><br>
+<img src="/assets/img/mindful/mindful6.jpg" alt="">
