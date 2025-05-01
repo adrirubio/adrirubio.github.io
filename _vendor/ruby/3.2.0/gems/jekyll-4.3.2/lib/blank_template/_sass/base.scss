@@ -1,0 +1,17 @@
+$bodyFont: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+// Default (dark) styles
+body {
+  background-color: #111;  // Dark background
+  color: #f2f2f2;          // Light text
+  font-family: $bodyFont;
+}
+
+header, footer {
+  background-color: #222;
+}
+
+a {
+  color: #aaf;            // Link color suitable for dark mode
+}
+

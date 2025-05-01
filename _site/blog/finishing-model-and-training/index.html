@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]--><head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description" content="" />
+	<title>Finishing SSD Model and Training</title>
+
+	<!-- Open Graph Meta -->
+	<meta content="Adrian Rubio" property="og:site_name" /><meta content="Finishing SSD Model and Training" property="og:title" /><meta content="article" property="og:type" /><meta content="This is my blog where I share my coding journey, my experiences, challenges, and discoveries in the ever-evolving world of programming." property="og:description" /><meta content="http://localhost:4000/blog/finishing-model-and-training/" property="og:url" /><meta
+		content="2025-04-06T00:00:00+02:00"
+		property="article:published_time"
+	/>
+	<meta content="http://localhost:4000/about/" property="article:author" /><meta
+		content="http://localhost:4000/assets/img/touring.jpg"
+		property="og:image"
+	/><!-- Twitter Cards -->
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@" />
+	<meta name="twitter:creator" content="@" /><meta name="twitter:title" content="Finishing SSD Model and Training" /><meta name="twitter:url" content="http://localhost:4000/blog/finishing-model-and-training/" /><meta name="twitter:description" content="This is my blog where I share my coding journey, my experiences, challenges, and discoveries in the ever-evolving world of programming." /><meta
+		name="twitter:image:src"
+		content="http://localhost:4000/assets/img/touring.jpg"
+	/><!-- Favicon --><link rel="stylesheet" href="/assets/css/style.css" />
+
+	<link rel="icon" type="image/x-icon" href=""/>
+
+	<!-- Come and get me RSS readers -->
+	<link rel="alternate" type="application/rss+xml" title="Adrian Rubio"
+	href="http://localhost:4000/feed.xml" />
+
+	<!-- Stylesheet -->
+	<link rel="stylesheet" href="/assets/css/style.css" />
+	
+	<!-- Canonical URL -->
+	<link
+		rel="canonical"
+		href="http://localhost:4000/blog/finishing-model-and-training/"
+	/><!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script>
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-58263416-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+</head>
+<body> <div class="header ">
+     <div class="container">
+         <h1 class="logo"><a href="/">Adrian Rubio</a></h1>
+         <nav class="nav-collapse">
+             <ul class="noList"><li class="elementfirst">
+                     <a href="/index.html">Home</a>
+                 </li><li class="element">
+                     <a href="/about">About</a>
+                 </li><li class="elementlast">
+                     <a href="/contact">Contact</a>
+                 </li><li> <a href="https://github.com/adrirubio" target="_blank">GitHub</a></li>
+             </ul>
+         </nav>
+     </div>
+ </div><!-- end .header -->
+<div class="content">
+      <div class="container">
+         <article class="post"><header>
+    <h1 class="postTitle">Finishing SSD Model and Training</h1>
+    <p class="meta">April 06, 2025 | <span class="time">6</span> Minute Read</p>
+  </header>
+
+  <p class="intro"><span class="dropcap">H</span>ello and welcome! This week, I completed the model and began the debugging process, which involved making numerous changes across the entire system. After that, I kicked off the first full training run, made some adjustments based on the results, and retrained the model. So far, the results are looking very promising!</p>
+
+<p>During the debugging phase, the model underwent significant changes. I removed the Pascal VOC dataset that was previously loaded from Hugging Face and instead downloaded the original 2007 Pascal VOC dataset directly to the VM (I’ll explain what the VM is and its role later). I also enhanced the data transformations applied to the datasets by adding augmentations like random shadows, Gaussian noise, and Gaussian blur. These improvements aim to boost training performance and model generalization.</p>
+
+<p>I adjusted the feature map sizes from [38, 19, 10, 5, 3, 1] to [37, 18, 18, 9, 5, 2] to better balance spatial resolution and receptive fields. Additionally, I modified the VGG backbone: it now uses the full VGG16 feature extractor up to layer 23, then continues from layer 30, aligning more closely with the original SSD architecture. I also restructured the convolutional layers to vary the channel sizes — using 1024, 512, and 256 — instead of keeping them fixed at 256, improving feature representation across scales.</p>
+
+<p>The loss function remains largely the same, but I introduced checks for empty ground truth boxes and improved the handling of edge cases for increased robustness. The training loop was also enhanced to support early stopping, model checkpointing, and training visualization. Finally, a number of smaller refinements were made throughout the process to get the model fully ready for training.</p>
+
+<p><a href="https://github.com/adrirubio/ml-rover/tree/6e5d2f788b96d3f1b72b5b5f93db69305c5fc4b1">SSD model at this phase</a></p>
+
+<p>It’s a good time to mention that the entire training process would have been impossible without the Nebius VM. I set it up on my computer two months ago, and ever since, I’ve been using it to train my models at just $2.30 an hour. With its H100 GPU, it significantly accelerates training and inference, making it perfect for handling my larger models efficiently.</p>
+
+<p>And so, I began training.</p>
+
+<p>The model trained for 35 epochs, finishing with a final loss of 1740.8066 and a best loss of 1648.3888. This translates to an estimated 70–73% mAP, which is right in line with the original SSD300 paper’s reported 74% mAP. Training didn’t take long, and the results were genuinely promising.</p>
+
+<p>… <br />
+Completed in 0:00:06.431447 <br />
+Epoch 8/35 <br />
+Batch 20/157 - Loss: 3314.0496 <br />
+Batch 40/157 - Loss: 3511.7007 <br />
+Batch 60/157 - Loss: 3111.1152 <br />
+Batch 80/157 - Loss: 2806.2126 <br />
+Batch 100/157 - Loss: 2849.9556 <br />
+Batch 120/157 - Loss: 3000.4382 <br />
+Batch 140/157 - Loss: 2939.6262 <br />
+Batch 157/157 - Loss: 3830.0691 <br />
+Epoch 8 completed in 0:00:06.913375 <br />
+Train Loss: 3302.9789 <br />
+Val Loss: 3030.0992 <br />
+Saving best model with validation loss: 3030.0992 <br />
+… <br />
+Epoch 35/35 <br />
+Batch 20/157 - Loss: 1721.4296 <br />
+Batch 40/157 - Loss: 1765.3861 <br />
+Batch 60/157 - Loss: 1596.6831 <br />
+Batch 80/157 - Loss: 1818.6946 <br />
+Batch 100/157 - Loss: 1464.0607 <br />
+Batch 120/157 - Loss: 1789.6305 <br />
+Batch 140/157 - Loss: 2008.2661 <br />
+Batch 157/157 - Loss: 1806.7076 <br />
+Epoch 35 completed in 0:00:07.030001 <br />
+Train Loss: 1740.8066 <br />
+Val Loss: 1648.3888 <br />
+Final model saved to ssd_pascal_voc_final.pth <br /></p>
+
+<p><img src="/assets/img/ssd/ssd-loss-plot-old.jpg" alt="" /><br /></p>
+
+<p>But I wasn’t finished. I knew I could do better.</p>
+
+<p>So, using insights from the previous results, I made a few key changes. I enabled mixed precision training with AMP to speed up computation and reduce memory usage, and I replaced the standard loss function with Focal Loss to better address class imbalance. I also optimized the learning rate strategy by starting with lower initial values and extended the training duration from 35 to 100 epochs, aiming to improve stability and enhance detection accuracy, especially for harder-to-detect objects.</p>
+
+<p>The results did not disappoint.</p>
+
+<p>The model completed its training beautifully! It achieved a final validation loss of 1928.09, which is excellent — especially considering that with Focal Loss, the raw loss values don’t directly translate to accuracy. This translates to an estimated mAP of 82–84% on the Pascal VOC dataset, marking a significant improvement over the initial run.</p>
+
+<p>Here’s what Claude had to say about the model:</p>
+
+<p>“Your model has reached a validation loss of 1934.89 at epoch 58, which is even better than I predicted. This loss level puts your SSD model in an excellent position for real-world detection tasks. For context, this level of performance would make your model competitive with many production-ready object detectors.”</p>
+
+<p>Epoch 1/100 <br />
+Batch 20/157 - Loss: 12212.2188 <br />
+Batch 40/157 - Loss: 13119.7129 <br />
+Batch 60/157 - Loss: 12890.0430 <br />
+Batch 80/157 - Loss: 12896.1777 <br />
+Batch 100/157 - Loss: 10839.2949 <br />
+Batch 120/157 - Loss: 12710.5645 <br />
+Batch 140/157 - Loss: 11867.0479 <br />
+Batch 157/157 - Loss: 10401.2627 <br />
+Warmup phase: learning rate set to 0.000010 <br />
+Epoch 1 completed in 0:00:07.048314 <br />
+… <br />
+Epoch 50/100 <br />
+Batch 20/157 - Loss: 2943.6089 <br />
+Batch 40/157 - Loss: 1767.0057 <br />
+Batch 60/157 - Loss: 2459.3105 <br />
+Batch 80/157 - Loss: 2643.3643 <br />
+Batch 100/157 - Loss: 2142.9924 <br />
+Batch 120/157 - Loss: 2283.0781 <br />
+Batch 140/157 - Loss: 2101.7227 <br />
+Batch 157/157 - Loss: 2728.4829 <br />
+Cosine phase: learning rate set to 0.000011 <br />
+Epoch 50 completed in 0:00:06.342008 <br />
+Train Loss: 2154.6789 <br />
+Val Loss: 1995.7843 <br />
+Saving best model with validation loss: 1995.7843 <br />
+… <br />
+Epoch 100/100 <br />
+Batch 20/157 - Loss: 1751.8605 <br />
+Batch 40/157 - Loss: 2114.5859 <br />
+Batch 60/157 - Loss: 2165.1792 <br />
+Batch 80/157 - Loss: 2106.7981 <br />
+Batch 100/157 - Loss: 2118.8838 <br />
+Batch 120/157 - Loss: 1908.6840 <br />
+Batch 140/157 - Loss: 2345.2627 <br />
+Batch 157/157 - Loss: 1830.1548 <br />
+Cosine phase: learning rate set to 0.000002 <br />
+Epoch 100 completed in 0:00:06.242254 <br />
+Train Loss: 2037.4231 <br />
+Val Loss: 1928.0867 <br />
+Final model saved to ssd_pascal_voc_final.pth <br /></p>
+
+<p><img src="/assets/img/ssd/ssd-loss-plot-new.jpg" alt="" /><br /></p>
+
+<p>In the next few weeks, my goal is to review all the code to deepen my understanding and ensure everything is well-optimized. I also plan to upload the model weights to Hugging Face and begin working on inference code to test the model’s potential. Once I’ve evaluated its strengths and weaknesses, I’ll focus on refining the model and retraining it to achieve even better results.</p>
+
+<p>This post documents the state of the SSD model as of April 6, 2025.<br />
+To see the current state of the model visit:</p>
+
+<p><a href="https://github.com/adrirubio/ml-rover/blob/main/ssd/ssd-object-detection.py">SSD object detection model</a></p>
+
+
+  <!-- POST NAVIGATION -->
+  <footer class="postNav clearfix"><a class="prev" href="/blog/SSD-loss-and-training-loop/"><span>&laquo;&nbsp;SSD Loss and Training Loop</span></a><a class="next" href="/blog/finalizing-ssd-model-and-training/"><span>Finalizing SSD Model and Training&nbsp;&raquo;</span></a></footer>
+</article>
+      </div>
+   </div><!-- end .content --><div class="footer">
+	<div class="container">
+		<p class="copy">
+			&copy; 2025
+			<a </a> Powered by
+			<a href="http://jekyllrb.com">Jekyll</a>
+		</p>
+
+		<div class="footer-links">
+			<ul class="noList"><li>
+	<a href="https://github.com/adrirubio" target="_blank">
+		<svg
+			id="github"
+			class="custom-icon"
+			version="1.1"
+			xmlns="http://www.w3.org/2000/svg"
+			xmlns:xlink="http://www.w3.org/1999/xlink"
+			viewBox="0 0 100 100"
+			style="height: 30px; width: 30px;"
+		>
+			<circle
+				class="outer-shape"
+				cx="50"
+				cy="50"
+				r="48"
+				style="opacity: 1;"
+			></circle>
+			<path
+				class="inner-shape"
+				style="opacity: 1;"
+				transform="translate(25,25) scale(0.5)"
+				d="M50,1C22.938,1,1,22.938,1,50s21.938,49,49,49s49-21.938,49-49S77.062,1,50,1z M79.099,79.099 c-3.782,3.782-8.184,6.75-13.083,8.823c-1.245,0.526-2.509,0.989-3.79,1.387v-7.344c0-3.86-1.324-6.699-3.972-8.517 c1.659-0.16,3.182-0.383,4.57-0.67c1.388-0.287,2.855-0.702,4.402-1.245c1.547-0.543,2.935-1.189,4.163-1.938 c1.228-0.75,2.409-1.723,3.541-2.919s2.082-2.552,2.847-4.067s1.372-3.334,1.818-5.455c0.446-2.121,0.67-4.458,0.67-7.01 c0-4.945-1.611-9.155-4.833-12.633c1.467-3.828,1.308-7.991-0.478-12.489l-1.197-0.143c-0.829-0.096-2.321,0.255-4.474,1.053 c-2.153,0.798-4.57,2.105-7.249,3.924c-3.797-1.053-7.736-1.579-11.82-1.579c-4.115,0-8.039,0.526-11.772,1.579 c-1.69-1.149-3.294-2.097-4.809-2.847c-1.515-0.75-2.727-1.26-3.637-1.532c-0.909-0.271-1.754-0.439-2.536-0.503 c-0.782-0.064-1.284-0.079-1.507-0.048c-0.223,0.031-0.383,0.064-0.478,0.096c-1.787,4.53-1.946,8.694-0.478,12.489 c-3.222,3.477-4.833,7.688-4.833,12.633c0,2.552,0.223,4.889,0.67,7.01c0.447,2.121,1.053,3.94,1.818,5.455 c0.765,1.515,1.715,2.871,2.847,4.067s2.313,2.169,3.541,2.919c1.228,0.751,2.616,1.396,4.163,1.938 c1.547,0.543,3.014,0.957,4.402,1.245c1.388,0.287,2.911,0.511,4.57,0.67c-2.616,1.787-3.924,4.626-3.924,8.517v7.487 c-1.445-0.43-2.869-0.938-4.268-1.53c-4.899-2.073-9.301-5.041-13.083-8.823c-3.782-3.782-6.75-8.184-8.823-13.083 C9.934,60.948,8.847,55.56,8.847,50s1.087-10.948,3.231-16.016c2.073-4.899,5.041-9.301,8.823-13.083s8.184-6.75,13.083-8.823 C39.052,9.934,44.44,8.847,50,8.847s10.948,1.087,16.016,3.231c4.9,2.073,9.301,5.041,13.083,8.823 c3.782,3.782,6.75,8.184,8.823,13.083c2.143,5.069,3.23,10.457,3.23,16.016s-1.087,10.948-3.231,16.016 C85.848,70.915,82.88,75.317,79.099,79.099L79.099,79.099z"
+			></path>
+		</svg>
+	</a>
+</li>
+<li>
+	<a href="mailto:adrian.rubio.punal@gmail.com" target="_blank">
+		<svg
+			id="mail"
+			class="custom-icon"
+			version="1.1"
+			xmlns="http://www.w3.org/2000/svg"
+			xmlns:xlink="http://www.w3.org/1999/xlink"
+			viewBox="0 0 100 100"
+			style="height: 30px; width: 30px;"
+		>
+			<circle
+				class="outer-shape"
+				cx="50"
+				cy="50"
+				r="48"
+				style="opacity: 1;"
+			></circle>
+			<path
+				class="inner-shape"
+				style="opacity: 1;"
+				transform="translate(25,25) scale(0.5)"
+				d="M50,1C22.938,1,1,22.938,1,50s21.938,49,49,49s49-21.938,49-49S77.062,1,50,1z M25.5,25.5h49 c0.874,0,1.723,0.188,2.502,0.542L50,57.544L22.998,26.041C23.777,25.687,24.626,25.499,25.5,25.5L25.5,25.5z M19.375,68.375v-36.75 c0-0.128,0.005-0.256,0.014-0.383l17.96,20.953L19.587,69.958C19.448,69.447,19.376,68.916,19.375,68.375L19.375,68.375z M74.5,74.5 h-49c-0.541,0-1.072-0.073-1.583-0.212l17.429-17.429L50,66.956l8.653-10.096l17.429,17.429C75.572,74.427,75.041,74.5,74.5,74.5 L74.5,74.5z M80.625,68.375c0,0.541-0.073,1.072-0.211,1.583L62.652,52.195l17.96-20.953c0.008,0.127,0.014,0.255,0.014,0.383 L80.625,68.375L80.625,68.375z"
+			></path>
+		</svg>
+	</a>
+</li>
+</ul>
+		</div>
+	</div>
+</div>
+<!-- end .footer -->
+<!-- Add jQuery and other scripts -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src=/assets/js/jquery-1.11.2.min.js><\/script>')</script>
+<script src="/assets/js/dropcap.min.js"></script>
+<script src="/assets/js/responsive-nav.min.js"></script>
+<script src="/assets/js/scripts.js"></script>
+</body>
+
+</html>
