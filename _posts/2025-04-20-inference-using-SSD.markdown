@@ -18,7 +18,7 @@ But despite all that, after full training, the model only managed to hit around 
 
 By this point, I was honestly exhausted. It was Friday, and I’d spent the better part of the week going back and forth, tweaking weights and adjusting parameters, hoping for a breakthrough. But the model just kept underperforming, no matter what I threw at it. So—naturally—I started thinking about giving up.
 
-<img src="/assets/img/ssd/SSD-0-mAP.jpg" alt=""><br>
+<img src="/assets/img/ssd/SSD-0-mAP.png" alt=""><br>
 
 But—I had one last shot left in me.
 
@@ -28,19 +28,19 @@ I decided to simplify the model, keeping the SSD paper as my main reference. Fol
 
 So, I started training the simplified model. I think the following snippets really say it all.
 
-<img src="/assets/img/ssd/SSD-training-snippet.jpg" alt=""><br>
-<img src="/assets/img/ssd/SSD-training-snippet2.jpg" alt=""><br>
-<img src="/assets/img/ssd/SSD-training-snippet3.jpg" alt=""><br>
+<img src="/assets/img/ssd/SSD-training-snippet.png" alt=""><br>
+<img src="/assets/img/ssd/SSD-training-snippet2.png" alt=""><br>
+<img src="/assets/img/ssd/SSD-training-snippet3.png" alt=""><br>
 
 The model finished with an mAP@0.5 of 0.76 (76%), which is very close to the 77% reported in the paper. This marked a huge improvement compared to the 40% mAP of the previous model. But now came the moment of truth: I had to test it out. So, I asked Claude to create two simple sets of inference code—one that randomly selects an image from the Pascal VOC dataset and predicts the bounding boxes and labels, and another where you provide the image manually.
 
 The model did not disappoint.
 
-<img src="/assets/img/ssd/1_pred.jpg" alt=""><br>
-<img src="/assets/img/ssd/2_pred.jpg" alt=""><br>
-<img src="/assets/img/ssd/3_pred.jpg" alt=""><br>
-<img src="/assets/img/ssd/4_pred.jpg" alt=""><br>
-<img src="/assets/img/ssd/5_pred.jpg" alt=""><br>
+<img src="/assets/img/ssd/1_pred.png" alt=""><br>
+<img src="/assets/img/ssd/2_pred.png" alt=""><br>
+<img src="/assets/img/ssd/3_pred.png" alt=""><br>
+<img src="/assets/img/ssd/4_pred.png" alt=""><br>
+<img src="/assets/img/ssd/5_pred.png" alt=""><br>
 
 You can also check out the final trained model weights, now available on Hugging Face. For more examples and the full inference code, head over to the GitHub repo. Feel free to test it, fork it, or build on it!
 

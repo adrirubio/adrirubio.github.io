@@ -16,16 +16,16 @@ By the end of the summer, the Arcade had wrapped up, and I had completed around 
 <a href="https://hackclub.com/arcade/">Visit Arcade</a>
 
 
-<img src="/assets/img/arcade/keychron.jpg" alt="">
-<img src="/assets/img/arcade/plushie.jpg" alt="">
-<img src="/assets/img/arcade/after-arcade-setup.jpg" alt="">
-<img src="/assets/img/arcade/stickers.jpg" alt="">
+<img src="/assets/img/arcade/keychron.png" alt="">
+<img src="/assets/img/arcade/plushie.png" alt="">
+<img src="/assets/img/arcade/after-arcade-setup.png" alt="">
+<img src="/assets/img/arcade/stickers.png" alt="">
 
 When Arcade ended, school started, and my brother and I joined what Hack Club calls a YSWS (You Ship, We Ship). The idea is simple: if you ship a project, Hack Club ships a prize. For this YSWS, if you built an AI LLM (Large Language Model) from scratch, you would receive a YubiKey and a signed copy of Build an LLM From Scratch by Sebastian Raschka. Both my brother and I completed the challenge, and we earned our prizes. You can check out my LLM project here:
 
 <a href="https://github.com/adrirubio/storycrafterllm">Visit the LMM</a>
 
-<img src="/assets/img/storycrafterllm/signed-book.jpg" alt="">
-<img src="/assets/img/storycrafterllm/signed-page.jpg" alt="">
+<img src="/assets/img/storycrafterllm/signed-book.png" alt="">
+<img src="/assets/img/storycrafterllm/signed-page.png" alt="">
 
 The goal of this blog is to document my coding journey and showcase the projects I build. I plan to post every week about what I’ve worked on, any new ideas I’ve had, or anything code-related that I find worth sharing. Some weeks, I might not have much to post—or might not be able to post at all—but I’ll do my best to stay consistent. This first post was a small introduction to who I am with some of my past and what I love. By now, you probably know that I love AI, and most of my projects will be centered around it.

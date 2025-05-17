@@ -14,11 +14,11 @@ Before starting a new project, I usually research the model, add relevant inform
 For example, the first model I’m building is a CNN (Convolutional Neural Network), so I researched what a CNN is and added the key details to my notebook. When working on the PyTorch models, I often refer to my notes in Org mode, which were created with the help of the PyTorch courses I took last year.
 This process helps me stay organized and ensures I’m well-prepared before I start coding!
 
-<img src="/assets/img/notebook/notebook2.jpg" alt=""><br>
-<img src="/assets/img/notebook/notebook3.jpg" alt=""><br>
-<img src="/assets/img/notebook/notebook4.jpg" alt=""><br>
-<img src="/assets/img/notebook/notebook5.jpg" alt=""><br>
+<img src="/assets/img/notebook/notebook2.png" alt=""><br>
+<img src="/assets/img/notebook/notebook3.png" alt=""><br>
+<img src="/assets/img/notebook/notebook4.png" alt=""><br>
+<img src="/assets/img/notebook/notebook5.png" alt=""><br>
 
 The rover I’ll be using for this project is the Adeept Picar-B, which I built a few years ago with help from my dad. I want to take a moment to say that my dad has been an incredible support throughout my coding journey. He taught me how to code when I was younger, and without his guidance and encouragement, I wouldn’t be where I am today. So, a huge thank you to my dad!
 
-<img src="/assets/img/ml-rover/rover.jpg" alt=""><br>
+<img src="/assets/img/ml-rover/rover.png" alt=""><br>

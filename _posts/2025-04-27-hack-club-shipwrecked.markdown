@@ -8,7 +8,7 @@ date:   2025-04-27
 
 I kicked off the week by discussing the SSD model with Claude, breaking down each component to understand how everything fits together. It really helped me get a better grip on some of the more complex concepts. I also generated a few more inference examples—I'm still amazed at how well the model performs! To top it off, the weights are also getting some attention on Hugging Face too: it’s already been downloaded 90 times this month, and I only published it halfway through.
 
-<img src="/assets/img/ssd/model-weight-downloads.jpg" alt=""><br>
+<img src="/assets/img/ssd/model-weight-downloads.png" alt=""><br>
 
 I had just started diving into the line-following model for the ML Rover when a message popped up in the Hack Club announcements channel—and it definitely stole my attention.
 
@@ -26,7 +26,7 @@ As soon as I saw the announcement, a change of plans was inevitable—I decided 
 
 <a href="https://shipwrecked.hackclub.com/">Shipwrecked link</a>
 
-<img src="/assets/img/shipwrecked/shipwrecked.jpg" alt=""><br>
+<img src="/assets/img/shipwrecked/shipwrecked.png" alt=""><br>
 
 So, naturally, I started thinking about what kind of project could actually go viral. I have to admit—I was stuck for a while. Every idea I came up with felt off, and I’d second-guess it almost immediately. That is, until my brother stepped in with an idea he picked up from one of Karpathy’s videos. In it, Karpathy mentioned that he didn’t know of any PDF reader where you could highlight text and chat with an AI about it. And just like that, I knew what I wanted to build.
 
@@ -36,8 +36,8 @@ You should know—I’m not an expert in CSS, JavaScript, or front-end developme
 
 I started working on it just two days ago, and here’s where it currently stands:
 
-<img src="/assets/img/shipwrecked/open-pdf-landing-page.jpg" alt=""><br>
-<img src="/assets/img/shipwrecked/pdf-reader-home.jpg" alt=""><br>
+<img src="/assets/img/shipwrecked/open-pdf-landing-page.png" alt=""><br>
+<img src="/assets/img/shipwrecked/pdf-reader-home.png" alt=""><br>
 
 Right now, the project has a simple landing page where you can upload and open a PDF. Once the PDF is loaded, you can highlight any text, and a small bubble with a chat icon appears next to your selection. When you click the icon, a chat window opens, showing the highlighted message and giving you the option to choose how you'd like the AI to respond: Simple, Like I’m 5, Technical, or Custom. You can open multiple chats, close them, and ask the AI anything within each one.
 

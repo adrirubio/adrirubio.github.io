@@ -22,24 +22,24 @@ Now, here's what my model's structure will look like:
 
 First, I began by loading the dataset for training and validation. For the SSD model, I chose the PASCAL VOC dataset. After that, I applied the necessary transformations and converted the dataset into PyTorch format to ensure compatibility with the training pipeline.
 
-<img src="/assets/img/ssd/pascal-voc.jpg" alt="">
+<img src="/assets/img/ssd/pascal-voc.png" alt="">
 
 Next, I created a collate function and set up the data loaders.<br>
 After that, I began working on the actual model definition.
 
 The first step was to load the first and second convolutional layers from a pretrained PASCAL VOC model. This is done to allow the network to leverage learned features, speeding up training and improving generalization. Then, I added four custom convolutional layers to further refine feature extraction for object detection. The convolutional layers have sizes of 38×38, 19×19, 10×10, 5×5, 3×3, and 1×1. Each layer produces a feature map, capturing details from fine-grained features at 38×38 to high-level, larger features at 1×1, enabling the model to detect objects at multiple scales.
 
-<img src="/assets/img/ssd/conv-layers.jpg" alt="">
+<img src="/assets/img/ssd/conv-layers.png" alt="">
 
 Once a feature map was generated for each convolutional layer, the next step was to add random default anchor boxes at every index of the feature maps. I defined anchor box configurations for each feature map and then created a function with a nested loop. This function iterates through every index in the feature map, traversing its rows and columns to locate the center of each grid cell. It places default boxes of various sizes and aspect ratios surrounding the the center, ensuring robust multi-scale object detection.
 
-<img src="/assets/img/ssd/default-boxes.jpg" alt="">
+<img src="/assets/img/ssd/default-boxes.png" alt="">
 
 Now, we are ready to predict the bounding box adjustments and class probabilities for the input image. This step is often referred to as the "prediction head". Within the SSD model, I defined a sequence of convolutional layers responsible for predicting the bounding box offsets and class probabilities for each default box.
 
 In the forward pass, the input image is passed through these convolutional layers, which produce feature maps at different scales. These feature maps are then used to generate predictions for each default box. For each default box, the network predicts two things: the offsets (or adjustments) for the bounding box coordinates and the class probabilities for the object within the box.
 
-<img src="/assets/img/ssd/forward-function.jpg" alt="">
+<img src="/assets/img/ssd/forward-function.png" alt="">
 
 This post documents the state of the SSD model as of March 23, 2025.<br>
 To see the current state of the model visit:

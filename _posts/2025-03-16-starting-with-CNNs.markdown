@@ -10,7 +10,7 @@ I started the week by refining the blog, adding dark mode, and making a few mino
 
 Dark mode:
 
-<img src="/assets/img/dark-mode.jpg" alt="">
+<img src="/assets/img/dark-mode.png" alt="">
 
 I felt the need to refresh my understanding of CNN concepts, so I watched a couple of videos on the topic and revisited the ImageNet Classification with Deep Convolutional Neural Networks paper by Alex Krizhevsky, Ilya Sutskever, and Geoffrey Hinton.
 

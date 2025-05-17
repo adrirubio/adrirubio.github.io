@@ -5,15 +5,47 @@
     <description>This is my blog where I share my coding journey, my experiences, challenges, and discoveries in the ever-evolving world of programming.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 01 May 2025 09:21:00 +0200</pubDate>
-    <lastBuildDate>Thu, 01 May 2025 09:21:00 +0200</lastBuildDate>
+    <pubDate>Sat, 17 May 2025 13:07:33 +0200</pubDate>
+    <lastBuildDate>Sat, 17 May 2025 13:07:33 +0200</lastBuildDate>
     <generator>Jekyll v4.3.2</generator><item>
+        <title>Improving the AI PDF Reader</title>
+        <description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! Over the past two weeks, I’ve been working hard on the AI PDF Reader. I’ve improved the UI, integrated the AI API, and am now implementing a database to support the reader.&lt;/p&gt;
+
+&lt;p&gt;I haven’t posted in the past two weeks as I’ve been fully focused on developing the AI PDF Reader. Now that I’ve found a moment, here’s a quick recap of what I’ve been working on and what to expect moving forward.&lt;/p&gt;
+
+&lt;p&gt;I started the week by addressing several UI issues to make the interface cleaner and more user-friendly.
+I removed the “Simple,” “Like I’m Five,” and “Technical” modes, keeping only the “Custom” option to streamline the experience. I also enlarged the chat area and slightly repositioned the PDF viewer to the left for better layout balance. Instead of dumping the entire highlighted text into the chat, it now generates a compact link or button that takes you directly to the relevant section in the PDF—making navigation much smoother. Additionally, when starting a new chat, it can now retain full context from the entire PDF.&lt;/p&gt;
+
+&lt;p&gt;After that, I began integrating the API.
+The app now supports OpenAI API keys, correctly detects them, and uses them for generating responses.
+Here is a quick look at what’s changed from where we left off to this week:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/shipwrecked/pdf-reader-home.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt; &lt;img src=&quot;/assets/img/shipwrecked/pdf-reader-home2.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Also added:
+&lt;img src=&quot;/assets/img/shipwrecked/full-context.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt; &lt;img src=&quot;/assets/img/shipwrecked/chat-with-full-context.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Yesterday, I joined the Shipwrecked kickoff call and got to see what other teenagers are building. It was exciting to hear from other builders, share early progress, and get inspired by a wide range of creative ideas. Being part of a community like this adds an extra layer of motivation.&lt;/p&gt;
+
+&lt;p&gt;So far, I’ve spent about 14 hours on the project. Once I finish implementing the database and polish things up a bit, I plan to launch a small web demo. After that, I’ll start promoting it across different platforms hopefully reaching 150 stars on GitHub.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/shipwrecked/23.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;This post documents the state of the AI pdf reader as of May 18, 2025&lt;br /&gt;
+To see the current state of the pdf reader visit:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/adrirubio/ai-pdf-reader&quot;&gt;AI pdf reader github&lt;/a&gt;&lt;/p&gt;
+
+</description><description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! Over the past two weeks, I’ve been working hard on the AI PDF Reader. I’ve improved the UI, integrated the AI API, and am now implementing a database to support the reader.&lt;/p&gt;
+</description><pubDate>Sat, 17 May 2025 00:00:00 +0200</pubDate>
+        <link>http://localhost:4000/blog/improving-the-ai-pdf-reader/</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/improving-the-ai-pdf-reader/</guid></item><item>
         <title>Hack Club Shipwrecked</title>
         <description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! This week, I wrapped up reviewing the SSD object detection model and was just about to dive into the line-following model—when a message in the Hack Club announcements caught my attention.&lt;/p&gt;
 
 &lt;p&gt;I kicked off the week by discussing the SSD model with Claude, breaking down each component to understand how everything fits together. It really helped me get a better grip on some of the more complex concepts. I also generated a few more inference examples—I’m still amazed at how well the model performs! To top it off, the weights are also getting some attention on Hugging Face too: it’s already been downloaded 90 times this month, and I only published it halfway through.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/ssd/model-weight-downloads.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/ssd/model-weight-downloads.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;I had just started diving into the line-following model for the ML Rover when a message popped up in the Hack Club announcements channel—and it definitely stole my attention.&lt;/p&gt;
 
@@ -33,7 +65,7 @@ As soon as you arrive, you’ll start working together to survive!&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://shipwrecked.hackclub.com/&quot;&gt;Shipwrecked link&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/shipwrecked/shipwrecked.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/shipwrecked/shipwrecked.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;So, naturally, I started thinking about what kind of project could actually go viral. I have to admit—I was stuck for a while. Every idea I came up with felt off, and I’d second-guess it almost immediately. That is, until my brother stepped in with an idea he picked up from one of Karpathy’s videos. In it, Karpathy mentioned that he didn’t know of any PDF reader where you could highlight text and chat with an AI about it. And just like that, I knew what I wanted to build.&lt;/p&gt;
 
@@ -43,8 +75,8 @@ As soon as you arrive, you’ll start working together to survive!&lt;/p&gt;
 
 &lt;p&gt;I started working on it just two days ago, and here’s where it currently stands:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/shipwrecked/open-pdf-landing-page.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
-&lt;img src=&quot;/assets/img/shipwrecked/pdf-reader-home.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/shipwrecked/open-pdf-landing-page.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/img/shipwrecked/pdf-reader-home.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;Right now, the project has a simple landing page where you can upload and open a PDF. Once the PDF is loaded, you can highlight any text, and a small bubble with a chat icon appears next to your selection. When you click the icon, a chat window opens, showing the highlighted message and giving you the option to choose how you’d like the AI to respond: Simple, Like I’m 5, Technical, or Custom. You can open multiple chats, close them, and ask the AI anything within each one.&lt;/p&gt;
 
@@ -75,7 +107,7 @@ To see the current state of the pdf reader visit:&lt;/p&gt;
 
 &lt;p&gt;By this point, I was honestly exhausted. It was Friday, and I’d spent the better part of the week going back and forth, tweaking weights and adjusting parameters, hoping for a breakthrough. But the model just kept underperforming, no matter what I threw at it. So—naturally—I started thinking about giving up.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/ssd/SSD-0-mAP.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/ssd/SSD-0-mAP.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;But—I had one last shot left in me.&lt;/p&gt;
 
@@ -85,19 +117,19 @@ To see the current state of the pdf reader visit:&lt;/p&gt;
 
 &lt;p&gt;So, I started training the simplified model. I think the following snippets really say it all.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/ssd/SSD-training-snippet.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
-&lt;img src=&quot;/assets/img/ssd/SSD-training-snippet2.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
-&lt;img src=&quot;/assets/img/ssd/SSD-training-snippet3.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/ssd/SSD-training-snippet.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/img/ssd/SSD-training-snippet2.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/img/ssd/SSD-training-snippet3.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;The model finished with an mAP@0.5 of 0.76 (76%), which is very close to the 77% reported in the paper. This marked a huge improvement compared to the 40% mAP of the previous model. But now came the moment of truth: I had to test it out. So, I asked Claude to create two simple sets of inference code—one that randomly selects an image from the Pascal VOC dataset and predicts the bounding boxes and labels, and another where you provide the image manually.&lt;/p&gt;
 
 &lt;p&gt;The model did not disappoint.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/ssd/1_pred.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
-&lt;img src=&quot;/assets/img/ssd/2_pred.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
-&lt;img src=&quot;/assets/img/ssd/3_pred.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
-&lt;img src=&quot;/assets/img/ssd/4_pred.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
-&lt;img src=&quot;/assets/img/ssd/5_pred.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/ssd/1_pred.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/img/ssd/2_pred.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/img/ssd/3_pred.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/img/ssd/4_pred.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/img/ssd/5_pred.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;You can also check out the final trained model weights, now available on Hugging Face. For more examples and the full inference code, head over to the GitHub repo. Feel free to test it, fork it, or build on it!&lt;/p&gt;
 
@@ -135,8 +167,8 @@ To stay organized, I followed some Org mode notes I made a while back:&lt;/p&gt;
 
 &lt;p&gt;To deepen my knowledge of the model, I created some podcasts using Notebook LM (AI-generated podcasts). I would listen to them in the car, at the library, while studying, and more — helping me take my understanding to the next level. By the end of Thursday, I felt that I understood the code much better.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/ssd/SSD-notebook-lm-loading-data.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
-&lt;img src=&quot;/assets/img/ssd/SSD-notebook-lm-ssd-architecture.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/ssd/SSD-notebook-lm-loading-data.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/img/ssd/SSD-notebook-lm-ssd-architecture.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;Once I understood the code better, I created some simple inference code for the model (with Claude’s help) to test it out. I didn’t upload the code to GitHub, but running the tests showed that Claude’s predictions from last week were a bit off.&lt;/p&gt;
 
@@ -152,8 +184,8 @@ To stay organized, I followed some Org mode notes I made a while back:&lt;/p&gt;
 
 &lt;p&gt;After making these changes, I created new podcasts with the updated code and plan to start listening to them next week.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/ssd/SSD-notebook-lm-ssd-architecture2.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
-&lt;img src=&quot;/assets/img/ssd/SSD-notebook-lm-ssd-loss.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/ssd/SSD-notebook-lm-ssd-architecture2.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/img/ssd/SSD-notebook-lm-ssd-loss.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;This post documents the state of the SSD model as of April 13, 2025&lt;br /&gt;
 To see the current state of the model visit:&lt;/p&gt;
@@ -210,7 +242,7 @@ Train Loss: 1740.8066 &lt;br /&gt;
 Val Loss: 1648.3888 &lt;br /&gt;
 Final model saved to ssd_pascal_voc_final.pth &lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/ssd/ssd-loss-plot-old.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/ssd/ssd-loss-plot-old.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;But I wasn’t finished. I knew I could do better.&lt;/p&gt;
 
@@ -266,7 +298,7 @@ Train Loss: 2037.4231 &lt;br /&gt;
 Val Loss: 1928.0867 &lt;br /&gt;
 Final model saved to ssd_pascal_voc_final.pth &lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/ssd/ssd-loss-plot-new.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/ssd/ssd-loss-plot-new.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;In the next few weeks, my goal is to review all the code to deepen my understanding and ensure everything is well-optimized. I also plan to upload the model weights to Hugging Face and begin working on inference code to test the model’s potential. Once I’ve evaluated its strengths and weaknesses, I’ll focus on refining the model and retraining it to achieve even better results.&lt;/p&gt;
 
@@ -285,20 +317,20 @@ To see the current state of the model visit:&lt;/p&gt;
 
 &lt;p&gt;First, I instantiated the model we defined last week and began working on the loss function. The box_iou function calculates the Intersection over Union (IoU) between two sets of bounding boxes to determine their overlap. The encode_boxes function converts ground truth box coordinates into a format relative to default anchor boxes, improving the model’s learning process. Finally, the SSD_loss class defines the loss function, combining Smooth L1 loss for localization and Cross-Entropy loss for classification while balancing positive and negative samples for stable training. The loss function’s goal is to evaluate how well the predicted bounding boxes and class probabilities align with the ground truth, guiding the model toward greater accuracy.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/ssd/box-iou-encoder.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
-&lt;img src=&quot;/assets/img/ssd/SSD-loss.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/ssd/box-iou-encoder.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/img/ssd/SSD-loss.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;Next, I initialized the SSD loss function and froze the first 10 layers of the VGG backbone to preserve low-level feature extraction, prevent overfitting, and speed up training by focusing updates on the higher layers that learn task-specific features. Additionally, I defined the Adam optimizer with a lower learning rate for the first and second convolution layers of the backbone to ensure more stable and gradual updates in the early feature extraction stages.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/ssd/SSD-freezing-layers-and-optimizer.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/ssd/SSD-freezing-layers-and-optimizer.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;Now, it was time for the actual training loop. The loop processes batches of images, computes the loss using the SSDLoss function, backpropagates gradients, and updates the model parameters using the optimizer. After each epoch, it evaluates the model on the validation set without updating weights, records the average training and validation losses, and prints the epoch’s performance metrics. The goal is to optimize the model’s parameters by minimizing training loss while tracking validation performance to ensure generalization.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/ssd/SSD-training-loop.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/ssd/SSD-training-loop.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;Finally, I added basic loss plotting to visualize the learning curve, along with code to save the trained model. I also conducted several debugging sessions to refine and improve various aspects of the code.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/ssd/SSD-loss-plotting-and-model-saving.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/ssd/SSD-loss-plotting-and-model-saving.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;This post documents the state of the SSD model as of March 30, 2025.&lt;br /&gt;
 To see the current state of the model visit:&lt;/p&gt;
@@ -327,24 +359,24 @@ That might sound like a lot to take in, but by the end of this post, you’ll ha
 
 &lt;p&gt;First, I began by loading the dataset for training and validation. For the SSD model, I chose the PASCAL VOC dataset. After that, I applied the necessary transformations and converted the dataset into PyTorch format to ensure compatibility with the training pipeline.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/ssd/pascal-voc.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/ssd/pascal-voc.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Next, I created a collate function and set up the data loaders.&lt;br /&gt;
 After that, I began working on the actual model definition.&lt;/p&gt;
 
 &lt;p&gt;The first step was to load the first and second convolutional layers from a pretrained PASCAL VOC model. This is done to allow the network to leverage learned features, speeding up training and improving generalization. Then, I added four custom convolutional layers to further refine feature extraction for object detection. The convolutional layers have sizes of 38×38, 19×19, 10×10, 5×5, 3×3, and 1×1. Each layer produces a feature map, capturing details from fine-grained features at 38×38 to high-level, larger features at 1×1, enabling the model to detect objects at multiple scales.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/ssd/conv-layers.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/ssd/conv-layers.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Once a feature map was generated for each convolutional layer, the next step was to add random default anchor boxes at every index of the feature maps. I defined anchor box configurations for each feature map and then created a function with a nested loop. This function iterates through every index in the feature map, traversing its rows and columns to locate the center of each grid cell. It places default boxes of various sizes and aspect ratios surrounding the the center, ensuring robust multi-scale object detection.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/ssd/default-boxes.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/ssd/default-boxes.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Now, we are ready to predict the bounding box adjustments and class probabilities for the input image. This step is often referred to as the “prediction head”. Within the SSD model, I defined a sequence of convolutional layers responsible for predicting the bounding box offsets and class probabilities for each default box.&lt;/p&gt;
 
 &lt;p&gt;In the forward pass, the input image is passed through these convolutional layers, which produce feature maps at different scales. These feature maps are then used to generate predictions for each default box. For each default box, the network predicts two things: the offsets (or adjustments) for the bounding box coordinates and the class probabilities for the object within the box.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/ssd/forward-function.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/ssd/forward-function.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;This post documents the state of the SSD model as of March 23, 2025.&lt;br /&gt;
 To see the current state of the model visit:&lt;/p&gt;
@@ -361,7 +393,7 @@ To see the current state of the model visit:&lt;/p&gt;
 
 &lt;p&gt;Dark mode:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/dark-mode.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/dark-mode.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;I felt the need to refresh my understanding of CNN concepts, so I watched a couple of videos on the topic and revisited the ImageNet Classification with Deep Convolutional Neural Networks paper by Alex Krizhevsky, Ilya Sutskever, and Geoffrey Hinton.&lt;/p&gt;
 
@@ -395,14 +427,14 @@ To see the current state of the model visit:&lt;/p&gt;
 For example, the first model I’m building is a CNN (Convolutional Neural Network), so I researched what a CNN is and added the key details to my notebook. When working on the PyTorch models, I often refer to my notes in Org mode, which were created with the help of the PyTorch courses I took last year.
 This process helps me stay organized and ensures I’m well-prepared before I start coding!&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/notebook/notebook2.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
-&lt;img src=&quot;/assets/img/notebook/notebook3.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
-&lt;img src=&quot;/assets/img/notebook/notebook4.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
-&lt;img src=&quot;/assets/img/notebook/notebook5.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/notebook/notebook2.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/img/notebook/notebook3.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/img/notebook/notebook4.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/img/notebook/notebook5.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;The rover I’ll be using for this project is the Adeept Picar-B, which I built a few years ago with help from my dad. I want to take a moment to say that my dad has been an incredible support throughout my coding journey. He taught me how to code when I was younger, and without his guidance and encouragement, I wouldn’t be where I am today. So, a huge thank you to my dad!&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/ml-rover/rover.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/ml-rover/rover.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
 </description><description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello, and welcome! In this post, I’ll be sharing what I’m currently working on—the ML Rover. This project involves building AI models for my Mars rover (Adeept Picar-B), combining machine learning with robotics for an exciting challenge! We are now up to day so consider this the weekly post.&lt;/p&gt;
 </description><pubDate>Sun, 09 Mar 2025 00:00:00 +0100</pubDate>
         <link>http://localhost:4000/blog/ml-rover/</link>
@@ -418,34 +450,14 @@ Of course, Mindful was built for educational purposes, so its results aren’t p
 &lt;p&gt;For Mindful, I used Nebius to set up a virtual machine with an NVIDIA H100, as training the model would have been impossible without it. Initially, I had two fine-tuned models, but I later removed the second one. After troubleshooting and fixing a few frustrating bugs in the inference code, the model finally ran successfully for the first time.
 I then spent time testing and tweaking the parameters until I was satisfied with the responses. Here are some of the best (and funniest) results I got after experimenting for a while!&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/mindful/mindful1.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
-&lt;img src=&quot;/assets/img/mindful/mindful2.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
-&lt;img src=&quot;/assets/img/mindful/mindful3.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
-&lt;img src=&quot;/assets/img/mindful/mindful4.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
-&lt;img src=&quot;/assets/img/mindful/mindful5.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
-&lt;img src=&quot;/assets/img/mindful/mindful6.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/mindful/mindful1.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/img/mindful/mindful2.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/img/mindful/mindful3.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/img/mindful/mindful4.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/img/mindful/mindful5.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/img/mindful/mindful6.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 </description><description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello, and welcome! In this post, I’ll be explaining Mindful—the project I built for High Seas—and how four other Hack Club members helped me bring it to life.&lt;/p&gt;
 </description><pubDate>Sat, 08 Mar 2025 00:00:00 +0100</pubDate>
         <link>http://localhost:4000/blog/mindful/</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/mindful/</guid></item><item>
-        <title>High Seas</title>
-        <description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello, and welcome to a recap of what High Seas was and what happened during it. In this post, we’ll dive into what High Seas was all about. I’m still catching up with my blog posts, so consider this a look back as I work my way to the present.&lt;/p&gt;
-
-&lt;p&gt;To start, High Seas was another Hack Club activity, similar to Arcade, designed to get more young teens involved in coding. In High Seas, you installed a tool called Hackatime, which tracked your coding hours and connected to the High Seas website. Your project would then be matched against others with a similar number of hours, and they would “battle” by going up for votes. People would vote for their favorite project, and in return, they had to cast votes on 12 projects to see how many doubloons (High Seas’ currency) they earned. The better your project performed in the votes, the more doubloons you received.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://highseas.hackclub.com/&quot;&gt;Visit High Seas&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/high-seas/high-seas.jpg&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;/assets/img/hackatime/hackatime.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Both my brother and I worked on projects during High Seas, but balancing school made it more challenging since it took place during the winter. In the end, I logged 18 hours and earned around 200 doubloons—solid results overall. I’ll dive into what I worked on during this time in my next post, but for now, all you need to know is that my project was Mindful, an AI therapist. With my doubloons, I redeemed some GitHub keycaps for my keyboard and a logic analyzer.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/high-seas/coding-time.jpg&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;/assets/img/high-seas/keycaps.jpg&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;/assets/img/high-seas/logic-analizer.jpg&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;/assets/img/high-seas/k6-keycaps.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-</description><description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello, and welcome to a recap of what High Seas was and what happened during it. In this post, we’ll dive into what High Seas was all about. I’m still catching up with my blog posts, so consider this a look back as I work my way to the present.&lt;/p&gt;
-</description><pubDate>Sat, 08 Mar 2025 00:00:00 +0100</pubDate>
-        <link>http://localhost:4000/blog/high-seas/</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/high-seas/</guid></item></channel>
+        <guid isPermaLink="true">http://localhost:4000/blog/mindful/</guid></item></channel>
 </rss>
