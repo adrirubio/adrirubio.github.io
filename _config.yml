@@ -8,6 +8,7 @@ permalink: "blog/:title/"
 # Header Option
 # header: large
 
+future: true
 sass:
   style: compressed
 
