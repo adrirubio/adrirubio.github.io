@@ -5,8 +5,8 @@
     <description>This is my blog where I share my coding journey, my experiences, challenges, and discoveries in the ever-evolving world of programming.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 01 Jun 2025 17:21:08 +0200</pubDate>
-    <lastBuildDate>Sun, 01 Jun 2025 17:21:08 +0200</lastBuildDate>
+    <pubDate>Fri, 06 Jun 2025 18:48:02 +0200</pubDate>
+    <lastBuildDate>Fri, 06 Jun 2025 18:48:02 +0200</lastBuildDate>
     <generator>Jekyll v4.3.2</generator><item>
         <title>My AI PDF Reader: The Story of How (and Why) I Built It</title>
         <description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! In this post I&apos;m going to tell you the whole story of my AI PDF reader – like, how I built it and the reasons why. This project was a pretty wild ride with some tough challenges and fun wins, and seeing it finally work just how I wanted is awesome!&lt;/p&gt;
@@ -19,9 +19,16 @@
 
 &lt;p&gt;This was my very first desktop app using &lt;em&gt;Electron&lt;/em&gt;, so for some of the harder parts, I &lt;strong&gt;vibe coded&lt;/strong&gt; it – you know, working with an AI (Claude 3.7 via &lt;a href=&quot;https://www.cursor.com/&quot;&gt;Cursor&lt;/a&gt;) helping me along. I definitely used this chance to understand these frameworks better, and now they don’t seem as confusing as before! I also learned that &lt;em&gt;vibe coding&lt;/em&gt; isn’t as easy as it looks. You have to explain everything super clearly to the AI, and sometimes it would just get stuck, meaning I’d have to dive in and figure things out. Getting the UI to work was awesome! But sometimes trying to fix one tiny bug would just make a bunch of new ones pop up – so frustrating! Still, I learned a ton about &lt;em&gt;Electron,&lt;/em&gt; &lt;em&gt;npm&lt;/em&gt; and &lt;em&gt;JavaScript&lt;/em&gt;. I even got used to using Git branches, which was super helpful for trying new stuff without breaking everything. And when I had a stable version, I learned how to make GitHub Releases so people could actually download and use the app! Looking back it was a really great experience and I learned so much!&lt;/p&gt;
 
+&lt;div style=&quot;text-align: center; margin: 2em 0;&quot;&gt;
+  &lt;video controls=&quot;&quot; width=&quot;720&quot; style=&quot;max-width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);&quot;&gt;
+    &lt;source src=&quot;https://github.com/adrirubio/ai-pdf-reader-demo/raw/main/demo-ai-pdf-reader.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+    Your browser does not support the video tag.
+  &lt;/video&gt;
+&lt;/div&gt;
+
 &lt;p&gt;I really hope this can be a useful tool for students, researchers, or anyone who wants to read PDFs more efficiently.
-You can find the project, download the app, and see all the code on my GitHub page: &lt;a href=&quot;https://github.com/adrirubio/ai-pdf-reader&quot;&gt;AI PDF reader&lt;/a&gt;.&lt;br /&gt;
-    If you think it’s cool or useful, starring the project on GitHub would mean the world to me! It helps other people find it and really motivates me to keep building new things. I’d also love to hear what you think or if you have any ideas!&lt;/p&gt;
+You can find the project, download the app, and see all the code on my GitHub page: &lt;a href=&quot;https://github.com/adrirubio/ai-pdf-reader&quot;&gt;AI PDF reader&lt;/a&gt;&lt;br /&gt;
+If you think it’s cool or useful, starring the project on GitHub would mean the world to me! It helps other people find it and really motivates me to keep building new things. I’d also love to hear what you think or if you have any ideas!&lt;/p&gt;
 
 &lt;p&gt;Thanks for reading and checking out my project!&lt;/p&gt;
 </description><description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! In this post I&apos;m going to tell you the whole story of my AI PDF reader – like, how I built it and the reasons why. This project was a pretty wild ride with some tough challenges and fun wins, and seeing it finally work just how I wanted is awesome!&lt;/p&gt;
