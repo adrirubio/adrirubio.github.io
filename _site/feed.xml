@@ -5,9 +5,27 @@
     <description>This is my blog where I share my coding journey, my experiences, challenges, and discoveries in the ever-evolving world of programming.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 06 Jun 2025 18:48:02 +0200</pubDate>
-    <lastBuildDate>Fri, 06 Jun 2025 18:48:02 +0200</lastBuildDate>
+    <pubDate>Sun, 08 Jun 2025 17:00:00 +0200</pubDate>
+    <lastBuildDate>Sun, 08 Jun 2025 17:00:00 +0200</lastBuildDate>
     <generator>Jekyll v4.3.2</generator><item>
+        <title>Starting Architext-AI</title>
+        <description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! In this post, I wrapped up the AI PDF Reader by releasing a Windows version and started my next project — an AI writing assistant called Architext-AI.&lt;/p&gt;
+
+&lt;p&gt;I started the week by creating a demo video for the AI PDF Reader, which is now embedded in  &lt;a href=&quot;https://adrianrubio.org/blog/my-ai-pdf-reader-how-and-why-I-build-it/&quot;&gt;last week’s blog post.&lt;/a&gt; I’m really happy with how the final version turned out. To wrap up the project, I released a Windows version and improved the README.
+Hopefully, the AI PDF Reader can gain some traction, as my dad and I will be sharing it across various social media platforms. Our goal is to reach 150 stars on GitHub.&lt;/p&gt;
+
+&lt;p&gt;Next, I began brainstorming ideas for my next project. With some help from my dad, we came up with a simple Python program: using a predefined command, you can open a small window where write your message, and the AI will enhance it for you—improving clarity and overall quality. I think it would be something everyone would use.&lt;/p&gt;
+
+&lt;p&gt;Yesterday, I got started on the project. I planned out the structure and chose &lt;a href=&quot;https://docs.python.org/3/library/tkinter.html&quot;&gt;Tkinter&lt;/a&gt; for the GUI and the &lt;a href=&quot;https://openai.github.io/openai-agents-python/&quot;&gt;OpenAI SDK&lt;/a&gt; for the AI capabilites. I set up all the necessary files, and now I’m focusing on building the Python GUI. Hopefully, by next week, I’ll have something that looks good and works smoothly.&lt;/p&gt;
+
+&lt;p&gt;This post documents the state of Architext-AI as of June 8, 2025&lt;br /&gt;
+To see the current state of the pdf reader visit:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/adrirubio/architext-ai&quot;&gt;architext-ai github&lt;/a&gt;&lt;/p&gt;
+</description><description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! In this post, I wrapped up the AI PDF Reader by releasing a Windows version and started my next project — an AI writing assistant called Architext-AI.&lt;/p&gt;
+</description><pubDate>Sun, 08 Jun 2025 00:00:00 +0200</pubDate>
+        <link>http://localhost:4000/blog/starting-architext-ai/</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/starting-architext-ai/</guid></item><item>
         <title>My AI PDF Reader: The Story of How (and Why) I Built It</title>
         <description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! In this post I&apos;m going to tell you the whole story of my AI PDF reader – like, how I built it and the reasons why. This project was a pretty wild ride with some tough challenges and fun wins, and seeing it finally work just how I wanted is awesome!&lt;/p&gt;
 
@@ -442,28 +460,5 @@ To see the current state of the model visit:&lt;/p&gt;
 </description><description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello, and welcome! This week, I wrapped up work on the blog and began working on the ML-Rover project.&lt;/p&gt;
 </description><pubDate>Sun, 16 Mar 2025 00:00:00 +0100</pubDate>
         <link>http://localhost:4000/blog/starting-with-CNNs/</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/starting-with-CNNs/</guid></item><item>
-        <title>ML-Rover</title>
-        <description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello, and welcome! In this post, I’ll be sharing what I’m currently working on—the ML Rover. This project involves building AI models for my Mars rover (Adeept Picar-B), combining machine learning with robotics for an exciting challenge! We are now up to day so consider this the weekly post.&lt;/p&gt;
-
-&lt;p&gt;As of writing this post, the AI models for my Adeept Picar-B are still a work in progress—I only recently started working on them after finishing Mindful just a few days ago. Before diving into a new model, I like to take a methodical approach. I keep a small notebook where I jot down notes on various types of AI models.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/adrirubio/ml-rover&quot;&gt;Visit the ml-rover&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Before starting a new project, I usually research the model, add relevant information to my notebook, and, if necessary, revisit my existing notes. Sometimes I already have a solid foundation, but I’ll often dig deeper to get a better understanding and add new insights. This way, when I begin building the model, I’m not starting from scratch and have a clearer idea of what I’m doing.
-For example, the first model I’m building is a CNN (Convolutional Neural Network), so I researched what a CNN is and added the key details to my notebook. When working on the PyTorch models, I often refer to my notes in Org mode, which were created with the help of the PyTorch courses I took last year.
-This process helps me stay organized and ensures I’m well-prepared before I start coding!&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/notebook/notebook2.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
-&lt;img src=&quot;/assets/img/notebook/notebook3.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
-&lt;img src=&quot;/assets/img/notebook/notebook4.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
-&lt;img src=&quot;/assets/img/notebook/notebook5.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;The rover I’ll be using for this project is the Adeept Picar-B, which I built a few years ago with help from my dad. I want to take a moment to say that my dad has been an incredible support throughout my coding journey. He taught me how to code when I was younger, and without his guidance and encouragement, I wouldn’t be where I am today. So, a huge thank you to my dad!&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/ml-rover/rover.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
-</description><description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello, and welcome! In this post, I’ll be sharing what I’m currently working on—the ML Rover. This project involves building AI models for my Mars rover (Adeept Picar-B), combining machine learning with robotics for an exciting challenge! We are now up to day so consider this the weekly post.&lt;/p&gt;
-</description><pubDate>Sun, 09 Mar 2025 00:00:00 +0100</pubDate>
-        <link>http://localhost:4000/blog/ml-rover/</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/ml-rover/</guid></item></channel>
+        <guid isPermaLink="true">http://localhost:4000/blog/starting-with-CNNs/</guid></item></channel>
 </rss>
