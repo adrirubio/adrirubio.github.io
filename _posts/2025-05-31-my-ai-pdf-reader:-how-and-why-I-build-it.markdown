@@ -16,7 +16,7 @@ This was my very first desktop app using <em>Electron</em>, so for some of the h
 
 <div style="text-align: center; margin: 2em 0;">
   <video controls width="720" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-    <source src="https://github.com/adrirubio/ai-pdf-reader-demo/raw/main/demo-ai-pdf-reader.mp4" type="video/mp4">
+    <source src="https://github.com/adrirubio/ai-pdf-reader-demo/raw/main/ai-pdf-reader-demo.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 </div>

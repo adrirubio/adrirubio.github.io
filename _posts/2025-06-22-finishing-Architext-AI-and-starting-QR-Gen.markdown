@@ -18,7 +18,7 @@ As I mentioned last week, Architext-AI is a straightforward message enhancer fea
 Architext-AI Demo:
 <div style="text-align: center; margin: 2em 0;">
   <video controls width="720" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-    <source src="https://github.com/adrirubio/architext-ai/raw/main/demo-architext-ai.mp4" type="video/webm">
+    <source src="https://github.com/adrirubio/architext-ai/raw/main/architext-ai-demo.mp4" type="video/webm">
     Your browser does not support the video tag.
   </video>
 </div>
