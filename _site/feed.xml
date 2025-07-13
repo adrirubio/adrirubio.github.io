@@ -5,9 +5,39 @@
     <description>This is my blog where I share my coding journey, my experiences, challenges, and discoveries in the ever-evolving world of programming.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 06 Jul 2025 16:27:57 +0200</pubDate>
-    <lastBuildDate>Sun, 06 Jul 2025 16:27:57 +0200</lastBuildDate>
+    <pubDate>Sun, 13 Jul 2025 13:13:49 +0200</pubDate>
+    <lastBuildDate>Sun, 13 Jul 2025 13:13:49 +0200</lastBuildDate>
     <generator>Jekyll v4.3.2</generator><item>
+        <title>Retro Snake Game</title>
+        <description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! This week, there was a change of plans. Instead of starting with the Arduino kit, I decided to complete one more project for Shipwrecked: a Retro Snake Game.&lt;/p&gt;
+
+&lt;p&gt;The change of plans happened because the flight cost €500 per person, and since my dad, my brother, and I were all going, the total would have been around €1,500, which is quite a lot. So, I decided to do one last project before diving into the Arduino: a Retro Snake Game!&lt;/p&gt;
+
+&lt;p&gt;Before I get into the details of my Snake Game, you might be wondering: why was my brother also coming to Boston? Was he also working on Shipwrecked? Well, no, he was working toward something similar called Neighborhood, where, if you complete a working app in 100 Hackatime hours, you earn a chance to go to San Francisco for as long as you want. You get to stay in houses with people your age. Neighborhood was designed for 16, 17, and 18 year-olds. The only catch? You had to code at least 40 hours a week to stay in SF.&lt;/p&gt;
+
+&lt;p&gt;The plan was for him to go from Boston to Neighborhood. The only problem? Well, Neighborhood was cancelled because too many teenagers met the requirements, and there weren’t enough houses to accommodate them all. In the end, the situation wasn’t ideal for the participants, and the best course of action was to cancel the program.&lt;/p&gt;
+
+&lt;p&gt;Since my brother already had a flight booked to Boston, he’s now looking for alternatives, possibly trying to go for Shipwrecked instead. He had completed 45 out of the 100 required Hackatime hours for Neighborhood, but with the program canceled, he doesn’t have much motivation.&lt;/p&gt;
+
+&lt;p&gt;I decided to do one more project because, for every hour you complete beyond the required 60 hours across four projects, you earn €10 toward your flight cost. To get those extra hours, I chose to build a Retro Snake Game. I spent the whole week working on it and only finished it yesterday. I logged 13 hours in total, which adds up to €130, though it still needs to be reviewed and accepted on the Shipwrecked page. Currently I have €32 from the little bits of hours from the other four projects. If I get my retro snake game accepted it would total to €162.&lt;/p&gt;
+
+&lt;p&gt;Retro Snake Game Demo:&lt;/p&gt;
+&lt;div style=&quot;text-align: center; margin: 2em 0;&quot;&gt;
+  &lt;video controls=&quot;&quot; width=&quot;720&quot; style=&quot;max-width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);&quot;&gt;
+    &lt;source src=&quot;https://github.com/adrirubio/ai-pdf-reader-demo/raw/main/retro-snake-game-demo.mp4&quot; type=&quot;video/webm&quot; /&gt;
+    Your browser does not support the video tag.
+  &lt;/video&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/adrirubio/retro-snake-game/&quot;&gt;retro-snake-game github&lt;/a&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://pypi.org/project/retro-snake-game/&quot;&gt;retro-snake-game-pypi&lt;/a&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Over the next few weeks before Shipwrecked, I plan to focus on the Arduino kit. I’m also hoping to earn a bit more toward our flights, since Hackatime is compatible with KiCad, which means I can track hours spent on electronics projects for Shipwrecked. As I mentioned last week, I’ve got some great ideas that I can’t wait to get into.&lt;/p&gt;
+</description><description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! This week, there was a change of plans. Instead of starting with the Arduino kit, I decided to complete one more project for Shipwrecked: a Retro Snake Game.&lt;/p&gt;
+</description><pubDate>Sat, 12 Jul 2025 00:00:00 +0200</pubDate>
+        <link>http://localhost:4000/blog/retro-snake-game/</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/retro-snake-game/</guid></item><item>
         <title>Shipwrecked Invitation</title>
         <description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! The past two weeks have been a rollercoaster, but I’m proud to say that I’ve successfully completed 30 hours of work and built two full projects. All of my projects have been accepted, and I’m officially invited to Hack Club Shipwrecked!&lt;/p&gt;
 
@@ -450,35 +480,5 @@ To see the current state of the model visit:&lt;/p&gt;
 </description><description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! This week, I completed the model and began the debugging process, which involved making numerous changes across the entire system. After that, I kicked off the first full training run, made some adjustments based on the results, and retrained the model. So far, the results are looking very promising!&lt;/p&gt;
 </description><pubDate>Sun, 06 Apr 2025 00:00:00 +0200</pubDate>
         <link>http://localhost:4000/blog/finishing-model-and-training/</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/finishing-model-and-training/</guid></item><item>
-        <title>SSD Loss and Training Loop</title>
-        <description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello, and welcome! This week, I made significant progress on the SSD object detection model, nearly completing it by implementing the loss function, training loop, loss plotting, and model saving.&lt;/p&gt;
-
-&lt;p&gt;Last week, I completed the model definition. This week, I focused on building the loss function, which calculates the bounding box offset, as well as the training loop which is where the model learns. Additionally, I worked on smaller components such as the optimizer, loss plotting, and model saving.&lt;/p&gt;
-
-&lt;p&gt;First, I instantiated the model we defined last week and began working on the loss function. The box_iou function calculates the Intersection over Union (IoU) between two sets of bounding boxes to determine their overlap. The encode_boxes function converts ground truth box coordinates into a format relative to default anchor boxes, improving the model’s learning process. Finally, the SSD_loss class defines the loss function, combining Smooth L1 loss for localization and Cross-Entropy loss for classification while balancing positive and negative samples for stable training. The loss function’s goal is to evaluate how well the predicted bounding boxes and class probabilities align with the ground truth, guiding the model toward greater accuracy.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/ssd/box-iou-encoder.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
-&lt;img src=&quot;/assets/img/ssd/SSD-loss.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;Next, I initialized the SSD loss function and froze the first 10 layers of the VGG backbone to preserve low-level feature extraction, prevent overfitting, and speed up training by focusing updates on the higher layers that learn task-specific features. Additionally, I defined the Adam optimizer with a lower learning rate for the first and second convolution layers of the backbone to ensure more stable and gradual updates in the early feature extraction stages.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/ssd/SSD-freezing-layers-and-optimizer.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;Now, it was time for the actual training loop. The loop processes batches of images, computes the loss using the SSDLoss function, backpropagates gradients, and updates the model parameters using the optimizer. After each epoch, it evaluates the model on the validation set without updating weights, records the average training and validation losses, and prints the epoch’s performance metrics. The goal is to optimize the model’s parameters by minimizing training loss while tracking validation performance to ensure generalization.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/ssd/SSD-training-loop.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;Finally, I added basic loss plotting to visualize the learning curve, along with code to save the trained model. I also conducted several debugging sessions to refine and improve various aspects of the code.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/ssd/SSD-loss-plotting-and-model-saving.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;This post documents the state of the SSD model as of March 30, 2025.&lt;br /&gt;
-To see the current state of the model visit:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/adrirubio/ml-rover/blob/main/ssd/ssd-object-detection.py&quot;&gt;SSD object detection model&lt;/a&gt;&lt;/p&gt;
-</description><description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello, and welcome! This week, I made significant progress on the SSD object detection model, nearly completing it by implementing the loss function, training loop, loss plotting, and model saving.&lt;/p&gt;
-</description><pubDate>Sun, 30 Mar 2025 00:00:00 +0100</pubDate>
-        <link>http://localhost:4000/blog/SSD-loss-and-training-loop/</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/SSD-loss-and-training-loop/</guid></item></channel>
+        <guid isPermaLink="true">http://localhost:4000/blog/finishing-model-and-training/</guid></item></channel>
 </rss>
