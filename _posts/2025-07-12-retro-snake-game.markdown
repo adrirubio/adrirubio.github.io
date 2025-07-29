@@ -28,4 +28,4 @@ Retro Snake Game Demo:
 
 <a href="https://pypi.org/project/retro-snake-game/">retro-snake-game-pypi</a><br>
 
-Over the next few weeks before Shipwrecked, I plan to focus on the Arduino kit. I’m also hoping to earn a bit more toward our flights, since Hackatime is compatible with KiCad, which means I can track hours spent on electronics projects for Shipwrecked. As I mentioned last week, I’ve got some great ideas that I can't wait to get into.
+Over the next few weeks before Shipwrecked, I plan to focus on the Arduino kit. I’m also hoping to earn a bit more toward our flights, since Hackatime is compatible with the Arduino IDE, which means I can track hours spent on electronics projects for Shipwrecked. As I mentioned last week, I’ve got some great ideas that I can't wait to get into.

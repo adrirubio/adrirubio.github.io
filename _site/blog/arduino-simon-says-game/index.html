@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]--><head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description" content="" />
+	<title>Arduino Simon Says Game</title>
+
+	<!-- Open Graph Meta -->
+	<meta content="Adrian Rubio" property="og:site_name" /><meta content="Arduino Simon Says Game" property="og:title" /><meta content="article" property="og:type" /><meta content="This is my blog where I share my coding journey, my experiences, challenges, and discoveries in the ever-evolving world of programming." property="og:description" /><meta content="http://localhost:4000/blog/arduino-simon-says-game/" property="og:url" /><meta
+		content="2025-07-29T00:00:00+02:00"
+		property="article:published_time"
+	/>
+	<meta content="http://localhost:4000/about/" property="article:author" /><meta
+		content="http://localhost:4000/assets/img/touring.jpg"
+		property="og:image"
+	/><!-- Twitter Cards -->
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@" />
+	<meta name="twitter:creator" content="@" /><meta name="twitter:title" content="Arduino Simon Says Game" /><meta name="twitter:url" content="http://localhost:4000/blog/arduino-simon-says-game/" /><meta name="twitter:description" content="This is my blog where I share my coding journey, my experiences, challenges, and discoveries in the ever-evolving world of programming." /><meta
+		name="twitter:image:src"
+		content="http://localhost:4000/assets/img/touring.jpg"
+	/><!-- Favicon --><link rel="stylesheet" href="/assets/css/style.css" />
+
+	<link rel="icon" type="image/x-icon" href=""/>
+
+	<!-- Come and get me RSS readers -->
+	<link rel="alternate" type="application/rss+xml" title="Adrian Rubio"
+	href="http://localhost:4000/feed.xml" />
+
+	<!-- Stylesheet -->
+	<link rel="stylesheet" href="/assets/css/style.css" />
+	
+	<!-- Canonical URL -->
+	<link
+		rel="canonical"
+		href="http://localhost:4000/blog/arduino-simon-says-game/"
+	/><!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script>
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-58263416-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+</head>
+<body> <div class="header ">
+     <div class="container">
+         <h1 class="logo"><a href="/">Adrian Rubio</a></h1>
+         <nav class="nav-collapse">
+             <ul class="noList"><li class="elementfirst">
+                     <a href="/index.html">Home</a>
+                 </li><li class="element">
+                     <a href="/about">About</a>
+                 </li><li class="elementlast">
+                     <a href="/contact">Contact</a>
+                 </li><li> <a href="https://github.com/adrirubio" target="_blank">GitHub</a></li>
+             </ul>
+         </nav>
+     </div>
+ </div><!-- end .header -->
+<div class="content">
+      <div class="container">
+         <article class="post"><header>
+    <h1 class="postTitle">Arduino Simon Says Game</h1>
+    <p class="meta">July 29, 2025 | <span class="time">3</span> Minute Read</p>
+  </header>
+
+  <p class="intro"><span class="dropcap">H</span>ello and welcome! Over the past two weeks, I began working with the Arduino kit, completed several projects from the book, and even created my own project that contributes to the Boston flight stipend!</p>
+
+<p>It didn’t take long for me to get absorbed in the world of electronics. I started watching videos on voltage, current, resistors, LEDs, and more. I quickly got familiar with the kit, installed the Arduino IDE, and added Hackatime to track my hours. Before I knew it, I was already working on the first project from the guidebook.</p>
+
+<p>The first project involved simply connecting one and then two LEDs, so I quickly moved on to the second one, which was wiring three LEDs to a pushbutton. This project gave me a basic but valuable understanding of how C++ and Arduino code work. I completed it soon after and was happy with the result.</p>
+
+<p><img src="/assets/img/arduino/arduino-book-project-1.jpg" alt="" /><br /></p>
+
+<p>The third project used a temperature sensor to measure the temperature of one of your fingers. The last project I worked on was the fourth, as the projects became more time consuming and I needed to focus on logging hours toward the flight cost. But I made sure to read through the remaining projects so I can better understand them moving forward. The fourth project involved three phototransistors, each designed to detect a color: red, green, or blue. These were connected to an RGB LED, which mixed the colors and displayed the result using some simple code.</p>
+
+<p><img src="/assets/img/arduino/arduino-book-project-2.jpg" alt="" /><br /></p>
+
+<p>Once I had finished working with the guidebook, I decided to start one of the projects I had in mind: an Arduino Simon Says game. I began building it in Tinkercad but wrote the code in the Arduino IDE so it would count toward Shipwrecked. It took me about three days to complete the breadboarding and get the code working within the Tinkercad simulations. Once I was happy with the design and functionality, I built the physical version, which was up and running within a day. I made some small changes to the code at that stage, but nothing too big.</p>
+
+<p><img src="/assets/img/arduino/wiring-diagram.png" alt="" /><br /></p>
+
+<p>Once I was happy with the result, I began working on a demo video, since hardware projects especially require one to be accepted. I took plenty of video clips and screencasts, recorded audio, and even found a song in the YouTube Music Library. In a day or two, I had put together a demo video that I am quite happy with.</p>
+
+<p>Arduino Simon Says Demo:</p>
+<div style="text-align: center; margin: 2em 0;">
+  <video controls="" width="720" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+    <source src="https://github.com/adrirubio/arduino-simon-says/raw/refs/heads/main/my-build/demos/arduino-simon-says-demo.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+<p>Next, I put together the README, added the finishing touches to the repo, and submitted the project for review. If it gets accepted, it would contribute to a grand total of 214 dollars, which is not bad.</p>
+
+<p><img src="/assets/img/arduino/simon-up-for-review.png" alt="" /><br /></p>
+
+<p>Next week, I plan to build a small project similar to this one, and then I’ll be off to Shipwrecked.
+Also, feel free to check the GitHub repo out and read the README for more information on the project!</p>
+
+<p><a href="https://github.com/adrirubio/arduino-simon-says">Arduino Simon Says</a><br /></p>
+
+<p><img src="/assets/img/arduino/arduino-simon-says-pic.jpg" alt="" /><br /></p>
+
+
+  <!-- POST NAVIGATION -->
+  <footer class="postNav clearfix"><a class="prev" href="/blog/retro-snake-game/"><span>&laquo;&nbsp;Retro Snake Game</span></a></footer>
+</article>
+      </div>
+   </div><!-- end .content --><div class="footer">
+	<div class="container">
+		<p class="copy">
+			&copy; 2025
+			<a </a> Powered by
+			<a href="http://jekyllrb.com">Jekyll</a>
+		</p>
+
+		<div class="footer-links">
+			<ul class="noList"><li>
+	<a href="https://github.com/adrirubio" target="_blank">
+		<svg
+			id="github"
+			class="custom-icon"
+			version="1.1"
+			xmlns="http://www.w3.org/2000/svg"
+			xmlns:xlink="http://www.w3.org/1999/xlink"
+			viewBox="0 0 100 100"
+			style="height: 30px; width: 30px;"
+		>
+			<circle
+				class="outer-shape"
+				cx="50"
+				cy="50"
+				r="48"
+				style="opacity: 1;"
+			></circle>
+			<path
+				class="inner-shape"
+				style="opacity: 1;"
+				transform="translate(25,25) scale(0.5)"
+				d="M50,1C22.938,1,1,22.938,1,50s21.938,49,49,49s49-21.938,49-49S77.062,1,50,1z M79.099,79.099 c-3.782,3.782-8.184,6.75-13.083,8.823c-1.245,0.526-2.509,0.989-3.79,1.387v-7.344c0-3.86-1.324-6.699-3.972-8.517 c1.659-0.16,3.182-0.383,4.57-0.67c1.388-0.287,2.855-0.702,4.402-1.245c1.547-0.543,2.935-1.189,4.163-1.938 c1.228-0.75,2.409-1.723,3.541-2.919s2.082-2.552,2.847-4.067s1.372-3.334,1.818-5.455c0.446-2.121,0.67-4.458,0.67-7.01 c0-4.945-1.611-9.155-4.833-12.633c1.467-3.828,1.308-7.991-0.478-12.489l-1.197-0.143c-0.829-0.096-2.321,0.255-4.474,1.053 c-2.153,0.798-4.57,2.105-7.249,3.924c-3.797-1.053-7.736-1.579-11.82-1.579c-4.115,0-8.039,0.526-11.772,1.579 c-1.69-1.149-3.294-2.097-4.809-2.847c-1.515-0.75-2.727-1.26-3.637-1.532c-0.909-0.271-1.754-0.439-2.536-0.503 c-0.782-0.064-1.284-0.079-1.507-0.048c-0.223,0.031-0.383,0.064-0.478,0.096c-1.787,4.53-1.946,8.694-0.478,12.489 c-3.222,3.477-4.833,7.688-4.833,12.633c0,2.552,0.223,4.889,0.67,7.01c0.447,2.121,1.053,3.94,1.818,5.455 c0.765,1.515,1.715,2.871,2.847,4.067s2.313,2.169,3.541,2.919c1.228,0.751,2.616,1.396,4.163,1.938 c1.547,0.543,3.014,0.957,4.402,1.245c1.388,0.287,2.911,0.511,4.57,0.67c-2.616,1.787-3.924,4.626-3.924,8.517v7.487 c-1.445-0.43-2.869-0.938-4.268-1.53c-4.899-2.073-9.301-5.041-13.083-8.823c-3.782-3.782-6.75-8.184-8.823-13.083 C9.934,60.948,8.847,55.56,8.847,50s1.087-10.948,3.231-16.016c2.073-4.899,5.041-9.301,8.823-13.083s8.184-6.75,13.083-8.823 C39.052,9.934,44.44,8.847,50,8.847s10.948,1.087,16.016,3.231c4.9,2.073,9.301,5.041,13.083,8.823 c3.782,3.782,6.75,8.184,8.823,13.083c2.143,5.069,3.23,10.457,3.23,16.016s-1.087,10.948-3.231,16.016 C85.848,70.915,82.88,75.317,79.099,79.099L79.099,79.099z"
+			></path>
+		</svg>
+	</a>
+</li>
+<li>
+	<a href="mailto:adrian.rubio.punal@gmail.com" target="_blank">
+		<svg
+			id="mail"
+			class="custom-icon"
+			version="1.1"
+			xmlns="http://www.w3.org/2000/svg"
+			xmlns:xlink="http://www.w3.org/1999/xlink"
+			viewBox="0 0 100 100"
+			style="height: 30px; width: 30px;"
+		>
+			<circle
+				class="outer-shape"
+				cx="50"
+				cy="50"
+				r="48"
+				style="opacity: 1;"
+			></circle>
+			<path
+				class="inner-shape"
+				style="opacity: 1;"
+				transform="translate(25,25) scale(0.5)"
+				d="M50,1C22.938,1,1,22.938,1,50s21.938,49,49,49s49-21.938,49-49S77.062,1,50,1z M25.5,25.5h49 c0.874,0,1.723,0.188,2.502,0.542L50,57.544L22.998,26.041C23.777,25.687,24.626,25.499,25.5,25.5L25.5,25.5z M19.375,68.375v-36.75 c0-0.128,0.005-0.256,0.014-0.383l17.96,20.953L19.587,69.958C19.448,69.447,19.376,68.916,19.375,68.375L19.375,68.375z M74.5,74.5 h-49c-0.541,0-1.072-0.073-1.583-0.212l17.429-17.429L50,66.956l8.653-10.096l17.429,17.429C75.572,74.427,75.041,74.5,74.5,74.5 L74.5,74.5z M80.625,68.375c0,0.541-0.073,1.072-0.211,1.583L62.652,52.195l17.96-20.953c0.008,0.127,0.014,0.255,0.014,0.383 L80.625,68.375L80.625,68.375z"
+			></path>
+		</svg>
+	</a>
+</li>
+</ul>
+		</div>
+	</div>
+</div>
+<!-- end .footer -->
+<!-- Add jQuery and other scripts -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src=/assets/js/jquery-1.11.2.min.js><\/script>')</script>
+<script src="/assets/js/dropcap.min.js"></script>
+<script src="/assets/js/responsive-nav.min.js"></script>
+<script src="/assets/js/scripts.js"></script>
+</body>
+
+</html>

@@ -27,7 +27,7 @@ So far, I’ve spent about 14 hours on the project. Once I finish implementing t
 <img src="/assets/img/shipwrecked/23.png" alt=""><br>
 
 This post documents the state of the AI pdf reader as of May 18, 2025<br>
-To see the current state of the pdf reader visit:
+To see the current state of the ai pdf reader visit:
 
 <a href="https://github.com/adrirubio/ai-pdf-reader">AI pdf reader github</a>
 

@@ -41,6 +41,6 @@ I have 20 hours of work to complete in the next six days to secure a guaranteed 
 I'm looking forward to sharing my journey and the final results of the QR-Gen project next week, along with my next project!
 
 This post documents the state of the QR-Gen as of July 22, 2025<br>
-To see the current state of the model visit:
+To see the current state of the project visit:
 
 <a href="https://github.com/adrirubio/qr-gen">qr-gen github</a>

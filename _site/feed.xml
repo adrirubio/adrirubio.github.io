@@ -5,9 +5,50 @@
     <description>This is my blog where I share my coding journey, my experiences, challenges, and discoveries in the ever-evolving world of programming.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 13 Jul 2025 13:13:49 +0200</pubDate>
-    <lastBuildDate>Sun, 13 Jul 2025 13:13:49 +0200</lastBuildDate>
+    <pubDate>Tue, 29 Jul 2025 22:47:56 +0200</pubDate>
+    <lastBuildDate>Tue, 29 Jul 2025 22:47:56 +0200</lastBuildDate>
     <generator>Jekyll v4.3.2</generator><item>
+        <title>Arduino Simon Says Game</title>
+        <description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! Over the past two weeks, I began working with the Arduino kit, completed several projects from the book, and even created my own project that contributes to the Boston flight stipend!&lt;/p&gt;
+
+&lt;p&gt;It didn’t take long for me to get absorbed in the world of electronics. I started watching videos on voltage, current, resistors, LEDs, and more. I quickly got familiar with the kit, installed the Arduino IDE, and added Hackatime to track my hours. Before I knew it, I was already working on the first project from the guidebook.&lt;/p&gt;
+
+&lt;p&gt;The first project involved simply connecting one and then two LEDs, so I quickly moved on to the second one, which was wiring three LEDs to a pushbutton. This project gave me a basic but valuable understanding of how C++ and Arduino code work. I completed it soon after and was happy with the result.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/arduino/arduino-book-project-1.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;The third project used a temperature sensor to measure the temperature of one of your fingers. The last project I worked on was the fourth, as the projects became more time consuming and I needed to focus on logging hours toward the flight cost. But I made sure to read through the remaining projects so I can better understand them moving forward. The fourth project involved three phototransistors, each designed to detect a color: red, green, or blue. These were connected to an RGB LED, which mixed the colors and displayed the result using some simple code.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/arduino/arduino-book-project-2.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Once I had finished working with the guidebook, I decided to start one of the projects I had in mind: an Arduino Simon Says game. I began building it in Tinkercad but wrote the code in the Arduino IDE so it would count toward Shipwrecked. It took me about three days to complete the breadboarding and get the code working within the Tinkercad simulations. Once I was happy with the design and functionality, I built the physical version, which was up and running within a day. I made some small changes to the code at that stage, but nothing too big.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/arduino/wiring-diagram.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Once I was happy with the result, I began working on a demo video, since hardware projects especially require one to be accepted. I took plenty of video clips and screencasts, recorded audio, and even found a song in the YouTube Music Library. In a day or two, I had put together a demo video that I am quite happy with.&lt;/p&gt;
+
+&lt;p&gt;Arduino Simon Says Demo:&lt;/p&gt;
+&lt;div style=&quot;text-align: center; margin: 2em 0;&quot;&gt;
+  &lt;video controls=&quot;&quot; width=&quot;720&quot; style=&quot;max-width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);&quot;&gt;
+    &lt;source src=&quot;https://github.com/adrirubio/arduino-simon-says/raw/refs/heads/main/my-build/demos/arduino-simon-says-demo.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+    Your browser does not support the video tag.
+  &lt;/video&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Next, I put together the README, added the finishing touches to the repo, and submitted the project for review. If it gets accepted, it would contribute to a grand total of 214 dollars, which is not bad.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/arduino/simon-up-for-review.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Next week, I plan to build a small project similar to this one, and then I’ll be off to Shipwrecked.
+Also, feel free to check the GitHub repo out and read the README for more information on the project!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/adrirubio/arduino-simon-says&quot;&gt;Arduino Simon Says&lt;/a&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/arduino/arduino-simon-says-pic.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+</description><description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! Over the past two weeks, I began working with the Arduino kit, completed several projects from the book, and even created my own project that contributes to the Boston flight stipend!&lt;/p&gt;
+</description><pubDate>Tue, 29 Jul 2025 00:00:00 +0200</pubDate>
+        <link>http://localhost:4000/blog/arduino-simon-says-game/</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/arduino-simon-says-game/</guid></item><item>
         <title>Retro Snake Game</title>
         <description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! This week, there was a change of plans. Instead of starting with the Arduino kit, I decided to complete one more project for Shipwrecked: a Retro Snake Game.&lt;/p&gt;
 
@@ -33,7 +74,7 @@
 
 &lt;p&gt;&lt;a href=&quot;https://pypi.org/project/retro-snake-game/&quot;&gt;retro-snake-game-pypi&lt;/a&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;Over the next few weeks before Shipwrecked, I plan to focus on the Arduino kit. I’m also hoping to earn a bit more toward our flights, since Hackatime is compatible with KiCad, which means I can track hours spent on electronics projects for Shipwrecked. As I mentioned last week, I’ve got some great ideas that I can’t wait to get into.&lt;/p&gt;
+&lt;p&gt;Over the next few weeks before Shipwrecked, I plan to focus on the Arduino kit. I’m also hoping to earn a bit more toward our flights, since Hackatime is compatible with the Arduino IDE, which means I can track hours spent on electronics projects for Shipwrecked. As I mentioned last week, I’ve got some great ideas that I can’t wait to get into.&lt;/p&gt;
 </description><description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! This week, there was a change of plans. Instead of starting with the Arduino kit, I decided to complete one more project for Shipwrecked: a Retro Snake Game.&lt;/p&gt;
 </description><pubDate>Sat, 12 Jul 2025 00:00:00 +0200</pubDate>
         <link>http://localhost:4000/blog/retro-snake-game/</link>
@@ -127,7 +168,7 @@ You have until Sunday night to ship all your projects in The Bay to have your vi
 &lt;p&gt;I’m looking forward to sharing my journey and the final results of the QR-Gen project next week, along with my next project!&lt;/p&gt;
 
 &lt;p&gt;This post documents the state of the QR-Gen as of July 22, 2025&lt;br /&gt;
-To see the current state of the model visit:&lt;/p&gt;
+To see the current state of the project visit:&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://github.com/adrirubio/qr-gen&quot;&gt;qr-gen github&lt;/a&gt;&lt;/p&gt;
 </description><description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! In this post, I&apos;ll take talk about the latest two weeks of my Shipwrecked adventure. From striving to hit 150 stars to receiving a message that changes it all!&lt;/p&gt;
@@ -203,7 +244,7 @@ Here is a quick look at what’s changed from where we left off to this week:&lt
 &lt;p&gt;&lt;img src=&quot;/assets/img/shipwrecked/23.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;This post documents the state of the AI pdf reader as of May 18, 2025&lt;br /&gt;
-To see the current state of the pdf reader visit:&lt;/p&gt;
+To see the current state of the ai pdf reader visit:&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://github.com/adrirubio/ai-pdf-reader&quot;&gt;AI pdf reader github&lt;/a&gt;&lt;/p&gt;
 
@@ -365,120 +406,5 @@ To see the current state of the model visit:&lt;/p&gt;
 </description><description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! This week, I focused on deepening my understanding of last week’s model by creating inference code and making further improvements. The final results are looking even more promising than before!&lt;/p&gt;
 </description><pubDate>Sun, 13 Apr 2025 00:00:00 +0200</pubDate>
         <link>http://localhost:4000/blog/finalizing-ssd-model-and-training/</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/finalizing-ssd-model-and-training/</guid></item><item>
-        <title>Finishing SSD Model and Training</title>
-        <description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! This week, I completed the model and began the debugging process, which involved making numerous changes across the entire system. After that, I kicked off the first full training run, made some adjustments based on the results, and retrained the model. So far, the results are looking very promising!&lt;/p&gt;
-
-&lt;p&gt;During the debugging phase, the model underwent significant changes. I removed the Pascal VOC dataset that was previously loaded from Hugging Face and instead downloaded the original 2007 Pascal VOC dataset directly to the VM (I’ll explain what the VM is and its role later). I also enhanced the data transformations applied to the datasets by adding augmentations like random shadows, Gaussian noise, and Gaussian blur. These improvements aim to boost training performance and model generalization.&lt;/p&gt;
-
-&lt;p&gt;I adjusted the feature map sizes from [38, 19, 10, 5, 3, 1] to [37, 18, 18, 9, 5, 2] to better balance spatial resolution and receptive fields. Additionally, I modified the VGG backbone: it now uses the full VGG16 feature extractor up to layer 23, then continues from layer 30, aligning more closely with the original SSD architecture. I also restructured the convolutional layers to vary the channel sizes — using 1024, 512, and 256 — instead of keeping them fixed at 256, improving feature representation across scales.&lt;/p&gt;
-
-&lt;p&gt;The loss function remains largely the same, but I introduced checks for empty ground truth boxes and improved the handling of edge cases for increased robustness. The training loop was also enhanced to support early stopping, model checkpointing, and training visualization. Finally, a number of smaller refinements were made throughout the process to get the model fully ready for training.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/adrirubio/ml-rover/tree/6e5d2f788b96d3f1b72b5b5f93db69305c5fc4b1&quot;&gt;SSD model at this phase&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;It’s a good time to mention that the entire training process would have been impossible without the Nebius VM. I set it up on my computer two months ago, and ever since, I’ve been using it to train my models at just $2.30 an hour. With its H100 GPU, it significantly accelerates training and inference, making it perfect for handling my larger models efficiently.&lt;/p&gt;
-
-&lt;p&gt;And so, I began training.&lt;/p&gt;
-
-&lt;p&gt;The model trained for 35 epochs, finishing with a final loss of 1740.8066 and a best loss of 1648.3888. This translates to an estimated 70–73% mAP, which is right in line with the original SSD300 paper’s reported 74% mAP. Training didn’t take long, and the results were genuinely promising.&lt;/p&gt;
-
-&lt;p&gt;… &lt;br /&gt;
-Completed in 0:00:06.431447 &lt;br /&gt;
-Epoch 8/35 &lt;br /&gt;
-Batch 20/157 - Loss: 3314.0496 &lt;br /&gt;
-Batch 40/157 - Loss: 3511.7007 &lt;br /&gt;
-Batch 60/157 - Loss: 3111.1152 &lt;br /&gt;
-Batch 80/157 - Loss: 2806.2126 &lt;br /&gt;
-Batch 100/157 - Loss: 2849.9556 &lt;br /&gt;
-Batch 120/157 - Loss: 3000.4382 &lt;br /&gt;
-Batch 140/157 - Loss: 2939.6262 &lt;br /&gt;
-Batch 157/157 - Loss: 3830.0691 &lt;br /&gt;
-Epoch 8 completed in 0:00:06.913375 &lt;br /&gt;
-Train Loss: 3302.9789 &lt;br /&gt;
-Val Loss: 3030.0992 &lt;br /&gt;
-Saving best model with validation loss: 3030.0992 &lt;br /&gt;
-… &lt;br /&gt;
-Epoch 35/35 &lt;br /&gt;
-Batch 20/157 - Loss: 1721.4296 &lt;br /&gt;
-Batch 40/157 - Loss: 1765.3861 &lt;br /&gt;
-Batch 60/157 - Loss: 1596.6831 &lt;br /&gt;
-Batch 80/157 - Loss: 1818.6946 &lt;br /&gt;
-Batch 100/157 - Loss: 1464.0607 &lt;br /&gt;
-Batch 120/157 - Loss: 1789.6305 &lt;br /&gt;
-Batch 140/157 - Loss: 2008.2661 &lt;br /&gt;
-Batch 157/157 - Loss: 1806.7076 &lt;br /&gt;
-Epoch 35 completed in 0:00:07.030001 &lt;br /&gt;
-Train Loss: 1740.8066 &lt;br /&gt;
-Val Loss: 1648.3888 &lt;br /&gt;
-Final model saved to ssd_pascal_voc_final.pth &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/ssd/ssd-loss-plot-old.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;But I wasn’t finished. I knew I could do better.&lt;/p&gt;
-
-&lt;p&gt;So, using insights from the previous results, I made a few key changes. I enabled mixed precision training with AMP to speed up computation and reduce memory usage, and I replaced the standard loss function with Focal Loss to better address class imbalance. I also optimized the learning rate strategy by starting with lower initial values and extended the training duration from 35 to 100 epochs, aiming to improve stability and enhance detection accuracy, especially for harder-to-detect objects.&lt;/p&gt;
-
-&lt;p&gt;The results did not disappoint.&lt;/p&gt;
-
-&lt;p&gt;The model completed its training beautifully! It achieved a final validation loss of 1928.09, which is excellent — especially considering that with Focal Loss, the raw loss values don’t directly translate to accuracy. This translates to an estimated mAP of 82–84% on the Pascal VOC dataset, marking a significant improvement over the initial run.&lt;/p&gt;
-
-&lt;p&gt;Here’s what Claude had to say about the model:&lt;/p&gt;
-
-&lt;p&gt;“Your model has reached a validation loss of 1934.89 at epoch 58, which is even better than I predicted. This loss level puts your SSD model in an excellent position for real-world detection tasks. For context, this level of performance would make your model competitive with many production-ready object detectors.”&lt;/p&gt;
-
-&lt;p&gt;Epoch 1/100 &lt;br /&gt;
-Batch 20/157 - Loss: 12212.2188 &lt;br /&gt;
-Batch 40/157 - Loss: 13119.7129 &lt;br /&gt;
-Batch 60/157 - Loss: 12890.0430 &lt;br /&gt;
-Batch 80/157 - Loss: 12896.1777 &lt;br /&gt;
-Batch 100/157 - Loss: 10839.2949 &lt;br /&gt;
-Batch 120/157 - Loss: 12710.5645 &lt;br /&gt;
-Batch 140/157 - Loss: 11867.0479 &lt;br /&gt;
-Batch 157/157 - Loss: 10401.2627 &lt;br /&gt;
-Warmup phase: learning rate set to 0.000010 &lt;br /&gt;
-Epoch 1 completed in 0:00:07.048314 &lt;br /&gt;
-… &lt;br /&gt;
-Epoch 50/100 &lt;br /&gt;
-Batch 20/157 - Loss: 2943.6089 &lt;br /&gt;
-Batch 40/157 - Loss: 1767.0057 &lt;br /&gt;
-Batch 60/157 - Loss: 2459.3105 &lt;br /&gt;
-Batch 80/157 - Loss: 2643.3643 &lt;br /&gt;
-Batch 100/157 - Loss: 2142.9924 &lt;br /&gt;
-Batch 120/157 - Loss: 2283.0781 &lt;br /&gt;
-Batch 140/157 - Loss: 2101.7227 &lt;br /&gt;
-Batch 157/157 - Loss: 2728.4829 &lt;br /&gt;
-Cosine phase: learning rate set to 0.000011 &lt;br /&gt;
-Epoch 50 completed in 0:00:06.342008 &lt;br /&gt;
-Train Loss: 2154.6789 &lt;br /&gt;
-Val Loss: 1995.7843 &lt;br /&gt;
-Saving best model with validation loss: 1995.7843 &lt;br /&gt;
-… &lt;br /&gt;
-Epoch 100/100 &lt;br /&gt;
-Batch 20/157 - Loss: 1751.8605 &lt;br /&gt;
-Batch 40/157 - Loss: 2114.5859 &lt;br /&gt;
-Batch 60/157 - Loss: 2165.1792 &lt;br /&gt;
-Batch 80/157 - Loss: 2106.7981 &lt;br /&gt;
-Batch 100/157 - Loss: 2118.8838 &lt;br /&gt;
-Batch 120/157 - Loss: 1908.6840 &lt;br /&gt;
-Batch 140/157 - Loss: 2345.2627 &lt;br /&gt;
-Batch 157/157 - Loss: 1830.1548 &lt;br /&gt;
-Cosine phase: learning rate set to 0.000002 &lt;br /&gt;
-Epoch 100 completed in 0:00:06.242254 &lt;br /&gt;
-Train Loss: 2037.4231 &lt;br /&gt;
-Val Loss: 1928.0867 &lt;br /&gt;
-Final model saved to ssd_pascal_voc_final.pth &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/ssd/ssd-loss-plot-new.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;In the next few weeks, my goal is to review all the code to deepen my understanding and ensure everything is well-optimized. I also plan to upload the model weights to Hugging Face and begin working on inference code to test the model’s potential. Once I’ve evaluated its strengths and weaknesses, I’ll focus on refining the model and retraining it to achieve even better results.&lt;/p&gt;
-
-&lt;p&gt;This post documents the state of the SSD model as of April 6, 2025.&lt;br /&gt;
-To see the current state of the model visit:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/adrirubio/ml-rover/blob/main/ssd/ssd-object-detection.py&quot;&gt;SSD object detection model&lt;/a&gt;&lt;/p&gt;
-</description><description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! This week, I completed the model and began the debugging process, which involved making numerous changes across the entire system. After that, I kicked off the first full training run, made some adjustments based on the results, and retrained the model. So far, the results are looking very promising!&lt;/p&gt;
-</description><pubDate>Sun, 06 Apr 2025 00:00:00 +0200</pubDate>
-        <link>http://localhost:4000/blog/finishing-model-and-training/</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/finishing-model-and-training/</guid></item></channel>
+        <guid isPermaLink="true">http://localhost:4000/blog/finalizing-ssd-model-and-training/</guid></item></channel>
 </rss>
