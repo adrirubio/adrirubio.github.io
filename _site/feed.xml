@@ -5,9 +5,57 @@
     <description>This is my blog where I share my coding journey, my experiences, challenges, and discoveries in the ever-evolving world of programming.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 29 Jul 2025 22:47:56 +0200</pubDate>
-    <lastBuildDate>Tue, 29 Jul 2025 22:47:56 +0200</lastBuildDate>
+    <pubDate>Wed, 06 Aug 2025 09:38:16 +0200</pubDate>
+    <lastBuildDate>Wed, 06 Aug 2025 09:38:16 +0200</lastBuildDate>
     <generator>Jekyll v4.3.2</generator><item>
+        <title>Arduino Security System</title>
+        <description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! During this week, I designed and built my final project before Hack Club Shipwrecked: an Arduino Security System.&lt;/p&gt;
+
+&lt;p&gt;So what does this security system look like, and how does it work?
+It’s built on two separate breadboards, each with its own power supply. One of the breadboards holds the Arduino, which runs the code and manages the logic. The second, simpler breadboard contains the laser module, which can be connected to a slide switch to manually turn it on or off.&lt;/p&gt;
+
+&lt;p&gt;The main breadboard features:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;One pushbutton for arming/disarming/shutting down the system&lt;/li&gt;
+  &lt;li&gt;Three LEDs: green (armed), red (alert), and yellow (shutdown)&lt;/li&gt;
+  &lt;li&gt;A piezo buzzer for the alarm&lt;/li&gt;
+  &lt;li&gt;A laser receiver&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The system is designed to be completely standalone, with both breadboards powered through wall adapters, no need to stay connected to a computer.
+In operation, the Arduino constantly checks the laser beam. When the beam is uninterrupted and hitting the sensor, it reads LOW. If the beam is broken, the input reads HIGH, which triggers the alarm and turns on the red LED.&lt;/p&gt;
+
+&lt;p&gt;After building the Arduino Simon Says game, I wanted to raise the bar. I decided a security system using a laser module and laser receiver would be the perfect next project. First, my dad and I ordered the necessary parts to make sure they’d arrive in time for me to build the system before Hack Club Shipwrecked. While waiting for the parts, I started designing the project in Tinkercad, but I quickly ran into a problem: Tinkercad doesn’t include laser modules or laser receivers as components. So I substituted the laser module with an LED and used a photoresistor in place of the laser receiver.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/arduino/security-system-wiring-diagram.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;After about a day of building, I had the Tinkercad hardware complete. Next, I started working on the code. I had to write two versions: one for the Tinkercad simulation using a photoresistor, and another for the real-life setup using a laser receiver. This way, the project could function both in the virtual environment and in real life.&lt;/p&gt;
+
+&lt;p&gt;Once the physical components arrived, I started building the real-world version of the project. Unfortunately, time wasn’t on my side due to Shipwrecked being only a few days away. Thankfully, after a bit of trial and error, I managed to complete the project with a few days to spare.&lt;/p&gt;
+
+&lt;p&gt;Next, I tested the system, captured some photos and videos, and put together a simple demo video to showcase how it works, something required for hardware project that count towards Shipwrecked.&lt;/p&gt;
+
+&lt;div style=&quot;text-align: center; margin: 2em 0;&quot;&gt;
+  &lt;video controls=&quot;&quot; width=&quot;720&quot; style=&quot;max-width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);&quot;&gt;
+    &lt;source src=&quot;https://raw.githubusercontent.com/adrirubio/arduino-security-system/main/my-build/demos/arduino-security-system-demo.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+    Your browser does not support the video tag.
+  &lt;/video&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Next, I finished up the README file, added some final touches to the project, and submitted it up for review. I’m very happy with how it turned out. I plan to install this security system next to my bedroom door to catch any unwanted intruders. The project took me about 7 hours and 30 minutes to complete which totals to around 75 dollars towards the stipend, which means that once approved, the total stipend will be nearly $290.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/adrirubio/arduino-security-system&quot;&gt;Arduino Security System&lt;/a&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/arduino/security-up-for-review.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;As I write this, Shipwrecked is just two days away, and I can’t wait! My next blog post will cover all the adventures and experiences from the event.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/arduino/arduino-security-system-pic.jpeg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+</description><description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! During this week, I designed and built my final project before Hack Club Shipwrecked: an Arduino Security System.&lt;/p&gt;
+</description><pubDate>Wed, 06 Aug 2025 00:00:00 +0200</pubDate>
+        <link>http://localhost:4000/blog/arduino-security-system/</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/arduino-security-system/</guid></item><item>
         <title>Arduino Simon Says Game</title>
         <description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! Over the past two weeks, I began working with the Arduino kit, completed several projects from the book, and even created my own project that contributes to the Boston flight stipend!&lt;/p&gt;
 
@@ -357,54 +405,5 @@ To see the current state of the model visit:&lt;/p&gt;
 </description><description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! This week, I took a deeper dive into last week&apos;s model, did some additional training, and let me just say—the inference code made predictions, and they’re genuinely impressive!&lt;/p&gt;
 </description><pubDate>Sun, 20 Apr 2025 00:00:00 +0200</pubDate>
         <link>http://localhost:4000/blog/inference-using-SSD/</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/inference-using-SSD/</guid></item><item>
-        <title>Finalizing SSD Model and Training</title>
-        <description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! This week, I focused on deepening my understanding of last week’s model by creating inference code and making further improvements. The final results are looking even more promising than before!&lt;/p&gt;
-
-&lt;p&gt;During this week, I spent most of my time reviewing the code and making sure I fully understood some of the harder concepts. Since I’m not creating the model completely from scratch — I use Claude to help take it to the next level — some parts of the code can be harder to grasp (for example, the loss function definition).
-To stay organized, I followed some Org mode notes I made a while back:&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Tips to improve coding
-- Start by learning concepts for new model using coding journal
-- Use claude effectively when learning new concepts:
-    - Make small modifications to code generated by claude
-    - Ask for lots of explanations of concepts
-    - Request code outlines to fill in 
-    - Ask &quot;why&quot; questions about how the generated code works
-- Challenge to write small functions I know how to write:
-    - Have claude review the code
-- Write in blog weekly to recap week&apos;s work
-- Create podcasts for the finished model and listen to further deepen knowledge
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;To deepen my knowledge of the model, I created some podcasts using Notebook LM (AI-generated podcasts). I would listen to them in the car, at the library, while studying, and more — helping me take my understanding to the next level. By the end of Thursday, I felt that I understood the code much better.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/ssd/SSD-notebook-lm-loading-data.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
-&lt;img src=&quot;/assets/img/ssd/SSD-notebook-lm-ssd-architecture.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;Once I understood the code better, I created some simple inference code for the model (with Claude’s help) to test it out. I didn’t upload the code to GitHub, but running the tests showed that Claude’s predictions from last week were a bit off.&lt;/p&gt;
-
-&lt;p&gt;The real model wasn’t able to detect objects and place bounding boxes with 75–80% mAP as expected. It recognized something, but the placements were often inaccurate, and the classification results had noticeable defects too.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/adrirubio/ml-rover/tree/dbe25b3a8f17d60ce391c47c27b042cb7aa144e1&quot;&gt;SSD model at this phase&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;So, I knew what I had to do.&lt;/p&gt;
-
-&lt;p&gt;The improved SSD model now uses an EfficientNet-B1 backbone with a Feature Pyramid Network (FPN). The training process combines SGD optimization with momentum (0.9) and a three-phase learning rate schedule. I also applied extensive data augmentation techniques, including mosaic transformations, which merge four training images to help improve small object detection.&lt;/p&gt;
-
-&lt;p&gt;For more precise localization, I implemented Generalized IoU (GIoU) loss for bounding box regression. To boost classification accuracy and better handle class imbalance, I used Focal Loss. According to Claude’s predictions, the updated model should achieve 80–84% mAP on the Pascal VOC dataset.&lt;/p&gt;
-
-&lt;p&gt;After making these changes, I created new podcasts with the updated code and plan to start listening to them next week.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/ssd/SSD-notebook-lm-ssd-architecture2.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
-&lt;img src=&quot;/assets/img/ssd/SSD-notebook-lm-ssd-loss.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;This post documents the state of the SSD model as of April 13, 2025&lt;br /&gt;
-To see the current state of the model visit:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/adrirubio/ml-rover/blob/main/ssd/ssd-object-detection.py&quot;&gt;SSD object detection model&lt;/a&gt;&lt;/p&gt;
-</description><description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! This week, I focused on deepening my understanding of last week’s model by creating inference code and making further improvements. The final results are looking even more promising than before!&lt;/p&gt;
-</description><pubDate>Sun, 13 Apr 2025 00:00:00 +0200</pubDate>
-        <link>http://localhost:4000/blog/finalizing-ssd-model-and-training/</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/finalizing-ssd-model-and-training/</guid></item></channel>
+        <guid isPermaLink="true">http://localhost:4000/blog/inference-using-SSD/</guid></item></channel>
 </rss>
