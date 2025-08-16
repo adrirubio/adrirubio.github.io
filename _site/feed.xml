@@ -5,9 +5,116 @@
     <description>This is my blog where I share my coding journey, my experiences, challenges, and discoveries in the ever-evolving world of programming.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 06 Aug 2025 09:38:16 +0200</pubDate>
-    <lastBuildDate>Wed, 06 Aug 2025 09:38:16 +0200</lastBuildDate>
+    <pubDate>Sat, 16 Aug 2025 21:05:32 +0200</pubDate>
+    <lastBuildDate>Sat, 16 Aug 2025 21:05:32 +0200</lastBuildDate>
     <generator>Jekyll v4.3.2</generator><item>
+        <title>Shipwrecked</title>
+        <description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! This past weekend was one of the coolest experiences of my whole life. I shipped three projects in four days, and met some incredible people along the way.&lt;/p&gt;
+
+&lt;p&gt;Shipwrecked was a four-day hackathon on an island where 130 teenagers coded and shipped three projects for prizes. My brother and I were among the 130 teenagers who attended out of 5,000 who RSVPed.&lt;/p&gt;
+
+&lt;p&gt;Before I get into the details, I’d like to say that the island was beautiful, and every activity and project was very well prepared and planned. I met many people and worked on three projects that I’m very proud of.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/shipwrecked/hackathon/friends-1.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/img/shipwrecked/hackathon/friends-2.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/img/shipwrecked/hackathon/dock.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;So, how did this Hackathon work? Each day you had to complete (ship) a project and present it in a science-fair style event showcasing all the projects built. If you met the project requirements, shipped it, and presented it, you earned a prize. During the day, few people felt like coding because there were so many workshops, challenges, and activities. Everyone ended up coding late at night, but it was worth it because going to these activities and challenges was really fun. Some examples include Zach’s workshop on how to create a non-profit, a spicy food challenge, a contest to build the tallest house, going swimming, and much more.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/shipwrecked/hackathon/basketball.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/img/shipwrecked/hackathon/tower.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;1st-project&quot;&gt;1st Project&lt;/h3&gt;
+
+&lt;p&gt;For first project, you had to build was a system to communicate without text, using things like colors, sounds, and images. I decided to work on it with a teammate who prefers not to be named, for this post, I’ll call him Byte, and Nikos (from Greece). We started brainstorming the first night and came up with a hardware project: four LEDs, each corresponds to a push-button, and each pair represents a feeling. The duration of the button press indicates the intensity of that feeling. For example, the green LED represents happiness, pressing its button for one second means you’re feeling sad, while pressing it for five seconds means you’re happy.&lt;/p&gt;
+
+&lt;p&gt;That night, I started designing the circuit and code in Tinkercad, finishing it by morning. After breakfast, we collected all the hardware parts needed for the project, although I had also brought my Arduino kit. Soon after, we started building the design, but we ran into a problem: the LCD screen didn’t work. Nikos and I tried for hours using the 4-pin LCD wiring method, but for some reason it just wouldn’t work. With only one hour left until the deadline to present our projects, we had to make an important decision.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/shipwrecked/hackathon/feeling-translator.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;The decision came because our original plan was to use an ESP32 to transfer the button press data to an app Nikos was building. Unfortunately, Nikos couldn’t get the ESP32 working either. In retrospect, I regret not helping him with the ESP32, maybe the app could have been more complete. We had two options: (1) focus on hardware and hope the LCD screen worked before the deadline, or (2) focus on the app and make the same thing we were working on with the hardware in an app. We ended up doing both, kind of. I built the hardware, but instead of sending output to the LCD, it displayed in the Arduino IDE’s serial monitor. Meanwhile, Nikos built the app that was practically the same as what I had done in hardware.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/Nikos1508/Translator&quot;&gt;Feeling Translator&lt;/a&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/shipwrecked/hackathon/1st-project.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Once it was finished, we presented it, and the prize was a Hack Club shirt!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/shipwrecked/hackathon/merch/shirt.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;2nd-project&quot;&gt;2nd Project&lt;/h3&gt;
+
+&lt;p&gt;For the second project you had to build something multiplayer, it could be a game, app, website… I decided to build this with Byte and Daniel (from Italy) and we started brainstorming right after the announcement. At the very start of the event, they gave us all PCB badges where we could flash it to display our name and handle, and they would receive announcements for events. But not only that, you could code it! We decided to try and build a game for the badges in which players pressed a button, and if two people pressed the same one, they were eliminated.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/shipwrecked/hackathon/merch/badge.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;At the start, Byte and I focused on getting all three badges to connect, while Daniel worked on a simple UI for the app. But for some reason, the badges didn’t connect. When Daniel finished the UI he tried to help us troubleshoot.&lt;/p&gt;
+
+&lt;p&gt;We tried for hours, but the badges still wouldn’t connect. With only an hour or two left before the event, we decided to split into smaller teams. Byte kept trying to get the badges and the game to work, while Daniel and I tried to quickly build a website as our backup plan in case the badges still wouldn’t connect by presentation time.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/v1ctorio/badge-game&quot;&gt;Badge Game&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/danielscos/russian-roulette&quot;&gt;Russian Rouletee&lt;/a&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/shipwrecked/hackathon/2nd-project.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;In the end, with a little help from AI, we managed to build a simple Russian roulettee game. On top of that, Byte also kind of got the badges to connect and the game to function properly. We rushed down to present our projects and came away with Shipwrecked stickers!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/shipwrecked/hackathon/merch/stickers.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;3rd-project&quot;&gt;3rd Project&lt;/h3&gt;
+
+&lt;p&gt;For our third and final project, we could build anything creative and colorful. I teamed up with Byte and Daniel, and we created a Chrome Extension that makes everything in your browser colorful and wild. At first, I thought it would be too difficult because we had so little time after all the day’s activities, but it turned out to be easier than I expected.&lt;/p&gt;
+
+&lt;p&gt;In just an hour or two, we had a Chrome extension with a CSS file that overrode the site’s styles. Honestly, it looked pretty cool.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/danielscos/browser-blaster&quot;&gt;Browser Blaster&lt;/a&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/shipwrecked/hackathon/3rd-project.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;During this project, I learned how to create a Chrome extension.
+Honestly, across all three projects, I also learned how to collaborate and how to distribute work with different people.&lt;/p&gt;
+
+&lt;p&gt;That morning, we presented our projects and received Shipwrecked keychains as a reward!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/shipwrecked/hackathon/merch/keychain.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;final-thoughts&quot;&gt;Final Thoughts&lt;/h3&gt;
+
+&lt;p&gt;Shipwrecked was an incredible experience, it was everything I could have expected and more. I met so many people who share my interests and had some really interesting conversations with them. The activities were amazing: I played basketball, flew a drone across the island, explored hidden beaches, and much more. One of the best friends I made during Shipwrecked is Imesh from Italy, who is a very kind and interesting person. Everyone was welcoming, and the island itself was beautiful. Thanks to everyone who made the event possible. I hope I can attend more Hackathons in the future!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/shipwrecked/hackathon/group-photo.JPG&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;merch&quot;&gt;Merch&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/shipwrecked/hackathon/merch/t-shirt.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/img/shipwrecked/hackathon/merch/extra-stickers.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/img/shipwrecked/hackathon/merch/light.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/img/shipwrecked/hackathon/merch/small-light.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/img/shipwrecked/hackathon/merch/map.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/img/shipwrecked/hackathon/merch/map-open.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Before &amp;amp; After: My laptop&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/shipwrecked/hackathon/merch/computer-without-stickers.jpg&quot; alt=&quot;Laptop before stickers&quot; /&gt;
+&lt;img src=&quot;/assets/img/shipwrecked/hackathon/merch/computer-with-stickers-2.jpg&quot; alt=&quot;Laptop after stickers&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;pictures&quot;&gt;Pictures&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/shipwrecked/hackathon/meetup.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/img/shipwrecked/hackathon/ferry.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/img/shipwrecked/hackathon/airplane.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/img/shipwrecked/hackathon/campfire.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/img/shipwrecked/hackathon/zach.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/img/shipwrecked/hackathon/island.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/img/shipwrecked/hackathon/sunny.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/img/shipwrecked/hackathon/view.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/img/shipwrecked/hackathon/sunny-boston.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/img/shipwrecked/hackathon/boston-sunset.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/img/shipwrecked/hackathon/boston-night.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+</description><description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! This past weekend was one of the coolest experiences of my whole life. I shipped three projects in four days, and met some incredible people along the way.&lt;/p&gt;
+</description><pubDate>Tue, 12 Aug 2025 00:00:00 +0200</pubDate>
+        <link>http://localhost:4000/blog/shipwrecked/</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/shipwrecked/</guid></item><item>
         <title>Arduino Security System</title>
         <description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! During this week, I designed and built my final project before Hack Club Shipwrecked: an Arduino Security System.&lt;/p&gt;
 
@@ -351,59 +458,5 @@ To see the current state of the pdf reader visit:&lt;/p&gt;
 </description><description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! This week, I wrapped up reviewing the SSD object detection model and was just about to dive into the line-following model—when a message in the Hack Club announcements caught my attention.&lt;/p&gt;
 </description><pubDate>Sun, 27 Apr 2025 00:00:00 +0200</pubDate>
         <link>http://localhost:4000/blog/hack-club-shipwrecked/</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/hack-club-shipwrecked/</guid></item><item>
-        <title>Inference Using SSD Weights</title>
-        <description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! This week, I took a deeper dive into last week&apos;s model, did some additional training, and let me just say—the inference code made predictions, and they’re genuinely impressive!&lt;/p&gt;
-
-&lt;p&gt;I kicked off the week by listening to a few podcasts created with Notebook LM, which helped set the stage for deeper understanding. I also spent some time revising the code alongside Claude, going through the model architecture and key components more thoroughly. That combination really clicked for me—I came away feeling like I finally had a much clearer grasp of how the model works.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/adrirubio/ml-rover/blob/93cbd2abda91a5a34217186b75c0cade86c84099/ssd/ssd-object-detection.py&quot;&gt;SSD model at this phase&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Once I felt confident in how the model worked—around Wednesday—I decided it was time to train it. Unfortunately, the initial results were pretty disappointing. Every time I kicked off training, the first few epochs showed a really high loss, which wasn’t too surprising at first. But what really threw me off was that the mAP@0.50 stayed stuck at 0.0000 for the first 10 epochs. Even after that, the improvements were minimal—barely creeping up with tiny values that were barely meaningful.&lt;/p&gt;
-
-&lt;p&gt;After that, I started tweaking some of the weights, hoping to find a sweet spot that would finally unlock the model’s potential. But no matter what I tried, nothing seemed to make a meaningful difference. It was especially frustrating because, on paper, this model had a pretty advanced architecture. It used an EfficientNet‑B1 backbone with an FPN, incorporated sophisticated augmentations through Albumentations, supported mixed‑precision training, and featured a three‑phase learning-rate scheduler. On top of that, the loss function was optimized with GIoU for bounding boxes and Focal Loss for classification—so expectations were high.&lt;/p&gt;
-
-&lt;p&gt;But despite all that, after full training, the model only managed to hit around 40 mAP@0.50—which is disappointingly low for a setup this advanced.&lt;/p&gt;
-
-&lt;p&gt;By this point, I was honestly exhausted. It was Friday, and I’d spent the better part of the week going back and forth, tweaking weights and adjusting parameters, hoping for a breakthrough. But the model just kept underperforming, no matter what I threw at it. So—naturally—I started thinking about giving up.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/ssd/SSD-0-mAP.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;But—I had one last shot left in me.&lt;/p&gt;
-
-&lt;p&gt;So, I turned to Claude for some insight. Naturally, I was curious—how could a model with such an advanced architecture perform so poorly? I started digging into the original SSD paper, specifically looking at how their model managed to reach 72 mAP@0.5. That’s when it hit me: I had likely overcomplicated my implementation. By layering on too many advanced techniques all at once, I may have introduced more confusion than clarity to the model. Instead of boosting performance, all those additions seemed to interfere with learning.&lt;/p&gt;
-
-&lt;p&gt;I decided to simplify the model, keeping the SSD paper as my main reference. Following its approach step by step, I started stripping away some of the complexity and sticking to the core elements of their design. In the end, the model I ended up with was quite similar to the SSD300 from the paper.&lt;/p&gt;
-
-&lt;p&gt;So, I started training the simplified model. I think the following snippets really say it all.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/ssd/SSD-training-snippet.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
-&lt;img src=&quot;/assets/img/ssd/SSD-training-snippet2.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
-&lt;img src=&quot;/assets/img/ssd/SSD-training-snippet3.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;The model finished with an mAP@0.5 of 0.76 (76%), which is very close to the 77% reported in the paper. This marked a huge improvement compared to the 40% mAP of the previous model. But now came the moment of truth: I had to test it out. So, I asked Claude to create two simple sets of inference code—one that randomly selects an image from the Pascal VOC dataset and predicts the bounding boxes and labels, and another where you provide the image manually.&lt;/p&gt;
-
-&lt;p&gt;The model did not disappoint.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/ssd/1_pred.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
-&lt;img src=&quot;/assets/img/ssd/2_pred.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
-&lt;img src=&quot;/assets/img/ssd/3_pred.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
-&lt;img src=&quot;/assets/img/ssd/4_pred.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
-&lt;img src=&quot;/assets/img/ssd/5_pred.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;You can also check out the final trained model weights, now available on Hugging Face. For more examples and the full inference code, head over to the GitHub repo. Feel free to test it, fork it, or build on it!&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://huggingface.co/pro-grammer/SSD&quot;&gt;SSD weights&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;https://github.com/adrirubio/ml-rover/tree/main/ssd&quot;&gt;SSD github&lt;/a&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;Next week, I plan to further deepen my understanding by reviewing the newer SSD models and beginning work on the next model for the ML-Rover project. Once that’s complete, I’ll start integrating the models into the Adeept PiCar-B.&lt;/p&gt;
-
-&lt;p&gt;This post documents the state of the SSD model as of April 20, 2025&lt;br /&gt;
-To see the current state of the model visit:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/adrirubio/ml-rover/blob/main/ssd/ssd-object-detection.py&quot;&gt;SSD object detection model&lt;/a&gt;&lt;/p&gt;
-</description><description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! This week, I took a deeper dive into last week&apos;s model, did some additional training, and let me just say—the inference code made predictions, and they’re genuinely impressive!&lt;/p&gt;
-</description><pubDate>Sun, 20 Apr 2025 00:00:00 +0200</pubDate>
-        <link>http://localhost:4000/blog/inference-using-SSD/</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/inference-using-SSD/</guid></item></channel>
+        <guid isPermaLink="true">http://localhost:4000/blog/hack-club-shipwrecked/</guid></item></channel>
 </rss>
