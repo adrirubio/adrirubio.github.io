@@ -79,6 +79,14 @@ Shipwrecked was an incredible experience, it was everything I could have expecte
 
 <img src="/assets/img/shipwrecked/hackathon/group-photo.JPG" alt=""><br>
 
+<p><strong>Shipwrecked Video</strong></p>
+
+<div style="text-align: center; margin: 2em 0;">
+  <a href="https://www.youtube.com/watch?v=uXWMr0gdLJA" target="_blank" style="display: inline-block; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden;">
+    <img src="https://img.youtube.com/vi/uXWMr0gdLJA/0.jpg" alt="Shipwrecked Video" style="width: 720px; max-width: 100%; display: block;">
+  </a>
+</div>
+
 ### Merch
 
 <img src="/assets/img/shipwrecked/hackathon/merch/t-shirt.jpg" alt=""><br>
@@ -92,7 +100,6 @@ Shipwrecked was an incredible experience, it was everything I could have expecte
 
 <img src="/assets/img/shipwrecked/hackathon/merch/computer-without-stickers.jpg" alt="Laptop before stickers">
 <img src="/assets/img/shipwrecked/hackathon/merch/computer-with-stickers-2.jpg" alt="Laptop after stickers">
-
 
 ### Pictures
 
