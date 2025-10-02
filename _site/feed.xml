@@ -5,9 +5,45 @@
     <description>This is my blog where I share my coding journey, my experiences, challenges, and discoveries in the ever-evolving world of programming.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 20 Sep 2025 10:58:05 +0200</pubDate>
-    <lastBuildDate>Sat, 20 Sep 2025 10:58:05 +0200</lastBuildDate>
+    <pubDate>Thu, 02 Oct 2025 20:41:33 +0200</pubDate>
+    <lastBuildDate>Thu, 02 Oct 2025 20:41:33 +0200</lastBuildDate>
     <generator>Jekyll v4.3.2</generator><item>
+        <title>Stepper Motor Project and the ML Rover</title>
+        <description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! Over the past week and a half, I burned out a motor driver because of faulty documentation and began work on the rover.&lt;/p&gt;
+
+&lt;p&gt;My dad and I thought the stepper motor’s malfunction was due to incorrect cabling. We downloaded the documentation to verify the cabling was correct, using the cooler on the motor driver as a reference point for orientation. Since the driver was mounted on a breadboard, we took if as granted that the pinout diagram in the PDF was correct without verifying the actual chip orientation.&lt;/p&gt;
+
+&lt;p&gt;When we connected 24V to one row of the breadboard and 5V to the other, we heard a sort of pop and saw smoke coming from the driver. Later, after taking the motor driver off the breadboard and looking closer, we realized that the pinout diagram in the docs was wrong.&lt;/p&gt;
+
+&lt;p&gt;Motor driver pinout docs:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/stepper-motor-project/motor-driver-pinout.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Motor driver pinout labels (grey sticker shows where the cooler is on the other side):&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/stepper-motor-project/old-motor-driver.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;As you can see from the pictures, the documentation and pinout labels on the motor driver don’t match. We bought a pack of 5 motor drivers just in case we burned out another one. This time we made sure to double-check the connections before applying power. Here’s the finished result:&lt;/p&gt;
+
+&lt;p&gt;Once my dad and I completed the stepper motor project, I began work on the rover. It had been quite some time since I’d worked on it, and when I tried to ssh into its Raspberry Pi, I realized I had forgotten the password. I asked Claude to create a script that would let me change the password without wiping the SD card. Once I was inside, I discovered the code was mostly outdated. I plan to use Claude Code or Codex CLI to update it to the latest versions, but I haven’t had the chance yet.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/ml-rover/rover-ssh.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Another thing I realized was that the rover had gotten dusty and needed cleaning. I fully took it apart, cleaned all the pieces, and reassembled everything. This took the entire afternoon, from after lunch until dinner, about 5 hours of continuous work.&lt;/p&gt;
+
+&lt;p&gt;Before cleaning:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/ml-rover/before-rover.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;After cleaning:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/ml-rover/after-rover.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;My goals for the next few weeks are to update the rover’s code to the latest versions, implement the object detection model I built (possibly using the Jetson Nano we have), and continue working on the ‘secret’ project with my brother.&lt;/p&gt;
+</description><description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! Over the past week and a half, I burned out a motor driver because of faulty documentation and began work on the rover.&lt;/p&gt;
+</description><pubDate>Tue, 30 Sep 2025 00:00:00 +0200</pubDate>
+        <link>http://localhost:4000/blog/stepper-motor-project-and-the-ml-rover/</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/stepper-motor-project-and-the-ml-rover/</guid></item><item>
         <title>ESP32 Environment Monitor</title>
         <description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! During this past month after Shipwrecked, I have built an ESP32 environment monitor, completed a hardware project with my dad, and started a very interesting project with my brother.&lt;/p&gt;
 
@@ -349,7 +385,7 @@ If you complete your 4 projects with at least 15 hours each before next Sunday (
 You have until Sunday night to ship all your projects in The Bay to have your virality requirement waived!
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;This was instantly a game-changer. If the virality requirement were waived, it would save me a lot of effort—or would it? Achieving 30 hours in just over a week, when I read the message, would be no easy task. At the time, I had just finished the second project (Architext-AI) and was only halfway through. But, as with most things, I decided to give it a try. For the past two days, I have done practically nothing else but focus on accumulating as many hours as possible.&lt;/p&gt;
+&lt;p&gt;This was instantly a game-changer. If the virality requirement were waived, it would save me a lot of effort, or would it? Achieving 30 hours in just over a week, when I read the message, would be no easy task. At the time, I had just finished the second project (Architext-AI) and was only halfway through. But, as with most things, I decided to give it a try. For the past two days, I have done practically nothing else but focus on accumulating as many hours as possible.&lt;/p&gt;
 
 &lt;p&gt;Now is probably a good time to mention the third project I’ve been working on for the past two days: the QR-Gen. This is a simple Tkinter project where you input text or a link, and it generates the corresponding QR code. I’ve also added a database feature to store past QR codes, and I think it’s looking nice. So far, I’ve accumulated 9 hours and 48 minutes of work, which isn’t bad for two days.&lt;/p&gt;
 
@@ -366,7 +402,7 @@ To see the current state of the project visit:&lt;/p&gt;
         <link>http://localhost:4000/blog/finishing-Architext-AI-and-starting-QR-Gen/</link>
         <guid isPermaLink="true">http://localhost:4000/blog/finishing-Architext-AI-and-starting-QR-Gen/</guid></item><item>
         <title>Starting Architext-AI</title>
-        <description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! In this post, I wrapped up the AI PDF Reader by releasing a Windows version and started my next project — an AI writing assistant called Architext-AI.&lt;/p&gt;
+        <description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! In this post, I wrapped up the AI PDF Reader by releasing a Windows version and started my next project, an AI writing assistant called Architext-AI.&lt;/p&gt;
 
 &lt;p&gt;I started the week by creating a demo video for the AI PDF Reader, which is now embedded in  &lt;a href=&quot;https://adrianrubio.org/blog/my-ai-pdf-reader-how-and-why-I-build-it/&quot;&gt;last week’s blog post.&lt;/a&gt; I’m really happy with how the final version turned out. To wrap up the project, I released a Windows version and improved the README.
 Hopefully, the AI PDF Reader can gain some traction, as my dad and I will be sharing it across various social media platforms. Our goal is to reach 150 stars on GitHub.&lt;/p&gt;
@@ -379,7 +415,7 @@ Hopefully, the AI PDF Reader can gain some traction, as my dad and I will be sha
 To see the current state of the pdf reader visit:&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://github.com/adrirubio/architext-ai&quot;&gt;architext-ai github&lt;/a&gt;&lt;/p&gt;
-</description><description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! In this post, I wrapped up the AI PDF Reader by releasing a Windows version and started my next project — an AI writing assistant called Architext-AI.&lt;/p&gt;
+</description><description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! In this post, I wrapped up the AI PDF Reader by releasing a Windows version and started my next project, an AI writing assistant called Architext-AI.&lt;/p&gt;
 </description><pubDate>Sun, 08 Jun 2025 00:00:00 +0200</pubDate>
         <link>http://localhost:4000/blog/starting-architext-ai/</link>
         <guid isPermaLink="true">http://localhost:4000/blog/starting-architext-ai/</guid></item><item>
@@ -409,37 +445,5 @@ If you think it’s cool or useful, starring the project on GitHub would mean th
 </description><description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! In this post I&apos;m going to tell you the whole story of my AI PDF reader – like, how I built it and the reasons why. This project was a pretty wild ride with some tough challenges and fun wins, and seeing it finally work just how I wanted is awesome!&lt;/p&gt;
 </description><pubDate>Sat, 31 May 2025 00:00:00 +0200</pubDate>
         <link>http://localhost:4000/blog/my-ai-pdf-reader-how-and-why-I-build-it/</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/my-ai-pdf-reader-how-and-why-I-build-it/</guid></item><item>
-        <title>Improving the AI PDF Reader</title>
-        <description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! Over the past two weeks, I’ve been working hard on the AI PDF Reader. I’ve improved the UI, integrated the AI API, and am now implementing a database to support the reader.&lt;/p&gt;
-
-&lt;p&gt;I haven’t posted in the past two weeks as I’ve been fully focused on developing the AI PDF Reader. Now that I’ve found a moment, here’s a quick recap of what I’ve been working on and what to expect moving forward.&lt;/p&gt;
-
-&lt;p&gt;I started the week by addressing several UI issues to make the interface cleaner and more user-friendly.
-I removed the “Simple,” “Like I’m Five,” and “Technical” modes, keeping only the “Custom” option to streamline the experience. I also enlarged the chat area and slightly repositioned the PDF viewer to the left for better layout balance. Instead of dumping the entire highlighted text into the chat, it now generates a compact link or button that takes you directly to the relevant section in the PDF—making navigation much smoother. Additionally, when starting a new chat, it can now retain full context from the entire PDF.&lt;/p&gt;
-
-&lt;p&gt;After that, I began integrating the API.
-The app now supports OpenAI API keys, correctly detects them, and uses them for generating responses.
-Here is a quick look at what’s changed from where we left off to this week:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/shipwrecked/pdf-reader-home.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt; &lt;img src=&quot;/assets/img/shipwrecked/pdf-reader-home2.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;Also added:
-&lt;img src=&quot;/assets/img/shipwrecked/full-context.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt; &lt;img src=&quot;/assets/img/shipwrecked/chat-with-full-context.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;Yesterday, I joined the Shipwrecked kickoff call and got to see what other teenagers are building. It was exciting to hear from other builders, share early progress, and get inspired by a wide range of creative ideas. Being part of a community like this adds an extra layer of motivation.&lt;/p&gt;
-
-&lt;p&gt;So far, I’ve spent about 14 hours on the project. Once I finish implementing the database and polish things up a bit, I plan to launch a small web demo. After that, I’ll start promoting it across different platforms hopefully reaching 150 stars on GitHub.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/shipwrecked/23.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;This post documents the state of the AI pdf reader as of May 18, 2025&lt;br /&gt;
-To see the current state of the ai pdf reader visit:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/adrirubio/ai-pdf-reader&quot;&gt;AI pdf reader github&lt;/a&gt;&lt;/p&gt;
-
-</description><description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! Over the past two weeks, I’ve been working hard on the AI PDF Reader. I’ve improved the UI, integrated the AI API, and am now implementing a database to support the reader.&lt;/p&gt;
-</description><pubDate>Sun, 18 May 2025 00:00:00 +0200</pubDate>
-        <link>http://localhost:4000/blog/improving-the-ai-pdf-reader/</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/improving-the-ai-pdf-reader/</guid></item></channel>
+        <guid isPermaLink="true">http://localhost:4000/blog/my-ai-pdf-reader-how-and-why-I-build-it/</guid></item></channel>
 </rss>

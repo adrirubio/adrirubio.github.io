@@ -13,7 +13,7 @@ To start, High Seas was another Hack Club activity, similar to Arcade, designed 
 <img src="/assets/img/high-seas/high-seas.png" alt="">
 <img src="/assets/img/hackatime/hackatime.png" alt="">
 
-Both my brother and I worked on projects during High Seas, but balancing school made it more challenging since it took place during the winter. In the end, I logged 18 hours and earned around 200 doubloons—solid results overall. I’ll dive into what I worked on during this time in my next post, but for now, all you need to know is that my project was Mindful, an AI therapist. With my doubloons, I redeemed some GitHub keycaps for my keyboard and a logic analyzer.
+Both my brother and I worked on projects during High Seas, but balancing school made it more challenging since it took place during the winter. In the end, I logged 18 hours and earned around 200 doubloons, solid results overall. I’ll dive into what I worked on during this time in my next post, but for now, all you need to know is that my project was Mindful, an AI therapist. With my doubloons, I redeemed some GitHub keycaps for my keyboard and a logic analyzer.
 
 <img src="/assets/img/high-seas/coding-time.png" alt="">
 <img src="/assets/img/high-seas/keycaps.png" alt="">

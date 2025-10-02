@@ -4,7 +4,7 @@ title:  "Mindful"
 date:   25/03/8
 ---
 
-<p class="intro"><span class="dropcap">H</span>ello, and welcome! In this post, I’ll be explaining Mindful—the project I built for High Seas—and how four other Hack Club members helped me bring it to life.</p>
+<p class="intro"><span class="dropcap">H</span>ello, and welcome! In this post, I’ll be explaining Mindful; the project I built for High Seas—and how four other Hack Club members helped me bring it to life.</p>
 
 So, what is Mindful? It’s your AI Wellness Companion—a compassionate, always-available guide for mental well-being. That’s the exact description from my GitHub account. Essentially, Mindful is an AI therapist.
 Of course, Mindful was built for educational purposes, so its results aren’t perfect, but I’m really happy with how it turned out. I had the help of four other Hack Club members: <a href="https://github.com/AlanDoesCS">AlanDoesCS</a>, <a href="https://github.com/EndofTimee">EndofTimee</a>, <a href="https://github.com/minglangdu">Minglangdu</a> , and <a href="https://github.com/TRXAlpha">TRXAlpha</a>. While I built most of the AI myself, they made important contributions and supported me throughout the process. Without them, the project would have been much more challenging.

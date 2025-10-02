@@ -8,7 +8,7 @@ date:   25/03/23
 
 So, what is SSD?
 
-SSD (Single Shot MultiBox Detector) is an object detection architecture that divides an image into a grid and predicts bounding boxes and class probabilities directly from feature maps at multiple scales. It leverages convolutional layers to extract features and applies predefined anchor boxes of various sizes and aspect ratios at each location, allowing it to efficiently detect objects of different scales. Unlike two-stage detectors, SSD performs detection in a single network pass, making it significantly faster while maintaining competitive accuracy—ideal for real-time applications.
+SSD (Single Shot MultiBox Detector) is an object detection architecture that divides an image into a grid and predicts bounding boxes and class probabilities directly from feature maps at multiple scales. It leverages convolutional layers to extract features and applies predefined anchor boxes of various sizes and aspect ratios at each location, allowing it to efficiently detect objects of different scales. Unlike two-stage detectors, SSD performs detection in a single network pass, making it significantly faster while maintaining competitive accuracy, ideal for real-time applications.
 That might sound like a lot to take in, but by the end of this post, you'll have a clearer understanding.
 
 Now, here's what my model's structure will look like:

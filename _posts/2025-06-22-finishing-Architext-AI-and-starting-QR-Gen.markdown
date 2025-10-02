@@ -32,7 +32,7 @@ If you complete your 4 projects with at least 15 hours each before next Sunday (
 You have until Sunday night to ship all your projects in The Bay to have your virality requirement waived!
 ```
 
-This was instantly a game-changer. If the virality requirement were waived, it would save me a lot of effort—or would it? Achieving 30 hours in just over a week, when I read the message, would be no easy task. At the time, I had just finished the second project (Architext-AI) and was only halfway through. But, as with most things, I decided to give it a try. For the past two days, I have done practically nothing else but focus on accumulating as many hours as possible.
+This was instantly a game-changer. If the virality requirement were waived, it would save me a lot of effort, or would it? Achieving 30 hours in just over a week, when I read the message, would be no easy task. At the time, I had just finished the second project (Architext-AI) and was only halfway through. But, as with most things, I decided to give it a try. For the past two days, I have done practically nothing else but focus on accumulating as many hours as possible.
 
 Now is probably a good time to mention the third project I've been working on for the past two days: the QR-Gen. This is a simple Tkinter project where you input text or a link, and it generates the corresponding QR code. I've also added a database feature to store past QR codes, and I think it’s looking nice. So far, I've accumulated 9 hours and 48 minutes of work, which isn't bad for two days.
 

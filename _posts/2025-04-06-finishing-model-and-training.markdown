@@ -8,7 +8,7 @@ date:   25/04/06
 
 During the debugging phase, the model underwent significant changes. I removed the Pascal VOC dataset that was previously loaded from Hugging Face and instead downloaded the original 2007 Pascal VOC dataset directly to the VM (I'll explain what the VM is and its role later). I also enhanced the data transformations applied to the datasets by adding augmentations like random shadows, Gaussian noise, and Gaussian blur. These improvements aim to boost training performance and model generalization.
 
-I adjusted the feature map sizes from [38, 19, 10, 5, 3, 1] to [37, 18, 18, 9, 5, 2] to better balance spatial resolution and receptive fields. Additionally, I modified the VGG backbone: it now uses the full VGG16 feature extractor up to layer 23, then continues from layer 30, aligning more closely with the original SSD architecture. I also restructured the convolutional layers to vary the channel sizes — using 1024, 512, and 256 — instead of keeping them fixed at 256, improving feature representation across scales.
+I adjusted the feature map sizes from [38, 19, 10, 5, 3, 1] to [37, 18, 18, 9, 5, 2] to better balance spatial resolution and receptive fields. Additionally, I modified the VGG backbone: it now uses the full VGG16 feature extractor up to layer 23, then continues from layer 30, aligning more closely with the original SSD architecture. I also restructured the convolutional layers to vary the channel sizes, using 1024, 512, and 256, instead of keeping them fixed at 256, improving feature representation across scales.
 
 The loss function remains largely the same, but I introduced checks for empty ground truth boxes and improved the handling of edge cases for increased robustness. The training loop was also enhanced to support early stopping, model checkpointing, and training visualization. Finally, a number of smaller refinements were made throughout the process to get the model fully ready for training.
 
@@ -58,7 +58,7 @@ So, using insights from the previous results, I made a few key changes. I enable
 
 The results did not disappoint.
 
-The model completed its training beautifully! It achieved a final validation loss of 1928.09, which is excellent — especially considering that with Focal Loss, the raw loss values don’t directly translate to accuracy. This translates to an estimated mAP of 82–84% on the Pascal VOC dataset, marking a significant improvement over the initial run.
+The model completed its training beautifully! It achieved a final validation loss of 1928.09, which is excellent, especially considering that with Focal Loss, the raw loss values don’t directly translate to accuracy. This translates to an estimated mAP of 82–84% on the Pascal VOC dataset, marking a significant improvement over the initial run.
 
 Here’s what Claude had to say about the model:
 

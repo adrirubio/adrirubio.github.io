@@ -9,7 +9,7 @@ date:   2025-05-18
 I haven’t posted in the past two weeks as I’ve been fully focused on developing the AI PDF Reader. Now that I’ve found a moment, here’s a quick recap of what I’ve been working on and what to expect moving forward.
 
 I started the week by addressing several UI issues to make the interface cleaner and more user-friendly.
-I removed the “Simple,” “Like I’m Five,” and “Technical” modes, keeping only the “Custom” option to streamline the experience. I also enlarged the chat area and slightly repositioned the PDF viewer to the left for better layout balance. Instead of dumping the entire highlighted text into the chat, it now generates a compact link or button that takes you directly to the relevant section in the PDF—making navigation much smoother. Additionally, when starting a new chat, it can now retain full context from the entire PDF.
+I removed the “Simple,” “Like I’m Five,” and “Technical” modes, keeping only the “Custom” option to streamline the experience. I also enlarged the chat area and slightly repositioned the PDF viewer to the left for better layout balance. Instead of dumping the entire highlighted text into the chat, it now generates a compact link or button that takes you directly to the relevant section in the PDF, making navigation much smoother. Additionally, when starting a new chat, it can now get full context from the entire PDF.
 
 After that, I began integrating the API.
 The app now supports OpenAI API keys, correctly detects them, and uses them for generating responses.

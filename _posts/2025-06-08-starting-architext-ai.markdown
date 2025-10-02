@@ -4,7 +4,7 @@ title:  "Starting Architext-AI"
 date:   2025-06-08
 ---
 
-<p class="intro"><span class="dropcap">H</span>ello and welcome! In this post, I wrapped up the AI PDF Reader by releasing a Windows version and started my next project — an AI writing assistant called Architext-AI.</p>
+<p class="intro"><span class="dropcap">H</span>ello and welcome! In this post, I wrapped up the AI PDF Reader by releasing a Windows version and started my next project, an AI writing assistant called Architext-AI.</p>
 
 I started the week by creating a demo video for the AI PDF Reader, which is now embedded in  <a href="https://adrianrubio.org/blog/my-ai-pdf-reader-how-and-why-I-build-it/">last week's blog post.</a> I'm really happy with how the final version turned out. To wrap up the project, I released a Windows version and improved the README.
 Hopefully, the AI PDF Reader can gain some traction, as my dad and I will be sharing it across various social media platforms. Our goal is to reach 150 stars on GitHub.

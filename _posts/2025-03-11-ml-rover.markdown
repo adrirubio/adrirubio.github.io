@@ -4,9 +4,9 @@ title:  "ML-Rover"
 date:   25/03/9
 ---
 
-<p class="intro"><span class="dropcap">H</span>ello, and welcome! In this post, I’ll be sharing what I’m currently working on—the ML Rover. This project involves building AI models for my Mars rover (Adeept Picar-B), combining machine learning with robotics for an exciting challenge! We are now up to day so consider this the weekly post.</p>
+<p class="intro"><span class="dropcap">H</span>ello, and welcome! In this post, I’ll be sharing what I’m currently working on; the ML Rover. This project involves building AI models for my Mars rover (Adeept Picar-B), combining machine learning with robotics for an exciting challenge! We are now up to day so consider this the weekly post.</p>
 
-As of writing this post, the AI models for my Adeept Picar-B are still a work in progress—I only recently started working on them after finishing Mindful just a few days ago. Before diving into a new model, I like to take a methodical approach. I keep a small notebook where I jot down notes on various types of AI models.
+As of writing this post, the AI models for my Adeept Picar-B are still a work in progress, I only recently started working on them after finishing Mindful just a few days ago. Before diving into a new model, I like to take a methodical approach. I keep a small notebook where I jot down notes on various types of AI models.
 
 <a href="https://github.com/adrirubio/ml-rover">Visit the ml-rover</a>
 

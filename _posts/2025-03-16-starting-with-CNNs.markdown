@@ -14,7 +14,7 @@ Dark mode:
 
 I felt the need to refresh my understanding of CNN concepts, so I watched a couple of videos on the topic and revisited the ImageNet Classification with Deep Convolutional Neural Networks paper by Alex Krizhevsky, Ilya Sutskever, and Geoffrey Hinton.
 
-Now seems like a good time to mention that I use the Cursor editor—the AI integration is a really cool feature!
+Now seems like a good time to mention that I use the Cursor editor and the AI integration is a really cool feature!
 
 For the ML-Rover, my goal is to create multiple AI models, each serving a specific purpose, to create a fully integrated and advanced AI system for the rover.
 
