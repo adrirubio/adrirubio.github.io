@@ -57,6 +57,8 @@ ga('send', 'pageview');
              <ul class="noList"><li class="elementfirst">
                      <a href="/index.html">Home</a>
                  </li><li class="element">
+                     <a href="/featured">Featured</a>
+                 </li><li class="element">
                      <a href="/about">About</a>
                  </li><li class="elementlast">
                      <a href="/contact">Contact</a>
@@ -92,8 +94,50 @@ This process helps me stay organized and ensures I’m well-prepared before I st
 <p><img src="/assets/img/ml-rover/rover.png" alt="" /><br /></p>
 
 
-  <!-- POST NAVIGATION -->
-  <footer class="postNav clearfix"><a class="prev" href="/blog/mindful/"><span>&laquo;&nbsp;Mindful</span></a><a class="next" href="/blog/starting-with-CNNs/"><span>Starting CNNs&nbsp;&raquo;</span></a></footer>
+  <!-- POST NAVIGATION --><footer class="postNav clearfix"><a class="prev" href="/blog/mindful/" data-post-title="Mindful"><span>&laquo;&nbsp;Mindful</span></a><a class="next" href="/blog/starting-with-CNNs/" data-post-title="Starting CNNs"><span>Starting CNNs&nbsp;&raquo;</span></a></footer>
+
+  <script>
+    (function() {
+      // Check if we came from the featured page
+      var referrer = document.referrer;
+      var fromFeatured = referrer && referrer.indexOf('/featured') !== -1;
+
+      if (fromFeatured) {
+        // List of featured post titles
+        var featuredTitles = [
+          "ESP32 Environment Monitor",
+          "Shipwrecked",
+          "Arduino Security System",
+          "My AI PDF Reader: The Story of How (and Why) I Built It",
+          "Hack Club Shipwrecked",
+          "Inference Using SSD Weights",
+          "Finalizing SSD Model and Training",
+          "ML-Rover",
+          "Mindful",
+          "High Seas",
+          "Introduction Post"
+        ];
+
+        // Check prev link
+        var prevLink = document.querySelector('.postNav .prev');
+        if (prevLink) {
+          var prevTitle = prevLink.getAttribute('data-post-title');
+          if (featuredTitles.indexOf(prevTitle) === -1) {
+            prevLink.style.display = 'none';
+          }
+        }
+
+        // Check next link
+        var nextLink = document.querySelector('.postNav .next');
+        if (nextLink) {
+          var nextTitle = nextLink.getAttribute('data-post-title');
+          if (featuredTitles.indexOf(nextTitle) === -1) {
+            nextLink.style.display = 'none';
+          }
+        }
+      }
+    })();
+  </script>
 </article>
       </div>
    </div><!-- end .content --><div class="footer">

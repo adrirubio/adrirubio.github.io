@@ -5,8 +5,8 @@
     <description>This is my blog where I share my coding journey, my experiences, challenges, and discoveries in the ever-evolving world of programming.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 02 Oct 2025 20:41:33 +0200</pubDate>
-    <lastBuildDate>Thu, 02 Oct 2025 20:41:33 +0200</lastBuildDate>
+    <pubDate>Thu, 09 Oct 2025 19:29:26 +0200</pubDate>
+    <lastBuildDate>Thu, 09 Oct 2025 19:29:26 +0200</lastBuildDate>
     <generator>Jekyll v4.3.2</generator><item>
         <title>Stepper Motor Project and the ML Rover</title>
         <description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! Over the past week and a half, I burned out a motor driver because of faulty documentation and began work on the rover.&lt;/p&gt;

@@ -1,0 +1,25 @@
+---
+layout: default
+title: Featured
+---
+
+<div class="home" id="home">
+	<h1 class="pageTitle">Featured Posts</h1>
+	<div class="posts noList">
+		{%- assign featured_titles = "ESP32 Environment Monitor,Shipwrecked,Arduino Security System,My AI PDF Reader: The Story of How (and Why) I Built It,Hack Club Shipwrecked,Inference Using SSD Weights,Finalizing SSD Model and Training,ML-Rover,Mindful,High Seas,Introduction Post" | split: "," -%}
+		{%- for post in site.posts -%}
+			{%- if featured_titles contains post.title -%}
+			<article>
+				<span class="date">{{ post.date | date: '%B %d, %Y' }}</span>
+				<h3>
+					<a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+				</h3>
+				<p>
+					{%- if post.description -%}{{ post.description }}{%- else -%}{{
+					post.excerpt | strip_html }}{%- endif -%}
+				</p>
+			</article>
+			{%- endif -%}
+		{%- endfor -%}
+	</div>
+</div>
