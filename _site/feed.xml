@@ -5,9 +5,46 @@
     <description>This is my blog where I share my coding journey, my experiences, challenges, and discoveries in the ever-evolving world of programming.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 09 Oct 2025 19:29:26 +0200</pubDate>
-    <lastBuildDate>Thu, 09 Oct 2025 19:29:26 +0200</lastBuildDate>
+    <pubDate>Thu, 23 Oct 2025 19:46:56 +0200</pubDate>
+    <lastBuildDate>Thu, 23 Oct 2025 19:46:56 +0200</lastBuildDate>
     <generator>Jekyll v4.3.2</generator><item>
+        <title>Hack Club Blueprint (I Got Distracted Again)</title>
+        <description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! This week, an announcement on Hack Club caught my attention. What about the rover? Postponed.  Again.&lt;/p&gt;
+
+&lt;p&gt;On Friday, October 3rd, a new message appeared on the announcements channel on my Hack Club Slack, it read the following:&lt;/p&gt;
+
+&lt;p&gt;Rummage Rummage 🌳 &lt;br /&gt;
+What’s that? A blueberry???🫐🫐🫐🫐🫐 &lt;br /&gt;
+Announcing……..Blueprint📘! Hack Club’s largest hardware event. &lt;br /&gt;
+Think of it as Highway (Hardware) x Summer of Making (Fully integrated dashboard!) &lt;br /&gt;
+Design any hardware project….. REALLY! ANYTHING: Get up to $400 to build it!!! &lt;br /&gt;
+What’s more??? Use the time you spend building to get cool tools from the toolbag such as a BambuLab 3d printer &lt;br /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Join #blueprint 📘 on Slack (You know you want to) &lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;Go to https://blueprint.hackclub.com/ and sign up (Don’t forget to thank @Ruby for the art) &lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;Start your first journal entry to instantly earn some cool stickers 📘! &lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;Click explore to see other things people are making…. Live! 🔴……….you can even follow other people! &lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I already had lots of work planned for the Rover but this message was just too tempting to ignore and so I signed up… Just by looking at the possible prizes (3d printers, bench power supplies, soldering irons and more) I knew that this was for me. I started brainstorming possible projects for someone who had never printed a PCB or designed 3d pieces. Before long I had a challenging but promising idea.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blueprint/blueprint.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Blueprint: &lt;a href=&quot;https://blueprint.hackclub.com/landing&quot;&gt;Hack Club Blueprint&lt;/a&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;My goal is to build a speed camera. It’ll have a pcb/carrier board and a case that screws onto a universal tripod mount. Here’s my base idea: I’ll use a TF-Luna lidar to detect passing vehicles and measure their speed, likely using one of the two methods I mentioned in my latest journal entry (you have to journal your process since you can’t use Hackatime for hardware projects). The moment it detects an object entering the lidar’s field of view, it triggers the camera to take a picture. The data from both the lidar and camera gets passed to the raspi zero 2w, which calculates the speed of the vehicle, what vehicle it is, and in the case of it being a car, its license plate. Lastly, the data is sent to a phone via the pi’s wifi.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blueprint/odins-eye.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Odins Eye Blueprint: &lt;a href=&quot;https://blueprint.hackclub.com/projects/413&quot;&gt;Odins Eye Blueprint&lt;/a&gt;&lt;br /&gt;
+Odins Eye Github: &lt;a href=&quot;https://github.com/adrirubio/odins-eye&quot;&gt;Odins Eye Github&lt;/a&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now, I don’t want to repeat everything I went through to get to where I am because it’s all explained on the Blueprint page for my project. But I’d just like to say that I have a good feeling about this project. I’m not sure when I’ll post my next blog post, but I think I want to concentrate on the project for now and post once it’s finished. In the meantime, my whole work process will be journaled on the Blueprint page.&lt;/p&gt;
+</description><description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! This week, an announcement on Hack Club caught my attention. What about the rover? Postponed.  Again.&lt;/p&gt;
+</description><pubDate>Wed, 22 Oct 2025 00:00:00 +0200</pubDate>
+        <link>http://localhost:4000/blog/hack-club-bluprint/</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/hack-club-bluprint/</guid></item><item>
         <title>Stepper Motor Project and the ML Rover</title>
         <description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! Over the past week and a half, I burned out a motor driver because of faulty documentation and began work on the rover.&lt;/p&gt;
 
@@ -418,32 +455,5 @@ To see the current state of the pdf reader visit:&lt;/p&gt;
 </description><description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! In this post, I wrapped up the AI PDF Reader by releasing a Windows version and started my next project, an AI writing assistant called Architext-AI.&lt;/p&gt;
 </description><pubDate>Sun, 08 Jun 2025 00:00:00 +0200</pubDate>
         <link>http://localhost:4000/blog/starting-architext-ai/</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/starting-architext-ai/</guid></item><item>
-        <title>My AI PDF Reader: The Story of How (and Why) I Built It</title>
-        <description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! In this post I&apos;m going to tell you the whole story of my AI PDF reader – like, how I built it and the reasons why. This project was a pretty wild ride with some tough challenges and fun wins, and seeing it finally work just how I wanted is awesome!&lt;/p&gt;
-
-&lt;p&gt;I’m a huge &lt;a href=&quot;https://karpathy.ai/&quot;&gt;Andrej Karpathy&lt;/a&gt; fan (the guy who invented the term &lt;em&gt;vibe coding&lt;/em&gt;) and pretty much watch all his videos. One time, while I was watching his “How I use LLMs” video, he said that he wished there was a tool to make reading PDFs way easier. That just clicked for me! I read a lot of AI papers (about how different AI systems are built), and I often get stuck on tricky parts. The idea of highlighting text and getting help right away to understand it? That sounded awesome!&lt;/p&gt;
-
-&lt;p&gt;He specifically imagined a tool where you could highlight text in the PDF and get AI explanations. He actually talks about the idea &lt;a href=&quot;https://www.youtube.com/watch?v=EWvNQjAaOHw&amp;amp;t=3507s&quot;&gt;right here!&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;So, I decided to give it a shot!&lt;/p&gt;
-
-&lt;p&gt;This was my very first desktop app using &lt;em&gt;Electron&lt;/em&gt;, so for some of the harder parts, I &lt;strong&gt;vibe coded&lt;/strong&gt; it – you know, working with an AI (Claude 3.7 via &lt;a href=&quot;https://www.cursor.com/&quot;&gt;Cursor&lt;/a&gt;) helping me along. I definitely used this chance to understand these frameworks better, and now they don’t seem as confusing as before! I also learned that &lt;em&gt;vibe coding&lt;/em&gt; isn’t as easy as it looks. You have to explain everything super clearly to the AI, and sometimes it would just get stuck, meaning I’d have to dive in and figure things out. Getting the UI to work was awesome! But sometimes trying to fix one tiny bug would just make a bunch of new ones pop up – so frustrating! Still, I learned a ton about &lt;em&gt;Electron,&lt;/em&gt; &lt;em&gt;npm&lt;/em&gt; and &lt;em&gt;JavaScript&lt;/em&gt;. I even got used to using Git branches, which was super helpful for trying new stuff without breaking everything. And when I had a stable version, I learned how to make GitHub Releases so people could actually download and use the app! Looking back it was a really great experience and I learned so much!&lt;/p&gt;
-
-&lt;div style=&quot;text-align: center; margin: 2em 0;&quot;&gt;
-  &lt;video controls=&quot;&quot; width=&quot;720&quot; style=&quot;max-width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);&quot;&gt;
-    &lt;source src=&quot;https://github.com/adrirubio/ai-pdf-reader-demo/raw/main/ai-pdf-reader-demo.mp4&quot; type=&quot;video/mp4&quot; /&gt;
-    Your browser does not support the video tag.
-  &lt;/video&gt;
-&lt;/div&gt;
-
-&lt;p&gt;I really hope this can be a useful tool for students, researchers, or anyone who wants to read PDFs more efficiently.
-You can find the project, download the app, and see all the code on my GitHub page: &lt;a href=&quot;https://github.com/adrirubio/ai-pdf-reader&quot;&gt;AI PDF reader&lt;/a&gt;&lt;br /&gt;
-If you think it’s cool or useful, starring the project on GitHub would mean the world to me! It helps other people find it and really motivates me to keep building new things. I’d also love to hear what you think or if you have any ideas!&lt;/p&gt;
-
-&lt;p&gt;Thanks for reading and checking out my project!&lt;/p&gt;
-</description><description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! In this post I&apos;m going to tell you the whole story of my AI PDF reader – like, how I built it and the reasons why. This project was a pretty wild ride with some tough challenges and fun wins, and seeing it finally work just how I wanted is awesome!&lt;/p&gt;
-</description><pubDate>Sat, 31 May 2025 00:00:00 +0200</pubDate>
-        <link>http://localhost:4000/blog/my-ai-pdf-reader-how-and-why-I-build-it/</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/my-ai-pdf-reader-how-and-why-I-build-it/</guid></item></channel>
+        <guid isPermaLink="true">http://localhost:4000/blog/starting-architext-ai/</guid></item></channel>
 </rss>

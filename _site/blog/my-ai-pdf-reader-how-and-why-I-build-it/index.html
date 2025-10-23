@@ -102,43 +102,70 @@ If you think it’s cool or useful, starring the project on GitHub would mean th
 
   <script>
     (function() {
-      // Check if we came from the featured page
+      // Check if we came from the featured page or are in featured browsing mode
       var referrer = document.referrer;
       var fromFeatured = referrer && referrer.indexOf('/featured') !== -1;
+      var fromHome = referrer && (referrer.endsWith('/') || referrer.indexOf('/index') !== -1 || referrer.indexOf('/articles') !== -1);
+      var fromBlogPost = referrer && referrer.indexOf('/blog/') !== -1;
+      var inFeaturedMode = sessionStorage.getItem('featuredBrowsing') === 'true';
 
+      // If coming from featured page, set featured browsing mode
       if (fromFeatured) {
-        // List of featured post titles
-        var featuredTitles = [
-          "ESP32 Environment Monitor",
-          "Shipwrecked",
-          "Arduino Security System",
-          "My AI PDF Reader: The Story of How (and Why) I Built It",
-          "Hack Club Shipwrecked",
-          "Inference Using SSD Weights",
-          "Finalizing SSD Model and Training",
-          "ML-Rover",
-          "Mindful",
-          "High Seas",
-          "Introduction Post"
-        ];
+        sessionStorage.setItem('featuredBrowsing', 'true');
+        inFeaturedMode = true;
+      }
+      // If coming from home page or similar, clear featured mode
+      else if (fromHome) {
+        sessionStorage.removeItem('featuredBrowsing');
+        inFeaturedMode = false;
+      }
+      // If coming from a blog post, keep current mode (don't change it)
 
-        // Check prev link
+      // List of featured post titles and their URLs (dynamically generated from Jekyll)
+      var featuredPosts = [{title: "Hack Club Blueprint (I Got Distracted Again)", url: "/blog/hack-club-bluprint/"},{title: "ESP32 Environment Monitor", url: "/blog/esp32-environment-monitor/"},{title: "Shipwrecked", url: "/blog/shipwrecked/"},{title: "Arduino Security System", url: "/blog/arduino-security-system/"},{title: "My AI PDF Reader: The Story of How (and Why) I Built It", url: "/blog/my-ai-pdf-reader-how-and-why-I-build-it/"},{title: "Hack Club Shipwrecked", url: "/blog/hack-club-shipwrecked/"},{title: "Inference Using SSD Weights", url: "/blog/inference-using-SSD/"},{title: "Finalizing SSD Model and Training", url: "/blog/finalizing-ssd-model-and-training/"},{title: "ML-Rover", url: "/blog/ml-rover/"},{title: "Mindful", url: "/blog/mindful/"},{title: "High Seas", url: "/blog/high-seas/"},{title: "Introduction Post", url: "/blog/introduction-post/"}];
+
+      // Get current page title
+      var currentTitle = document.querySelector('.postTitle').textContent;
+
+      // Find current index in featured list
+      var currentIndex = -1;
+      for (var i = 0; i < featuredPosts.length; i++) {
+        if (featuredPosts[i].title === currentTitle) {
+          currentIndex = i;
+          break;
+        }
+      }
+
+      // If we're in featured mode and this post is in the featured list, use featured navigation
+      if (inFeaturedMode && currentIndex !== -1) {
+        // Handle previous link (goes DOWN the featured list - higher index)
         var prevLink = document.querySelector('.postNav .prev');
-        if (prevLink) {
-          var prevTitle = prevLink.getAttribute('data-post-title');
-          if (featuredTitles.indexOf(prevTitle) === -1) {
-            prevLink.style.display = 'none';
+        if (currentIndex < featuredPosts.length - 1) {
+          var prevPost = featuredPosts[currentIndex + 1];
+          if (prevLink) {
+            prevLink.href = prevPost.url;
+            prevLink.querySelector('span').textContent = '« ' + prevPost.title;
+            prevLink.setAttribute('data-post-title', prevPost.title);
           }
+        } else if (prevLink) {
+          prevLink.style.display = 'none';
         }
 
-        // Check next link
+        // Handle next link (goes UP the featured list - lower index)
         var nextLink = document.querySelector('.postNav .next');
-        if (nextLink) {
-          var nextTitle = nextLink.getAttribute('data-post-title');
-          if (featuredTitles.indexOf(nextTitle) === -1) {
-            nextLink.style.display = 'none';
+        if (currentIndex > 0) {
+          var nextPost = featuredPosts[currentIndex - 1];
+          if (nextLink) {
+            nextLink.href = nextPost.url;
+            nextLink.querySelector('span').textContent = nextPost.title + ' »';
+            nextLink.setAttribute('data-post-title', nextPost.title);
           }
+        } else if (nextLink) {
+          nextLink.style.display = 'none';
         }
+      } else if (currentIndex === -1 && inFeaturedMode) {
+        // Current post is not in featured list, exit featured mode
+        sessionStorage.removeItem('featuredBrowsing');
       }
     })();
   </script>

@@ -7,11 +7,11 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta name="description" content="" />
-	<title>Inference Using SSD Weights</title>
+	<title>Hack Club Blueprint (I Got Distracted Again)</title>
 
 	<!-- Open Graph Meta -->
-	<meta content="Adrian Rubio" property="og:site_name" /><meta content="Inference Using SSD Weights" property="og:title" /><meta content="article" property="og:type" /><meta content="This is my blog where I share my coding journey, my experiences, challenges, and discoveries in the ever-evolving world of programming." property="og:description" /><meta content="http://localhost:4000/blog/inference-using-SSD/" property="og:url" /><meta
-		content="2025-04-20T00:00:00+02:00"
+	<meta content="Adrian Rubio" property="og:site_name" /><meta content="Hack Club Blueprint (I Got Distracted Again)" property="og:title" /><meta content="article" property="og:type" /><meta content="This is my blog where I share my coding journey, my experiences, challenges, and discoveries in the ever-evolving world of programming." property="og:description" /><meta content="http://localhost:4000/blog/hack-club-bluprint/" property="og:url" /><meta
+		content="2025-10-22T00:00:00+02:00"
 		property="article:published_time"
 	/>
 	<meta content="http://localhost:4000/about/" property="article:author" /><meta
@@ -20,7 +20,7 @@
 	/><!-- Twitter Cards -->
 	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:site" content="@" />
-	<meta name="twitter:creator" content="@" /><meta name="twitter:title" content="Inference Using SSD Weights" /><meta name="twitter:url" content="http://localhost:4000/blog/inference-using-SSD/" /><meta name="twitter:description" content="This is my blog where I share my coding journey, my experiences, challenges, and discoveries in the ever-evolving world of programming." /><meta
+	<meta name="twitter:creator" content="@" /><meta name="twitter:title" content="Hack Club Blueprint (I Got Distracted Again)" /><meta name="twitter:url" content="http://localhost:4000/blog/hack-club-bluprint/" /><meta name="twitter:description" content="This is my blog where I share my coding journey, my experiences, challenges, and discoveries in the ever-evolving world of programming." /><meta
 		name="twitter:image:src"
 		content="http://localhost:4000/assets/img/touring.jpg"
 	/><!-- Favicon --><link rel="stylesheet" href="/assets/css/style.css" />
@@ -37,7 +37,7 @@
 	<!-- Canonical URL -->
 	<link
 		rel="canonical"
-		href="http://localhost:4000/blog/inference-using-SSD/"
+		href="http://localhost:4000/blog/hack-club-bluprint/"
 	/><!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -70,62 +70,45 @@ ga('send', 'pageview');
 <div class="content">
       <div class="container">
          <article class="post"><header>
-    <h1 class="postTitle">Inference Using SSD Weights</h1>
-    <p class="meta">April 20, 2025 | <span class="time">4</span> Minute Read</p>
+    <h1 class="postTitle">Hack Club Blueprint (I Got Distracted Again)</h1>
+    <p class="meta">October 22, 2025 | <span class="time">2</span> Minute Read</p>
   </header>
 
-  <p class="intro"><span class="dropcap">H</span>ello and welcome! This week, I took a deeper dive into last week's model, did some additional training, and let me just say, the inference code made predictions, and they’re genuinely impressive!</p>
+  <p class="intro"><span class="dropcap">H</span>ello and welcome! This week, an announcement on Hack Club caught my attention. What about the rover? Postponed.  Again.</p>
 
-<p>I kicked off the week by listening to a few podcasts created with Notebook LM, which helped set the stage for deeper understanding. I also spent some time revising the code alongside Claude, going through the model architecture and key components more thoroughly. That combination really clicked for me and I came away feeling like I finally had a much clearer grasp of how the model works.</p>
+<p>On Friday, October 3rd, a new message appeared on the announcements channel on my Hack Club Slack, it read the following:</p>
 
-<p><a href="https://github.com/adrirubio/ml-rover/blob/93cbd2abda91a5a34217186b75c0cade86c84099/ssd/ssd-object-detection.py">SSD model at this phase</a></p>
+<p>Rummage Rummage 🌳 <br />
+What’s that? A blueberry???🫐🫐🫐🫐🫐 <br />
+Announcing……..Blueprint📘! Hack Club’s largest hardware event. <br />
+Think of it as Highway (Hardware) x Summer of Making (Fully integrated dashboard!) <br />
+Design any hardware project….. REALLY! ANYTHING: Get up to $400 to build it!!! <br />
+What’s more??? Use the time you spend building to get cool tools from the toolbag such as a BambuLab 3d printer <br /></p>
 
-<p>Once I felt confident in how the model worked, around Wednesday, I decided it was time to train it. Unfortunately, the initial results were pretty disappointing. Every time I kicked off training, the first few epochs showed a really high loss, which wasn’t too surprising at first. But what really threw me off was that the mAP@0.50 stayed stuck at 0.0000 for the first 10 epochs. Even after that, the improvements were barely creeping up with tiny values that were barely meaningful.</p>
+<ul>
+  <li>Join #blueprint 📘 on Slack (You know you want to) <br /></li>
+  <li>Go to https://blueprint.hackclub.com/ and sign up (Don’t forget to thank @Ruby for the art) <br /></li>
+  <li>Start your first journal entry to instantly earn some cool stickers 📘! <br /></li>
+  <li>Click explore to see other things people are making…. Live! 🔴……….you can even follow other people! <br /></li>
+</ul>
 
-<p>After that, I started tweaking some of the weights, hoping to find a sweet spot that would finally unlock the model’s potential. But no matter what I tried, nothing seemed to make a meaningful difference. It was especially frustrating because, on paper, this model had a pretty advanced architecture. It used an EfficientNet‑B1 backbone with an FPN, incorporated sophisticated augmentations through Albumentations, supported mixed‑precision training, and featured a three‑phase learning-rate scheduler. On top of that, the loss function was optimized with GIoU for bounding boxes and Focal Loss for classification, so expectations were high.</p>
+<p>I already had lots of work planned for the Rover but this message was just too tempting to ignore and so I signed up… Just by looking at the possible prizes (3d printers, bench power supplies, soldering irons and more) I knew that this was for me. I started brainstorming possible projects for someone who had never printed a PCB or designed 3d pieces. Before long I had a challenging but promising idea.</p>
 
-<p>But despite all that, after full training, the model only managed to hit around 40 mAP@0.50, which is disappointingly low for a setup this advanced.</p>
+<p><img src="/assets/img/blueprint/blueprint.png" alt="" /><br /></p>
 
-<p>By this point, I was honestly exhausted. It was Friday, and I’d spent the better part of the week going back and forth, tweaking weights and adjusting parameters, hoping for a breakthrough. But the model just kept underperforming, no matter what I threw at it. So, naturally, I started thinking about giving up.</p>
+<p>Blueprint: <a href="https://blueprint.hackclub.com/landing">Hack Club Blueprint</a><br /></p>
 
-<p><img src="/assets/img/ssd/SSD-0-mAP.png" alt="" /><br /></p>
+<p>My goal is to build a speed camera. It’ll have a pcb/carrier board and a case that screws onto a universal tripod mount. Here’s my base idea: I’ll use a TF-Luna lidar to detect passing vehicles and measure their speed, likely using one of the two methods I mentioned in my latest journal entry (you have to journal your process since you can’t use Hackatime for hardware projects). The moment it detects an object entering the lidar’s field of view, it triggers the camera to take a picture. The data from both the lidar and camera gets passed to the raspi zero 2w, which calculates the speed of the vehicle, what vehicle it is, and in the case of it being a car, its license plate. Lastly, the data is sent to a phone via the pi’s wifi.</p>
 
-<p>But, I had one last shot left in me.</p>
+<p><img src="/assets/img/blueprint/odins-eye.png" alt="" /><br /></p>
 
-<p>So, I turned to Claude for some insight. Naturally, I was curious how could a model with such an advanced architecture perform so poorly? I started digging into the original SSD paper, specifically looking at how their model managed to reach 72 mAP@0.5. That’s when it hit me: I had likely overcomplicated my implementation. By layering on too many advanced techniques all at once, I may have introduced more confusion than clarity to the model. Instead of boosting performance, all those additions seemed to interfere with learning.</p>
+<p>Odins Eye Blueprint: <a href="https://blueprint.hackclub.com/projects/413">Odins Eye Blueprint</a><br />
+Odins Eye Github: <a href="https://github.com/adrirubio/odins-eye">Odins Eye Github</a><br /></p>
 
-<p>I decided to simplify the model, keeping the SSD paper as my main reference. Following its approach step by step, I started stripping away some of the complexity and sticking to the core elements of their design. In the end, the model I ended up with was quite similar to the SSD300 from the paper.</p>
-
-<p>So, I started training the simplified model. I think the following snippets really say it all.</p>
-
-<p><img src="/assets/img/ssd/SSD-training-snippet.png" alt="" /><br />
-<img src="/assets/img/ssd/SSD-training-snippet2.png" alt="" /><br />
-<img src="/assets/img/ssd/SSD-training-snippet3.png" alt="" /><br /></p>
-
-<p>The model finished with an mAP@0.5 of 0.76 (76%), which is very close to the 77% reported in the paper. This marked a huge improvement compared to the 40% mAP of the previous model. But now came the moment of truth: I had to test it out. So, I asked Claude to create two simple sets of inference code, one that randomly selects an image from the Pascal VOC dataset and predicts the bounding boxes and labels, and another where you provide the image manually.</p>
-
-<p>The model did not disappoint.</p>
-
-<p><img src="/assets/img/ssd/1_pred.png" alt="" /><br />
-<img src="/assets/img/ssd/2_pred.png" alt="" /><br />
-<img src="/assets/img/ssd/3_pred.png" alt="" /><br />
-<img src="/assets/img/ssd/4_pred.png" alt="" /><br />
-<img src="/assets/img/ssd/5_pred.png" alt="" /><br /></p>
-
-<p>You can also check out the final trained model weights, now available on Hugging Face. For more examples and the full inference code, head over to the GitHub repo. Feel free to test it, fork it, or build on it!</p>
-
-<p><a href="https://huggingface.co/pro-grammer/SSD">SSD weights</a><br />
-<a href="https://github.com/adrirubio/ml-rover/tree/main/ssd">SSD github</a><br /></p>
-
-<p>Next week, I plan to further deepen my understanding by reviewing the newer SSD models and beginning work on the next model for the ML-Rover project. Once that’s complete, I’ll start integrating the models into the Adeept PiCar-B.</p>
-
-<p>This post documents the state of the SSD model as of April 20, 2025<br />
-To see the current state of the model visit:</p>
-
-<p><a href="https://github.com/adrirubio/ml-rover/blob/main/ssd/ssd-object-detection.py">SSD object detection model</a></p>
+<p>Now, I don’t want to repeat everything I went through to get to where I am because it’s all explained on the Blueprint page for my project. But I’d just like to say that I have a good feeling about this project. I’m not sure when I’ll post my next blog post, but I think I want to concentrate on the project for now and post once it’s finished. In the meantime, my whole work process will be journaled on the Blueprint page.</p>
 
 
-  <!-- POST NAVIGATION --><footer class="postNav clearfix"><a class="prev" href="/blog/finalizing-ssd-model-and-training/" data-post-title="Finalizing SSD Model and Training"><span>&laquo;&nbsp;Finalizing SSD Model and Training</span></a><a class="next" href="/blog/hack-club-shipwrecked/" data-post-title="Hack Club Shipwrecked"><span>Hack Club Shipwrecked&nbsp;&raquo;</span></a></footer>
+  <!-- POST NAVIGATION --><footer class="postNav clearfix"><a class="prev" href="/blog/stepper-motor-project-and-the-ml-rover/" data-post-title="Stepper Motor Project and the ML Rover"><span>&laquo;&nbsp;Stepper Motor Project and the ML Rover</span></a></footer>
 
   <script>
     (function() {
