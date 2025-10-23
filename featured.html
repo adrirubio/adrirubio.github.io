@@ -8,7 +8,15 @@ title: Featured
 	<div class="posts noList">
 		{%- assign featured_titles = "Hack Club Blueprint (I Got Distracted Again),ESP32 Environment Monitor,Shipwrecked,Arduino Security System,My AI PDF Reader: The Story of How (and Why) I Built It,Hack Club Shipwrecked,Inference Using SSD Weights,Finalizing SSD Model and Training,ML-Rover,Mindful,High Seas,Introduction Post" | split: "," -%}
 		{%- for post in site.posts -%}
-			{%- if featured_titles contains post.title -%}
+			{%- assign is_featured = false -%}
+			{%- for featured_title in featured_titles -%}
+				{%- assign featured_title_stripped = featured_title | strip -%}
+				{%- if post.title == featured_title_stripped -%}
+					{%- assign is_featured = true -%}
+					{%- break -%}
+				{%- endif -%}
+			{%- endfor -%}
+			{%- if is_featured -%}
 			<article>
 				<span class="date">{{ post.date | date: '%B %d, %Y' }}</span>
 				<h3>
