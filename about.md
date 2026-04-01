@@ -6,7 +6,7 @@ title: About Long Haul
 <div class="post">
   <h1 class="pageTitle">About Me</h1>
   <p>
-    Hi, I’m Adrian Rubio Punal. I’m 13 years old and really enjoy programming and AI. This blog is where I share my journey, what I’m learning, building, and discovering in the world of technology.
+    Hi, I’m Adrian Rubio Punal. I’m 14 years old and really enjoy programming and AI. This blog is where I share my journey, what I’m learning, building, and discovering in the world of technology.
   </p>
   <p>
     I got into coding when my dad introduced me to programming. I liked the challenge of figuring things out, the satisfaction of fixing bugs, and the excitement of seeing my projects actually work.
