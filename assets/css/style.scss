@@ -88,6 +88,10 @@
 	--table-even-bg: #1a1a1a;
 }
 
+:root[data-theme="dark"] .posts article h3 a.post-link {
+	color: #1571cd;
+}
+
 body {
 	background-color: var(--page-bg);
 	color: var(--page-text);
@@ -178,12 +182,18 @@ tr:nth-child(even) {
 :root[data-theme="dark"] .theme-toggle__icon {
 	transform: translateX(1rem);
 	background: #000000;
+	background-color: #000000;
 }
 
 @media (prefers-color-scheme: dark) {
+	:root:not([data-theme="light"]) .posts article h3 a.post-link {
+		color: #1571cd;
+	}
+
 	:root:not([data-theme="light"]) .theme-toggle__icon {
 		transform: translateX(1rem);
 		background: #000000;
+		background-color: #000000;
 	}
 }
 
