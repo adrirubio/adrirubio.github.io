@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]--><head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description" content="" />
+	<title>Odin's Eye</title>
+	<script>
+		(function() {
+			try {
+				var theme = localStorage.getItem('theme');
+				if (theme === 'light' || theme === 'dark') {
+					document.documentElement.setAttribute('data-theme', theme);
+				}
+			} catch (e) {}
+		})();
+	</script>
+
+	<!-- Open Graph Meta -->
+	<meta content="Adrian Rubio" property="og:site_name" /><meta content="Odin's Eye" property="og:title" /><meta content="article" property="og:type" /><meta content="This is my blog where I share my coding journey, my experiences, challenges, and discoveries in the ever-evolving world of programming." property="og:description" /><meta content="https://adrirubio.github.io/blog/odins-eye/" property="og:url" /><meta
+		content="2026-05-16T00:00:00+02:00"
+		property="article:published_time"
+	/>
+	<meta content="https://adrirubio.github.io/about/" property="article:author" /><meta
+		content="https://adrirubio.github.io/assets/img/touring.jpg"
+		property="og:image"
+	/><!-- Twitter Cards -->
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@" />
+	<meta name="twitter:creator" content="@" /><meta name="twitter:title" content="Odin's Eye" /><meta name="twitter:url" content="https://adrirubio.github.io/blog/odins-eye/" /><meta name="twitter:description" content="This is my blog where I share my coding journey, my experiences, challenges, and discoveries in the ever-evolving world of programming." /><meta
+		name="twitter:image:src"
+		content="https://adrirubio.github.io/assets/img/touring.jpg"
+	/><!-- Favicon --><link rel="stylesheet" href="/assets/css/style.css" />
+
+	<link rel="icon" type="image/x-icon" href=""/>
+
+	<!-- Come and get me RSS readers -->
+	<link rel="alternate" type="application/rss+xml" title="Adrian Rubio"
+	href="https://adrirubio.github.io/feed.xml" />
+
+	<!-- Stylesheet -->
+	<link rel="stylesheet" href="/assets/css/style.css" />
+	
+	<!-- Canonical URL -->
+	<link
+		rel="canonical"
+		href="https://adrirubio.github.io/blog/odins-eye/"
+	/><!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script>
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-58263416-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+</head>
+<body> <div class="header ">
+     <div class="container">
+         <h1 class="logo"><a href="/">Adrian Rubio</a></h1>
+         <nav class="nav-collapse">
+             <ul class="noList"><li class="elementfirst">
+                     <a href="/index.html">Home</a>
+                 </li><li class="element">
+                     <a href="/featured">Featured</a>
+                 </li><li class="element">
+                     <a href="/about">About</a>
+                 </li><li class="elementlast">
+                     <a href="/contact">Contact</a>
+                 </li><li> <a href="https://github.com/adrirubio" target="_blank">GitHub</a></li>
+                 <li class="theme-switch">
+                     <button class="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">
+                         <span class="theme-toggle__icon" aria-hidden="true"></span>
+                     </button>
+                 </li>
+             </ul>
+         </nav>
+     </div>
+ </div><!-- end .header -->
+<div class="content">
+      <div class="container">
+         <article class="post">
+  <header>
+    <h1 class="postTitle">Odin's Eye</h1>
+    <p class="meta">May 16, 2026 | <span class="time">10</span> Minute Read</p>
+  </header>
+
+  <p class="intro"><span class="dropcap">H</span>ello and welcome! Over the last few months, I have built four hardware projects for Blueprint which, once accepted, should earn me a 3D printer. The first of these projects was Odin’s Eye.</p>
+
+<p>I introduced Odin’s Eye in the previous journal, but here’s a quick recap:</p>
+
+<p>Odin’s Eye is a DIY speed camera that detects passing vehicles using a TF-Luna LiDAR sensor and measures their speed. When a vehicle passes, a Raspberry Pi Camera Module 3 takes a picture, which is then processed by a Pi Zero 2 W. Once everything is processed, the data is displayed on a dashboard that can be accessed from your phone over Wi-Fi.</p>
+
+<p>After more than 40 hours of work on the project, I achieved a result that I am incredibly proud of. However, the process came with plenty of setbacks and disappointments. For a full, detailed breakdown of the project and everything that led to it, refer to the Blueprint journal. You can also find all of the project files, including the PCB designs, firmware, 3D case files, demos, and more, on GitHub.</p>
+
+<p>Odin’s Eye Blueprint: <a href="https://blueprint.hackclub.com/projects/413">Odin’s Eye Blueprint</a><br />
+Odin’s Eye Github: <a href="https://github.com/adrirubio/odins-eye">Odin’s Eye Github</a><br /></p>
+
+<p>In this journal, I want to give a brief overview of Odin’s Eye and explain what I learned while building it.</p>
+
+<p>I began the project by doing research and choosing the parts that would work best for the system. I also made some rough sketches to illustrate my initial ideas for the PCB layout, 3D case, and component placement. Looking back, most of the ideas from this stage made it into the final version of the system.</p>
+
+<p><img src="/assets/img/odins-eye/sketches.png" alt="" /><br /></p>
+
+<p>I also spent time thinking about the speed measurement method. I looked into several different approaches, including video-based tracking, Doppler radar, microwave motion sensors, and more. I eventually settled on using a TF-Luna LiDAR sensor and a least-squares fitting method to calculate vehicle speed. The LiDAR is placed at an angle facing the road and continuously takes distance readings as a vehicle passes through its field of view. Using those measurements, the system can calculate the speed of the vehicle.</p>
+
+<p>After getting a clear idea of the parts I was going to use, I felt ready to start working on the PCB design, despite it being my first time designing one. First, I installed KiCad, the software I used to design the PCB. After watching a few guides and tutorials, I felt ready to begin working on the schematic.</p>
+
+<p>I added the connectors, resistors, LED, USB-C receptacle, and even designed my own header for the Raspberry Pi. I then laid out the components and connected everything by referencing the pinouts of the different parts, such as the OLED display and TF-Luna LiDAR sensor, while also checking multiple sources for the USB-C receptacle wiring.</p>
+
+<p><img src="/assets/img/odins-eye/schematic.png" alt="" /><br /></p>
+
+<p>Once I had double-checked that the schematic looked valid, I assigned footprints to each part and found matching components on either Mouser or DigiKey. All of these parts and references are documented on the Blueprint page. Most of the components were fairly easy to find, but the TF-Luna connector gave me trouble because it was not included in the sensor’s documentation. After digging through forum threads and Reddit posts, I eventually managed to narrow the options down to three possible connectors.</p>
+
+<p>Next, I moved on to the PCB design. I imported the correct board settings and, after some trial and error, found a compact way to arrange the components, placing each footprint close to its intended position. Once I was happy with the layout, I added the board outline using the dimensions I had planned for the PCB.</p>
+
+<p>Since it was also my first time designing a PCB, I watched a few tutorials and started routing the PCB traces. After fixing a few DRC violations, I improved the part labels and added some text containing the title, date, my name, and a Hack Club logo.</p>
+
+<p><img src="/assets/img/odins-eye/pcb.png" alt="" /><br /></p>
+
+<p>Now that the PCB was practically finished, I connected the TF-Luna that I had bought to I²C on a breadboard and created a proof of concept (POC). At first, I replicated the least-squares fit code in C++, but I wasn’t very satisfied with the results. After experimenting with different methods, I came up with an approach I called “Burst–Gap–Burst.” In simple terms, the system takes two quick groups of distance readings separated by a short pause, compares their averages, and uses the difference to calculate the vehicle’s speed.</p>
+
+<p>I used the proof of concept (POC) to improve the accuracy of this new method. By the end of the testing session, the system had become surprisingly accurate. This method required the sensor to face the road at roughly a 20-degree angle to work properly. Since I wanted the project to be completely standalone, I decided to add a gyroscope to the PCB and later implement a calibration sequence in the speed camera software.</p>
+
+<p><img src="/assets/img/odins-eye/poc.png" alt="" /><br /></p>
+
+<p>The only part of the speed camera left to design was the 3D case, so I got started on it. I installed FreeCAD and, after doing some research and experimenting with it on my own, I felt confident enough to begin designing the case.</p>
+
+<p>Shortly after starting, I already had the basic shape of the case and the four holes used to screw the cover onto it. I then added a hole on the bottom of the case for a 1/4-20 heat-set insert so the system could be mounted onto a tripod. I also added a slot across the width of the base so the PCB could slide in vertically.</p>
+
+<p>To give the PCB extra stability inside the case, I added a support strip on the side of the enclosure with two mounting holes, along with two matching mounting holes on the PCB itself. I also added two strips on the cover aligned with the PCB’s position inside the case.</p>
+
+<p>To complete the 3D case, I added cutouts for the TF-Luna, Pi Camera, USB-C port, OLED display, and LED. I used the datasheets for each component to get the measurements I needed.</p>
+
+<p><img src="/assets/img/odins-eye/3d-case.png" alt="" /><br /></p>
+
+<p>I went a step further and decided to make the 3D case as accurate as possible. To do this, I downloaded the STEP files for each component, imported them into the design, and placed them inside the case. This turned out to be an important step because it allowed me to fix several small measurement issues, such as the camera mounting holes, the LED cutout, and the USB-C cutout, that I likely would not have noticed otherwise.</p>
+
+<p><img src="/assets/img/odins-eye/complete-3d-case.png" alt="" /><br /></p>
+
+<p>At this point, I was ready to order the PCB, components, and 3D-printed case. Since I planned to use JLCPCB as the manufacturer, I generated the Gerber files and uploaded the BOM and CPL files for assembly so they could assemble the SMD USB-C connector for me. After verifying the USB-C connector was the correct component and properly positioned, I got a quote for the PCB. It was fairly expensive because it was getting shipped from China, but I was confident that it would work, so I went ahead with the order.</p>
+
+<p>I also bought the components (Pi, camera, OLED, etc.) separately, and the PCB parts from Mouser. The only thing left to order was the 3D case. I got this done by finding a teenager in Spain who had a 3D printer through Printing Legion. Printing Legion is a Hack Club initiative where people with 3D printers print parts for others who do not have access to one, then get reimbursed for the filament used.</p>
+
+<p><img src="/assets/img/odins-eye/pcb-order.png" alt="" /><br /></p>
+
+<p>After the PCB and parts had arrived, I began soldering. My first solder joints were noticeably worse than the later ones, by which point I had gotten the hang of it. Soldering went smoothly apart from the LED, which I had to remove after making a mistake while soldering it. Once the parts were soldered onto the PCB, I moved on to the Pi and gyroscope, and those joints turned out much cleaner.</p>
+
+<p><img src="/assets/img/odins-eye/soldered-pi.png" alt="" /><br />
+<img src="/assets/img/odins-eye/soldered-pcb.png" alt="" /><br /></p>
+
+<p>With the PCB assembled, I continued by flashing Raspberry Pi OS Lite onto the SD card I was going to use for the Pi. I then booted the Pi and got to work making sure all the sensors were recognized. All of the sensors were detected correctly.</p>
+
+<p><img src="/assets/img/odins-eye/sensors-working.png" alt="" /><br /></p>
+
+<p>I decided to assemble the system inside the case because I knew the sensors were working. I did this by slotting the PCB into the case, then screwing the TF-Luna, camera, and OLED into their positions. I also installed the heat-set insert into the cutout at the bottom of the case. Everything fit correctly and lined up exactly as intended.</p>
+
+<p><img src="/assets/img/odins-eye/assembled-system.png" alt="" /><br /></p>
+
+<p>Lastly, I worked on the code with the help of Claude Code. We adapted the Arduino speed-detection logic to Python and added a 12-second calibration process that tested which of the gyroscope’s axes corresponded to the device’s horizontal rotation. This resulted in the first working speed-detection program running on the Pi.</p>
+
+<p>I took it outside with my laptop and began testing. At first, the results were not accurate, and after some testing that led to no improvement, I developed a method to improve the code by having my dad drive past the sensor at roughly 20 km/h in sets of 10 passes, saving the sensor data after each run. I then used Claude Code to analyze the results, identify what was going wrong, and tune the parameters until the results improved.</p>
+
+<p><img src="/assets/img/odins-eye/finished-system.png" alt="" /><br /></p>
+
+<p>The method clearly worked, because by the third round the system had gone from reporting impossible speeds to producing realistic and repeatable results. Most of the speed measurements had an error margin of around 5 km/h, which was far better than I had expected when starting the project.</p>
+
+<p>I finished the project by turning it into a completely standalone system with a dashboard that shows the image, speed, tilt, fit error, confidence, and other information for each capture. I also made the speed-detection code and dashboard start running as soon as the Pi powers on and attached a small power bank to the cover.</p>
+
+<p><img src="/assets/img/odins-eye/finished-system-with-powerbank.png" alt="" /><br /></p>
+
+<p>Odin’s Eye Demo:</p>
+
+<div style="text-align: center; margin: 2em 0;">
+  <a href="https://youtu.be/cNV2ZcgS8Qw" target="_blank" style="display: inline-block; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden;">
+    <img src="https://img.youtube.com/vi/cNV2ZcgS8Qw/0.jpg" alt="Shipwrecked Video" style="width: 720px; max-width: 100%; display: block;" />
+  </a>
+</div>
+
+<p>I recommend having a look at the Blueprint page for Odin’s Eye because it gives a much more detailed account of the entire development process, including the setbacks, testing, design decisions, and improvements that led to the final project.</p>
+
+<p>Odin’s Eye Blueprint: <a href="https://blueprint.hackclub.com/projects/413">Odin’s Eye Blueprint</a><br /></p>
+
+<p>Odin’s Eye has been an incredible learning experience for me, going from barely knowing what hardware design was to designing, ordering, and soldering a fully functional PCB. This project took me through both the highs and the lows, but ultimately, I think that is what made it so rewarding. Seeing a project that started as a rough idea turn into a fully standalone speed camera capable of producing realistic results is something I am incredibly proud of. I plan on continuing to build even more ambitious hardware and software projects in the future.</p>
+
+
+  <!-- POST NAVIGATION -->
+  <footer class="postNav clearfix"><a class="prev" href="/blog/hack-club-bluprint/" data-post-title="Hack Club Blueprint (I Got Distracted Again)"><span>&laquo;&nbsp;Hack Club Blueprint (I Got Distracted Again)</span></a></footer>
+</article>
+      </div>
+   </div><!-- end .content --><div class="footer">
+	<div class="container">
+		<p class="copy">
+			&copy; 2026
+			<a </a> Powered by
+			<a href="http://jekyllrb.com">Jekyll</a>
+		</p>
+
+		<div class="footer-links">
+			<ul class="noList"><li>
+	<a href="https://github.com/adrirubio" target="_blank">
+		<svg
+			id="github"
+			class="custom-icon"
+			version="1.1"
+			xmlns="http://www.w3.org/2000/svg"
+			xmlns:xlink="http://www.w3.org/1999/xlink"
+			viewBox="0 0 100 100"
+			style="height: 30px; width: 30px;"
+		>
+			<circle
+				class="outer-shape"
+				cx="50"
+				cy="50"
+				r="48"
+				style="opacity: 1;"
+			></circle>
+			<path
+				class="inner-shape"
+				style="opacity: 1;"
+				transform="translate(25,25) scale(0.5)"
+				d="M50,1C22.938,1,1,22.938,1,50s21.938,49,49,49s49-21.938,49-49S77.062,1,50,1z M79.099,79.099 c-3.782,3.782-8.184,6.75-13.083,8.823c-1.245,0.526-2.509,0.989-3.79,1.387v-7.344c0-3.86-1.324-6.699-3.972-8.517 c1.659-0.16,3.182-0.383,4.57-0.67c1.388-0.287,2.855-0.702,4.402-1.245c1.547-0.543,2.935-1.189,4.163-1.938 c1.228-0.75,2.409-1.723,3.541-2.919s2.082-2.552,2.847-4.067s1.372-3.334,1.818-5.455c0.446-2.121,0.67-4.458,0.67-7.01 c0-4.945-1.611-9.155-4.833-12.633c1.467-3.828,1.308-7.991-0.478-12.489l-1.197-0.143c-0.829-0.096-2.321,0.255-4.474,1.053 c-2.153,0.798-4.57,2.105-7.249,3.924c-3.797-1.053-7.736-1.579-11.82-1.579c-4.115,0-8.039,0.526-11.772,1.579 c-1.69-1.149-3.294-2.097-4.809-2.847c-1.515-0.75-2.727-1.26-3.637-1.532c-0.909-0.271-1.754-0.439-2.536-0.503 c-0.782-0.064-1.284-0.079-1.507-0.048c-0.223,0.031-0.383,0.064-0.478,0.096c-1.787,4.53-1.946,8.694-0.478,12.489 c-3.222,3.477-4.833,7.688-4.833,12.633c0,2.552,0.223,4.889,0.67,7.01c0.447,2.121,1.053,3.94,1.818,5.455 c0.765,1.515,1.715,2.871,2.847,4.067s2.313,2.169,3.541,2.919c1.228,0.751,2.616,1.396,4.163,1.938 c1.547,0.543,3.014,0.957,4.402,1.245c1.388,0.287,2.911,0.511,4.57,0.67c-2.616,1.787-3.924,4.626-3.924,8.517v7.487 c-1.445-0.43-2.869-0.938-4.268-1.53c-4.899-2.073-9.301-5.041-13.083-8.823c-3.782-3.782-6.75-8.184-8.823-13.083 C9.934,60.948,8.847,55.56,8.847,50s1.087-10.948,3.231-16.016c2.073-4.899,5.041-9.301,8.823-13.083s8.184-6.75,13.083-8.823 C39.052,9.934,44.44,8.847,50,8.847s10.948,1.087,16.016,3.231c4.9,2.073,9.301,5.041,13.083,8.823 c3.782,3.782,6.75,8.184,8.823,13.083c2.143,5.069,3.23,10.457,3.23,16.016s-1.087,10.948-3.231,16.016 C85.848,70.915,82.88,75.317,79.099,79.099L79.099,79.099z"
+			></path>
+		</svg>
+	</a>
+</li>
+<li>
+	<a href="mailto:adrian.rubio.punal@gmail.com" target="_blank">
+		<svg
+			id="mail"
+			class="custom-icon"
+			version="1.1"
+			xmlns="http://www.w3.org/2000/svg"
+			xmlns:xlink="http://www.w3.org/1999/xlink"
+			viewBox="0 0 100 100"
+			style="height: 30px; width: 30px;"
+		>
+			<circle
+				class="outer-shape"
+				cx="50"
+				cy="50"
+				r="48"
+				style="opacity: 1;"
+			></circle>
+			<path
+				class="inner-shape"
+				style="opacity: 1;"
+				transform="translate(25,25) scale(0.5)"
+				d="M50,1C22.938,1,1,22.938,1,50s21.938,49,49,49s49-21.938,49-49S77.062,1,50,1z M25.5,25.5h49 c0.874,0,1.723,0.188,2.502,0.542L50,57.544L22.998,26.041C23.777,25.687,24.626,25.499,25.5,25.5L25.5,25.5z M19.375,68.375v-36.75 c0-0.128,0.005-0.256,0.014-0.383l17.96,20.953L19.587,69.958C19.448,69.447,19.376,68.916,19.375,68.375L19.375,68.375z M74.5,74.5 h-49c-0.541,0-1.072-0.073-1.583-0.212l17.429-17.429L50,66.956l8.653-10.096l17.429,17.429C75.572,74.427,75.041,74.5,74.5,74.5 L74.5,74.5z M80.625,68.375c0,0.541-0.073,1.072-0.211,1.583L62.652,52.195l17.96-20.953c0.008,0.127,0.014,0.255,0.014,0.383 L80.625,68.375L80.625,68.375z"
+			></path>
+		</svg>
+	</a>
+</li>
+</ul>
+		</div>
+	</div>
+</div>
+<!-- end .footer -->
+<!-- Add jQuery and other scripts -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src=/assets/js/jquery-1.11.2.min.js><\/script>')</script>
+<script src="/assets/js/dropcap.min.js"></script>
+<script src="/assets/js/responsive-nav.min.js"></script>
+<script src="/assets/js/scripts.js"></script>
+</body>
+
+</html>

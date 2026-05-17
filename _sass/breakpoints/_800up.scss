@@ -190,23 +190,6 @@ POST STYLING
 		margin: 2rem auto 1em;
 	}
 
-	.featuredImage {
-		position: relative;
-		margin-top: 2rem;
-
-		&:before {
-			background: white;
-			content: "";
-			display: block;
-			width: 100%;
-			height: 4em;
-			position: absolute;
-			top: -2em;
-			left: 0;
-			transform: skewY(-2deg);
-			transform-origin: bottom left;
-		}
-	}
 }
 
 
@@ -282,8 +265,7 @@ DARK THEME STYLING
 		color: white;
 	}
 
-	.content:after,
-	.post .featuredImage:before {
+	.content:after {
 		background: black;
 	}
 }

@@ -8,28 +8,38 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta name="description" content="" />
 	<title>Retro Snake Game</title>
+	<script>
+		(function() {
+			try {
+				var theme = localStorage.getItem('theme');
+				if (theme === 'light' || theme === 'dark') {
+					document.documentElement.setAttribute('data-theme', theme);
+				}
+			} catch (e) {}
+		})();
+	</script>
 
 	<!-- Open Graph Meta -->
-	<meta content="Adrian Rubio" property="og:site_name" /><meta content="Retro Snake Game" property="og:title" /><meta content="article" property="og:type" /><meta content="This is my blog where I share my coding journey, my experiences, challenges, and discoveries in the ever-evolving world of programming." property="og:description" /><meta content="http://localhost:4000/blog/retro-snake-game/" property="og:url" /><meta
+	<meta content="Adrian Rubio" property="og:site_name" /><meta content="Retro Snake Game" property="og:title" /><meta content="article" property="og:type" /><meta content="This is my blog where I share my coding journey, my experiences, challenges, and discoveries in the ever-evolving world of programming." property="og:description" /><meta content="https://adrirubio.github.io/blog/retro-snake-game/" property="og:url" /><meta
 		content="2025-07-12T00:00:00+02:00"
 		property="article:published_time"
 	/>
-	<meta content="http://localhost:4000/about/" property="article:author" /><meta
-		content="http://localhost:4000/assets/img/touring.jpg"
+	<meta content="https://adrirubio.github.io/about/" property="article:author" /><meta
+		content="https://adrirubio.github.io/assets/img/touring.jpg"
 		property="og:image"
 	/><!-- Twitter Cards -->
 	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:site" content="@" />
-	<meta name="twitter:creator" content="@" /><meta name="twitter:title" content="Retro Snake Game" /><meta name="twitter:url" content="http://localhost:4000/blog/retro-snake-game/" /><meta name="twitter:description" content="This is my blog where I share my coding journey, my experiences, challenges, and discoveries in the ever-evolving world of programming." /><meta
+	<meta name="twitter:creator" content="@" /><meta name="twitter:title" content="Retro Snake Game" /><meta name="twitter:url" content="https://adrirubio.github.io/blog/retro-snake-game/" /><meta name="twitter:description" content="This is my blog where I share my coding journey, my experiences, challenges, and discoveries in the ever-evolving world of programming." /><meta
 		name="twitter:image:src"
-		content="http://localhost:4000/assets/img/touring.jpg"
+		content="https://adrirubio.github.io/assets/img/touring.jpg"
 	/><!-- Favicon --><link rel="stylesheet" href="/assets/css/style.css" />
 
 	<link rel="icon" type="image/x-icon" href=""/>
 
 	<!-- Come and get me RSS readers -->
 	<link rel="alternate" type="application/rss+xml" title="Adrian Rubio"
-	href="http://localhost:4000/feed.xml" />
+	href="https://adrirubio.github.io/feed.xml" />
 
 	<!-- Stylesheet -->
 	<link rel="stylesheet" href="/assets/css/style.css" />
@@ -37,7 +47,7 @@
 	<!-- Canonical URL -->
 	<link
 		rel="canonical"
-		href="http://localhost:4000/blog/retro-snake-game/"
+		href="https://adrirubio.github.io/blog/retro-snake-game/"
 	/><!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -63,13 +73,19 @@ ga('send', 'pageview');
                  </li><li class="elementlast">
                      <a href="/contact">Contact</a>
                  </li><li> <a href="https://github.com/adrirubio" target="_blank">GitHub</a></li>
+                 <li class="theme-switch">
+                     <button class="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">
+                         <span class="theme-toggle__icon" aria-hidden="true"></span>
+                     </button>
+                 </li>
              </ul>
          </nav>
      </div>
  </div><!-- end .header -->
 <div class="content">
       <div class="container">
-         <article class="post"><header>
+         <article class="post">
+  <header>
     <h1 class="postTitle">Retro Snake Game</h1>
     <p class="meta">July 12, 2025 | <span class="time">2</span> Minute Read</p>
   </header>
@@ -101,89 +117,14 @@ ga('send', 'pageview');
 <p>Over the next few weeks before Shipwrecked, I plan to focus on the Arduino kit. I’m also hoping to earn a bit more toward our flights, since Hackatime is compatible with the Arduino IDE, which means I can track hours spent on electronics projects for Shipwrecked. As I mentioned last week, I’ve got some great ideas that I can’t wait to get into.</p>
 
 
-  <!-- POST NAVIGATION --><footer class="postNav clearfix"><a class="prev" href="/blog/shipwrecked-invitation/" data-post-title="Shipwrecked Invitation"><span>&laquo;&nbsp;Shipwrecked Invitation</span></a><a class="next" href="/blog/arduino-simon-says-game/" data-post-title="Arduino Simon Says Game"><span>Arduino Simon Says Game&nbsp;&raquo;</span></a></footer>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      var referrer = document.referrer;
-      var fromFeatured = referrer && referrer.indexOf('/featured') !== -1;
-
-      // Check if coming from home - must NOT be a blog post
-      var fromBlogPost = referrer && referrer.indexOf('/blog/') !== -1;
-      var fromHome = false;
-      if (referrer && !fromBlogPost) {
-        try {
-          var path = new URL(referrer).pathname;
-          fromHome = path === '/' || path.indexOf('/index') !== -1 || path.indexOf('/articles') !== -1;
-        } catch (e) {
-          fromHome = false;
-        }
-      }
-
-      var inFeaturedMode = sessionStorage.getItem('featuredBrowsing') === 'true';
-
-      if (fromFeatured) {
-        sessionStorage.setItem('featuredBrowsing', 'true');
-        inFeaturedMode = true;
-      } else if (fromHome) {
-        sessionStorage.removeItem('featuredBrowsing');
-        inFeaturedMode = false;
-      }
-
-      var featuredPosts = [{title: "Hack Club Blueprint (I Got Distracted Again)", url: "/blog/hack-club-bluprint/"},{title: "ESP32 Environment Monitor", url: "/blog/esp32-environment-monitor/"},{title: "Shipwrecked", url: "/blog/shipwrecked/"},{title: "Arduino Security System", url: "/blog/arduino-security-system/"},{title: "My AI PDF Reader: The Story of How (and Why) I Built It", url: "/blog/my-ai-pdf-reader-how-and-why-I-build-it/"},{title: "Hack Club Shipwrecked", url: "/blog/hack-club-shipwrecked/"},{title: "Inference Using SSD Weights", url: "/blog/inference-using-SSD/"},{title: "Finishing SSD Model and Training", url: "/blog/finishing-model-and-training/"},{title: "ML-Rover", url: "/blog/ml-rover/"},{title: "Mindful", url: "/blog/mindful/"},{title: "High Seas", url: "/blog/high-seas/"},{title: "Introduction Post", url: "/blog/introduction-post/"}];
-
-      if (!inFeaturedMode) return;
-
-      var currentTitle = document.querySelector('.postTitle').textContent;
-      var currentIndex = -1;
-      for (var i = 0; i < featuredPosts.length; i++) {
-        if (featuredPosts[i].title === currentTitle) {
-          currentIndex = i;
-          break;
-        }
-      }
-
-      if (currentIndex === -1) {
-        sessionStorage.removeItem('featuredBrowsing');
-        return;
-      }
-
-      var postNav = document.querySelector('.postNav');
-      if (!postNav) return;
-
-      postNav.innerHTML = '';
-
-      if (currentIndex < featuredPosts.length - 1) {
-        var prevPost = featuredPosts[currentIndex + 1];
-        var prevLink = document.createElement('a');
-        prevLink.className = 'prev';
-        prevLink.href = prevPost.url;
-        prevLink.setAttribute('data-post-title', prevPost.title);
-        var prevSpan = document.createElement('span');
-        prevSpan.textContent = '« ' + prevPost.title;
-        prevLink.appendChild(prevSpan);
-        postNav.appendChild(prevLink);
-      }
-
-      if (currentIndex > 0) {
-        var nextPost = featuredPosts[currentIndex - 1];
-        var nextLink = document.createElement('a');
-        nextLink.className = 'next';
-        nextLink.href = nextPost.url;
-        nextLink.setAttribute('data-post-title', nextPost.title);
-        var nextSpan = document.createElement('span');
-        nextSpan.textContent = nextPost.title + ' »';
-        nextLink.appendChild(nextSpan);
-        postNav.appendChild(nextLink);
-      }
-    });
-  </script>
+  <!-- POST NAVIGATION -->
+  <footer class="postNav clearfix"><a class="prev" href="/blog/shipwrecked-invitation/" data-post-title="Shipwrecked Invitation"><span>&laquo;&nbsp;Shipwrecked Invitation</span></a><a class="next" href="/blog/arduino-simon-says-game/" data-post-title="Arduino Simon Says Game"><span>Arduino Simon Says Game&nbsp;&raquo;</span></a></footer>
 </article>
       </div>
    </div><!-- end .content --><div class="footer">
 	<div class="container">
 		<p class="copy">
-			&copy; 2025
+			&copy; 2026
 			<a </a> Powered by
 			<a href="http://jekyllrb.com">Jekyll</a>
 		</p>

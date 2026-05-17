@@ -8,24 +8,34 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta name="description" content="" />
 	<title>Contact Me</title>
+	<script>
+		(function() {
+			try {
+				var theme = localStorage.getItem('theme');
+				if (theme === 'light' || theme === 'dark') {
+					document.documentElement.setAttribute('data-theme', theme);
+				}
+			} catch (e) {}
+		})();
+	</script>
 
 	<!-- Open Graph Meta -->
-	<meta content="Adrian Rubio" property="og:site_name" /><meta content="Contact Me" property="og:title" /><meta content="article" property="og:type" /><meta content="This is my blog where I share my coding journey, my experiences, challenges, and discoveries in the ever-evolving world of programming." property="og:description" /><meta content="http://localhost:4000/contact/" property="og:url" /><meta
-		content="http://localhost:4000/assets/img/touring.jpg"
+	<meta content="Adrian Rubio" property="og:site_name" /><meta content="Contact Me" property="og:title" /><meta content="article" property="og:type" /><meta content="This is my blog where I share my coding journey, my experiences, challenges, and discoveries in the ever-evolving world of programming." property="og:description" /><meta content="https://adrirubio.github.io/contact/" property="og:url" /><meta
+		content="https://adrirubio.github.io/assets/img/touring.jpg"
 		property="og:image"
 	/><!-- Twitter Cards -->
 	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:site" content="@" />
-	<meta name="twitter:creator" content="@" /><meta name="twitter:title" content="Contact Me" /><meta name="twitter:url" content="http://localhost:4000/contact/" /><meta name="twitter:description" content="This is my blog where I share my coding journey, my experiences, challenges, and discoveries in the ever-evolving world of programming." /><meta
+	<meta name="twitter:creator" content="@" /><meta name="twitter:title" content="Contact Me" /><meta name="twitter:url" content="https://adrirubio.github.io/contact/" /><meta name="twitter:description" content="This is my blog where I share my coding journey, my experiences, challenges, and discoveries in the ever-evolving world of programming." /><meta
 		name="twitter:image:src"
-		content="http://localhost:4000/assets/img/touring.jpg"
+		content="https://adrirubio.github.io/assets/img/touring.jpg"
 	/><!-- Favicon --><link rel="stylesheet" href="/assets/css/style.css" />
 
 	<link rel="icon" type="image/x-icon" href=""/>
 
 	<!-- Come and get me RSS readers -->
 	<link rel="alternate" type="application/rss+xml" title="Adrian Rubio"
-	href="http://localhost:4000/feed.xml" />
+	href="https://adrirubio.github.io/feed.xml" />
 
 	<!-- Stylesheet -->
 	<link rel="stylesheet" href="/assets/css/style.css" />
@@ -33,7 +43,7 @@
 	<!-- Canonical URL -->
 	<link
 		rel="canonical"
-		href="http://localhost:4000/contact/"
+		href="https://adrirubio.github.io/contact/"
 	/><!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -59,6 +69,11 @@ ga('send', 'pageview');
                  </li><li class="elementcurrentlast">
                      <a href="/contact">Contact</a>
                  </li><li> <a href="https://github.com/adrirubio" target="_blank">GitHub</a></li>
+                 <li class="theme-switch">
+                     <button class="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">
+                         <span class="theme-toggle__icon" aria-hidden="true"></span>
+                     </button>
+                 </li>
              </ul>
          </nav>
      </div>
@@ -121,7 +136,7 @@ ga('send', 'pageview');
    </div><!-- end .content --><div class="footer">
 	<div class="container">
 		<p class="copy">
-			&copy; 2025
+			&copy; 2026
 			<a </a> Powered by
 			<a href="http://jekyllrb.com">Jekyll</a>
 		</p>

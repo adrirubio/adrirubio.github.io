@@ -3,11 +3,113 @@
   <channel>
     <title>Adrian Rubio</title>
     <description>This is my blog where I share my coding journey, my experiences, challenges, and discoveries in the ever-evolving world of programming.</description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 15 Nov 2025 15:50:53 +0100</pubDate>
-    <lastBuildDate>Sat, 15 Nov 2025 15:50:53 +0100</lastBuildDate>
+    <link>https://adrirubio.github.io/</link>
+    <atom:link href="https://adrirubio.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 17 May 2026 19:48:54 +0200</pubDate>
+    <lastBuildDate>Sun, 17 May 2026 19:48:54 +0200</lastBuildDate>
     <generator>Jekyll v4.3.2</generator><item>
+        <title>Odin&apos;s Eye</title>
+        <description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! Over the last few months, I have built four hardware projects for Blueprint which, once accepted, should earn me a 3D printer. The first of these projects was Odin’s Eye.&lt;/p&gt;
+
+&lt;p&gt;I introduced Odin’s Eye in the previous journal, but here’s a quick recap:&lt;/p&gt;
+
+&lt;p&gt;Odin’s Eye is a DIY speed camera that detects passing vehicles using a TF-Luna LiDAR sensor and measures their speed. When a vehicle passes, a Raspberry Pi Camera Module 3 takes a picture, which is then processed by a Pi Zero 2 W. Once everything is processed, the data is displayed on a dashboard that can be accessed from your phone over Wi-Fi.&lt;/p&gt;
+
+&lt;p&gt;After more than 40 hours of work on the project, I achieved a result that I am incredibly proud of. However, the process came with plenty of setbacks and disappointments. For a full, detailed breakdown of the project and everything that led to it, refer to the Blueprint journal. You can also find all of the project files, including the PCB designs, firmware, 3D case files, demos, and more, on GitHub.&lt;/p&gt;
+
+&lt;p&gt;Odin’s Eye Blueprint: &lt;a href=&quot;https://blueprint.hackclub.com/projects/413&quot;&gt;Odin’s Eye Blueprint&lt;/a&gt;&lt;br /&gt;
+Odin’s Eye Github: &lt;a href=&quot;https://github.com/adrirubio/odins-eye&quot;&gt;Odin’s Eye Github&lt;/a&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;In this journal, I want to give a brief overview of Odin’s Eye and explain what I learned while building it.&lt;/p&gt;
+
+&lt;p&gt;I began the project by doing research and choosing the parts that would work best for the system. I also made some rough sketches to illustrate my initial ideas for the PCB layout, 3D case, and component placement. Looking back, most of the ideas from this stage made it into the final version of the system.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/odins-eye/sketches.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;I also spent time thinking about the speed measurement method. I looked into several different approaches, including video-based tracking, Doppler radar, microwave motion sensors, and more. I eventually settled on using a TF-Luna LiDAR sensor and a least-squares fitting method to calculate vehicle speed. The LiDAR is placed at an angle facing the road and continuously takes distance readings as a vehicle passes through its field of view. Using those measurements, the system can calculate the speed of the vehicle.&lt;/p&gt;
+
+&lt;p&gt;After getting a clear idea of the parts I was going to use, I felt ready to start working on the PCB design, despite it being my first time designing one. First, I installed KiCad, the software I used to design the PCB. After watching a few guides and tutorials, I felt ready to begin working on the schematic.&lt;/p&gt;
+
+&lt;p&gt;I added the connectors, resistors, LED, USB-C receptacle, and even designed my own header for the Raspberry Pi. I then laid out the components and connected everything by referencing the pinouts of the different parts, such as the OLED display and TF-Luna LiDAR sensor, while also checking multiple sources for the USB-C receptacle wiring.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/odins-eye/schematic.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Once I had double-checked that the schematic looked valid, I assigned footprints to each part and found matching components on either Mouser or DigiKey. All of these parts and references are documented on the Blueprint page. Most of the components were fairly easy to find, but the TF-Luna connector gave me trouble because it was not included in the sensor’s documentation. After digging through forum threads and Reddit posts, I eventually managed to narrow the options down to three possible connectors.&lt;/p&gt;
+
+&lt;p&gt;Next, I moved on to the PCB design. I imported the correct board settings and, after some trial and error, found a compact way to arrange the components, placing each footprint close to its intended position. Once I was happy with the layout, I added the board outline using the dimensions I had planned for the PCB.&lt;/p&gt;
+
+&lt;p&gt;Since it was also my first time designing a PCB, I watched a few tutorials and started routing the PCB traces. After fixing a few DRC violations, I improved the part labels and added some text containing the title, date, my name, and a Hack Club logo.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/odins-eye/pcb.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now that the PCB was practically finished, I connected the TF-Luna that I had bought to I²C on a breadboard and created a proof of concept (POC). At first, I replicated the least-squares fit code in C++, but I wasn’t very satisfied with the results. After experimenting with different methods, I came up with an approach I called “Burst–Gap–Burst.” In simple terms, the system takes two quick groups of distance readings separated by a short pause, compares their averages, and uses the difference to calculate the vehicle’s speed.&lt;/p&gt;
+
+&lt;p&gt;I used the proof of concept (POC) to improve the accuracy of this new method. By the end of the testing session, the system had become surprisingly accurate. This method required the sensor to face the road at roughly a 20-degree angle to work properly. Since I wanted the project to be completely standalone, I decided to add a gyroscope to the PCB and later implement a calibration sequence in the speed camera software.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/odins-eye/poc.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;The only part of the speed camera left to design was the 3D case, so I got started on it. I installed FreeCAD and, after doing some research and experimenting with it on my own, I felt confident enough to begin designing the case.&lt;/p&gt;
+
+&lt;p&gt;Shortly after starting, I already had the basic shape of the case and the four holes used to screw the cover onto it. I then added a hole on the bottom of the case for a 1/4-20 heat-set insert so the system could be mounted onto a tripod. I also added a slot across the width of the base so the PCB could slide in vertically.&lt;/p&gt;
+
+&lt;p&gt;To give the PCB extra stability inside the case, I added a support strip on the side of the enclosure with two mounting holes, along with two matching mounting holes on the PCB itself. I also added two strips on the cover aligned with the PCB’s position inside the case.&lt;/p&gt;
+
+&lt;p&gt;To complete the 3D case, I added cutouts for the TF-Luna, Pi Camera, USB-C port, OLED display, and LED. I used the datasheets for each component to get the measurements I needed.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/odins-eye/3d-case.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;I went a step further and decided to make the 3D case as accurate as possible. To do this, I downloaded the STEP files for each component, imported them into the design, and placed them inside the case. This turned out to be an important step because it allowed me to fix several small measurement issues, such as the camera mounting holes, the LED cutout, and the USB-C cutout, that I likely would not have noticed otherwise.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/odins-eye/complete-3d-case.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;At this point, I was ready to order the PCB, components, and 3D-printed case. Since I planned to use JLCPCB as the manufacturer, I generated the Gerber files and uploaded the BOM and CPL files for assembly so they could assemble the SMD USB-C connector for me. After verifying the USB-C connector was the correct component and properly positioned, I got a quote for the PCB. It was fairly expensive because it was getting shipped from China, but I was confident that it would work, so I went ahead with the order.&lt;/p&gt;
+
+&lt;p&gt;I also bought the components (Pi, camera, OLED, etc.) separately, and the PCB parts from Mouser. The only thing left to order was the 3D case. I got this done by finding a teenager in Spain who had a 3D printer through Printing Legion. Printing Legion is a Hack Club initiative where people with 3D printers print parts for others who do not have access to one, then get reimbursed for the filament used.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/odins-eye/pcb-order.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;After the PCB and parts had arrived, I began soldering. My first solder joints were noticeably worse than the later ones, by which point I had gotten the hang of it. Soldering went smoothly apart from the LED, which I had to remove after making a mistake while soldering it. Once the parts were soldered onto the PCB, I moved on to the Pi and gyroscope, and those joints turned out much cleaner.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/odins-eye/soldered-pi.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/img/odins-eye/soldered-pcb.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;With the PCB assembled, I continued by flashing Raspberry Pi OS Lite onto the SD card I was going to use for the Pi. I then booted the Pi and got to work making sure all the sensors were recognized. All of the sensors were detected correctly.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/odins-eye/sensors-working.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;I decided to assemble the system inside the case because I knew the sensors were working. I did this by slotting the PCB into the case, then screwing the TF-Luna, camera, and OLED into their positions. I also installed the heat-set insert into the cutout at the bottom of the case. Everything fit correctly and lined up exactly as intended.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/odins-eye/assembled-system.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Lastly, I worked on the code with the help of Claude Code. We adapted the Arduino speed-detection logic to Python and added a 12-second calibration process that tested which of the gyroscope’s axes corresponded to the device’s horizontal rotation. This resulted in the first working speed-detection program running on the Pi.&lt;/p&gt;
+
+&lt;p&gt;I took it outside with my laptop and began testing. At first, the results were not accurate, and after some testing that led to no improvement, I developed a method to improve the code by having my dad drive past the sensor at roughly 20 km/h in sets of 10 passes, saving the sensor data after each run. I then used Claude Code to analyze the results, identify what was going wrong, and tune the parameters until the results improved.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/odins-eye/finished-system.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;The method clearly worked, because by the third round the system had gone from reporting impossible speeds to producing realistic and repeatable results. Most of the speed measurements had an error margin of around 5 km/h, which was far better than I had expected when starting the project.&lt;/p&gt;
+
+&lt;p&gt;I finished the project by turning it into a completely standalone system with a dashboard that shows the image, speed, tilt, fit error, confidence, and other information for each capture. I also made the speed-detection code and dashboard start running as soon as the Pi powers on and attached a small power bank to the cover.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/odins-eye/finished-system-with-powerbank.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Odin’s Eye Demo:&lt;/p&gt;
+
+&lt;div style=&quot;text-align: center; margin: 2em 0;&quot;&gt;
+  &lt;a href=&quot;https://youtu.be/cNV2ZcgS8Qw&quot; target=&quot;_blank&quot; style=&quot;display: inline-block; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden;&quot;&gt;
+    &lt;img src=&quot;https://img.youtube.com/vi/cNV2ZcgS8Qw/0.jpg&quot; alt=&quot;Shipwrecked Video&quot; style=&quot;width: 720px; max-width: 100%; display: block;&quot; /&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;I recommend having a look at the Blueprint page for Odin’s Eye because it gives a much more detailed account of the entire development process, including the setbacks, testing, design decisions, and improvements that led to the final project.&lt;/p&gt;
+
+&lt;p&gt;Odin’s Eye Blueprint: &lt;a href=&quot;https://blueprint.hackclub.com/projects/413&quot;&gt;Odin’s Eye Blueprint&lt;/a&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Odin’s Eye has been an incredible learning experience for me, going from barely knowing what hardware design was to designing, ordering, and soldering a fully functional PCB. This project took me through both the highs and the lows, but ultimately, I think that is what made it so rewarding. Seeing a project that started as a rough idea turn into a fully standalone speed camera capable of producing realistic results is something I am incredibly proud of. I plan on continuing to build even more ambitious hardware and software projects in the future.&lt;/p&gt;
+</description><description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! Over the last few months, I have built four hardware projects for Blueprint which, once accepted, should earn me a 3D printer. The first of these projects was Odin’s Eye.&lt;/p&gt;
+</description><pubDate>Sat, 16 May 2026 00:00:00 +0200</pubDate>
+        <link>https://adrirubio.github.io/blog/odins-eye/</link>
+        <guid isPermaLink="true">https://adrirubio.github.io/blog/odins-eye/</guid></item><item>
         <title>Hack Club Blueprint (I Got Distracted Again)</title>
         <description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! This week, an announcement on Hack Club caught my attention. What about the rover? Postponed.  Again.&lt;/p&gt;
 
@@ -43,8 +145,8 @@ Odins Eye Github: &lt;a href=&quot;https://github.com/adrirubio/odins-eye&quot;&
 &lt;p&gt;Now, I don’t want to repeat everything I went through to get to where I am because it’s all explained on the Blueprint page for my project. But I’d just like to say that I have a good feeling about this project. I’m not sure when I’ll post my next blog post, but I think I want to concentrate on the project for now and post once it’s finished. In the meantime, my whole work process will be journaled on the Blueprint page.&lt;/p&gt;
 </description><description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! This week, an announcement on Hack Club caught my attention. What about the rover? Postponed.  Again.&lt;/p&gt;
 </description><pubDate>Wed, 22 Oct 2025 00:00:00 +0200</pubDate>
-        <link>http://localhost:4000/blog/hack-club-bluprint/</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/hack-club-bluprint/</guid></item><item>
+        <link>https://adrirubio.github.io/blog/hack-club-bluprint/</link>
+        <guid isPermaLink="true">https://adrirubio.github.io/blog/hack-club-bluprint/</guid></item><item>
         <title>Stepper Motor Project and the ML Rover</title>
         <description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! Over the past week and a half, I burned out a motor driver because of faulty documentation and began work on the rover.&lt;/p&gt;
 
@@ -79,8 +181,8 @@ Odins Eye Github: &lt;a href=&quot;https://github.com/adrirubio/odins-eye&quot;&
 &lt;p&gt;My goals for the next few weeks are to update the rover’s code to the latest versions, implement the object detection model I built (possibly using the Jetson Nano we have), and continue working on the ‘secret’ project with my brother.&lt;/p&gt;
 </description><description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! Over the past week and a half, I burned out a motor driver because of faulty documentation and began work on the rover.&lt;/p&gt;
 </description><pubDate>Tue, 30 Sep 2025 00:00:00 +0200</pubDate>
-        <link>http://localhost:4000/blog/stepper-motor-project-and-the-ml-rover/</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/stepper-motor-project-and-the-ml-rover/</guid></item><item>
+        <link>https://adrirubio.github.io/blog/stepper-motor-project-and-the-ml-rover/</link>
+        <guid isPermaLink="true">https://adrirubio.github.io/blog/stepper-motor-project-and-the-ml-rover/</guid></item><item>
         <title>ESP32 Environment Monitor</title>
         <description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! During this past month after Shipwrecked, I have built an ESP32 environment monitor, completed a hardware project with my dad, and started a very interesting project with my brother.&lt;/p&gt;
 
@@ -106,8 +208,8 @@ Odins Eye Github: &lt;a href=&quot;https://github.com/adrirubio/odins-eye&quot;&
 &lt;p&gt;I think during these next few months I will concentrate on this project I am building with my brother, and I would also like to come back to the rover and implement more AI models I plan on building. But I can’t really plan too far ahead, and I will see where the project with my brother takes me.&lt;/p&gt;
 </description><description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! During this past month after Shipwrecked, I have built an ESP32 environment monitor, completed a hardware project with my dad, and started a very interesting project with my brother.&lt;/p&gt;
 </description><pubDate>Fri, 19 Sep 2025 00:00:00 +0200</pubDate>
-        <link>http://localhost:4000/blog/esp32-environment-monitor/</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/esp32-environment-monitor/</guid></item><item>
+        <link>https://adrirubio.github.io/blog/esp32-environment-monitor/</link>
+        <guid isPermaLink="true">https://adrirubio.github.io/blog/esp32-environment-monitor/</guid></item><item>
         <title>Shipwrecked</title>
         <description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! This past weekend was one of the coolest experiences of my whole life. I shipped three projects in four days, and met some incredible people along the way.&lt;/p&gt;
 
@@ -221,8 +323,8 @@ Honestly, across all three projects, I also learned how to collaborate and how t
 &lt;img src=&quot;/assets/img/shipwrecked/hackathon/boston-night.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
 </description><description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! This past weekend was one of the coolest experiences of my whole life. I shipped three projects in four days, and met some incredible people along the way.&lt;/p&gt;
 </description><pubDate>Tue, 12 Aug 2025 00:00:00 +0200</pubDate>
-        <link>http://localhost:4000/blog/shipwrecked/</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/shipwrecked/</guid></item><item>
+        <link>https://adrirubio.github.io/blog/shipwrecked/</link>
+        <guid isPermaLink="true">https://adrirubio.github.io/blog/shipwrecked/</guid></item><item>
         <title>Arduino Security System</title>
         <description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! During this week, I designed and built my final project before Hack Club Shipwrecked: an Arduino Security System.&lt;/p&gt;
 
@@ -269,8 +371,8 @@ In operation, the Arduino constantly checks the laser beam. When the beam is uni
 &lt;p&gt;&lt;img src=&quot;/assets/img/arduino/arduino-security-system-pic.jpeg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
 </description><description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! During this week, I designed and built my final project before Hack Club Shipwrecked: an Arduino Security System.&lt;/p&gt;
 </description><pubDate>Wed, 06 Aug 2025 00:00:00 +0200</pubDate>
-        <link>http://localhost:4000/blog/arduino-security-system/</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/arduino-security-system/</guid></item><item>
+        <link>https://adrirubio.github.io/blog/arduino-security-system/</link>
+        <guid isPermaLink="true">https://adrirubio.github.io/blog/arduino-security-system/</guid></item><item>
         <title>Arduino Simon Says Game</title>
         <description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! Over the past two weeks, I began working with the Arduino kit, completed several projects from the book, and even created my own project that contributes to the Boston flight stipend!&lt;/p&gt;
 
@@ -310,8 +412,8 @@ Also, feel free to check the GitHub repo out and read the README for more inform
 &lt;p&gt;&lt;img src=&quot;/assets/img/arduino/arduino-simon-says-pic.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
 </description><description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! Over the past two weeks, I began working with the Arduino kit, completed several projects from the book, and even created my own project that contributes to the Boston flight stipend!&lt;/p&gt;
 </description><pubDate>Tue, 29 Jul 2025 00:00:00 +0200</pubDate>
-        <link>http://localhost:4000/blog/arduino-simon-says-game/</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/arduino-simon-says-game/</guid></item><item>
+        <link>https://adrirubio.github.io/blog/arduino-simon-says-game/</link>
+        <guid isPermaLink="true">https://adrirubio.github.io/blog/arduino-simon-says-game/</guid></item><item>
         <title>Retro Snake Game</title>
         <description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! This week, there was a change of plans. Instead of starting with the Arduino kit, I decided to complete one more project for Shipwrecked: a Retro Snake Game.&lt;/p&gt;
 
@@ -340,8 +442,8 @@ Also, feel free to check the GitHub repo out and read the README for more inform
 &lt;p&gt;Over the next few weeks before Shipwrecked, I plan to focus on the Arduino kit. I’m also hoping to earn a bit more toward our flights, since Hackatime is compatible with the Arduino IDE, which means I can track hours spent on electronics projects for Shipwrecked. As I mentioned last week, I’ve got some great ideas that I can’t wait to get into.&lt;/p&gt;
 </description><description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! This week, there was a change of plans. Instead of starting with the Arduino kit, I decided to complete one more project for Shipwrecked: a Retro Snake Game.&lt;/p&gt;
 </description><pubDate>Sat, 12 Jul 2025 00:00:00 +0200</pubDate>
-        <link>http://localhost:4000/blog/retro-snake-game/</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/retro-snake-game/</guid></item><item>
+        <link>https://adrirubio.github.io/blog/retro-snake-game/</link>
+        <guid isPermaLink="true">https://adrirubio.github.io/blog/retro-snake-game/</guid></item><item>
         <title>Shipwrecked Invitation</title>
         <description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! The past two weeks have been a rollercoaster, but I’m proud to say that I’ve successfully completed 30 hours of work and built two full projects. All of my projects have been accepted, and I’m officially invited to Hack Club Shipwrecked!&lt;/p&gt;
 
@@ -392,8 +494,8 @@ Once the project was complete I put the project up for review.&lt;/p&gt;
 &lt;p&gt;Now, my parents and I will start preparing everything for Shipwrecked (flights, accomodation, etc.). Over the next few weeks, I plan to dive into Arduino to learn more about digital electronics and breadboarding. I already have a few exciting project ideas in mind, and I’m really looking forward to start work on them!&lt;/p&gt;
 </description><description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! The past two weeks have been a rollercoaster, but I’m proud to say that I’ve successfully completed 30 hours of work and built two full projects. All of my projects have been accepted, and I’m officially invited to Hack Club Shipwrecked!&lt;/p&gt;
 </description><pubDate>Sat, 05 Jul 2025 00:00:00 +0200</pubDate>
-        <link>http://localhost:4000/blog/shipwrecked-invitation/</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/shipwrecked-invitation/</guid></item><item>
+        <link>https://adrirubio.github.io/blog/shipwrecked-invitation/</link>
+        <guid isPermaLink="true">https://adrirubio.github.io/blog/shipwrecked-invitation/</guid></item><item>
         <title>Finishing Architext-AI and starting QR-Gen</title>
         <description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! In this post, I&apos;ll take talk about the latest two weeks of my Shipwrecked adventure. From striving to hit 150 stars to receiving a message that changes it all!&lt;/p&gt;
 
@@ -436,24 +538,6 @@ To see the current state of the project visit:&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/adrirubio/qr-gen&quot;&gt;qr-gen github&lt;/a&gt;&lt;/p&gt;
 </description><description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! In this post, I&apos;ll take talk about the latest two weeks of my Shipwrecked adventure. From striving to hit 150 stars to receiving a message that changes it all!&lt;/p&gt;
 </description><pubDate>Sun, 22 Jun 2025 00:00:00 +0200</pubDate>
-        <link>http://localhost:4000/blog/finishing-Architext-AI-and-starting-QR-Gen/</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/finishing-Architext-AI-and-starting-QR-Gen/</guid></item><item>
-        <title>Starting Architext-AI</title>
-        <description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! In this post, I wrapped up the AI PDF Reader by releasing a Windows version and started my next project, an AI writing assistant called Architext-AI.&lt;/p&gt;
-
-&lt;p&gt;I started the week by creating a demo video for the AI PDF Reader, which is now embedded in  &lt;a href=&quot;https://adrianrubio.org/blog/my-ai-pdf-reader-how-and-why-I-build-it/&quot;&gt;last week’s blog post.&lt;/a&gt; I’m really happy with how the final version turned out. To wrap up the project, I released a Windows version and improved the README.
-Hopefully, the AI PDF Reader can gain some traction, as my dad and I will be sharing it across various social media platforms. Our goal is to reach 150 stars on GitHub.&lt;/p&gt;
-
-&lt;p&gt;Next, I began brainstorming ideas for my next project. With some help from my dad, we came up with a simple Python program: using a predefined command, you can open a small window where write your message, and the AI will enhance it for you—improving clarity and overall quality. I think it would be something everyone would use.&lt;/p&gt;
-
-&lt;p&gt;Yesterday, I got started on the project. I planned out the structure and chose &lt;a href=&quot;https://docs.python.org/3/library/tkinter.html&quot;&gt;Tkinter&lt;/a&gt; for the GUI and the &lt;a href=&quot;https://openai.github.io/openai-agents-python/&quot;&gt;OpenAI SDK&lt;/a&gt; for the AI capabilites. I set up all the necessary files, and now I’m focusing on building the Python GUI. Hopefully, by next week, I’ll have something that looks good and works smoothly.&lt;/p&gt;
-
-&lt;p&gt;This post documents the state of Architext-AI as of June 8, 2025&lt;br /&gt;
-To see the current state of the pdf reader visit:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/adrirubio/architext-ai&quot;&gt;architext-ai github&lt;/a&gt;&lt;/p&gt;
-</description><description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! In this post, I wrapped up the AI PDF Reader by releasing a Windows version and started my next project, an AI writing assistant called Architext-AI.&lt;/p&gt;
-</description><pubDate>Sun, 08 Jun 2025 00:00:00 +0200</pubDate>
-        <link>http://localhost:4000/blog/starting-architext-ai/</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/starting-architext-ai/</guid></item></channel>
+        <link>https://adrirubio.github.io/blog/finishing-Architext-AI-and-starting-QR-Gen/</link>
+        <guid isPermaLink="true">https://adrirubio.github.io/blog/finishing-Architext-AI-and-starting-QR-Gen/</guid></item></channel>
 </rss>

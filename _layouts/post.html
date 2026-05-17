@@ -2,11 +2,6 @@
 layout: default
 ---
 <article class="post">
-  {%- if page.image -%}
-    <div class="featuredImage">
-        <img src="{{ '/assets/img/' | append: page.image | relative_url }}" alt="" />
-      </div>
-  {%- endif -%}
   <header>
     <h1 class="postTitle">{{ page.title }}</h1>
     <p class="meta">{{ page.date | date: '%B %d, %Y' }} | <span class="time">{{ page.content | number_of_words | divided_by:180 }}</span> Minute Read</p>
@@ -15,8 +10,6 @@ layout: default
   {{ content }}
 
   <!-- POST NAVIGATION -->
-  {%- assign featured_titles = "Hack Club Blueprint (I Got Distracted Again),ESP32 Environment Monitor,Shipwrecked,Arduino Security System,My AI PDF Reader: The Story of How (and Why) I Built It,Hack Club Shipwrecked,Inference Using SSD Weights,Finishing SSD Model and Training,ML-Rover,Mindful,High Seas,Introduction Post" | split: "," -%}
-
   <footer class="postNav clearfix">
     {%- if page.previous.url -%}
       <a class="prev{% if page.previous.image %} image{% endif %}" href="{{ page.previous.url | relative_url }}" data-post-title="{{ page.previous.title }}"><span>&laquo;&nbsp;{{ page.previous.title }}</span>
@@ -33,95 +26,6 @@ layout: default
       </a>
     {%- endif -%}
   </footer>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      var referrer = document.referrer;
-      var fromFeatured = referrer && referrer.indexOf('/featured') !== -1;
-
-      // Check if coming from home - must NOT be a blog post
-      var fromBlogPost = referrer && referrer.indexOf('/blog/') !== -1;
-      var fromHome = false;
-      if (referrer && !fromBlogPost) {
-        try {
-          var path = new URL(referrer).pathname;
-          fromHome = path === '/' || path.indexOf('/index') !== -1 || path.indexOf('/articles') !== -1;
-        } catch (e) {
-          fromHome = false;
-        }
-      }
-
-      var inFeaturedMode = sessionStorage.getItem('featuredBrowsing') === 'true';
-
-      if (fromFeatured) {
-        sessionStorage.setItem('featuredBrowsing', 'true');
-        inFeaturedMode = true;
-      } else if (fromHome) {
-        sessionStorage.removeItem('featuredBrowsing');
-        inFeaturedMode = false;
-      }
-
-      var featuredPosts = [
-        {%- assign first = true -%}
-        {%- for title in featured_titles -%}
-          {%- assign title_stripped = title | strip -%}
-          {%- for post in site.posts -%}
-            {%- if post.title == title_stripped -%}
-              {%- unless first -%},{%- endunless -%}
-        {title: {{ post.title | jsonify }}, url: {{ post.url | jsonify }}}
-              {%- assign first = false -%}
-              {%- break -%}
-            {%- endif -%}
-          {%- endfor -%}
-        {%- endfor -%}
-      ];
-
-      if (!inFeaturedMode) return;
-
-      var currentTitle = document.querySelector('.postTitle').textContent;
-      var currentIndex = -1;
-      for (var i = 0; i < featuredPosts.length; i++) {
-        if (featuredPosts[i].title === currentTitle) {
-          currentIndex = i;
-          break;
-        }
-      }
-
-      if (currentIndex === -1) {
-        sessionStorage.removeItem('featuredBrowsing');
-        return;
-      }
-
-      var postNav = document.querySelector('.postNav');
-      if (!postNav) return;
-
-      postNav.innerHTML = '';
-
-      if (currentIndex < featuredPosts.length - 1) {
-        var prevPost = featuredPosts[currentIndex + 1];
-        var prevLink = document.createElement('a');
-        prevLink.className = 'prev';
-        prevLink.href = prevPost.url;
-        prevLink.setAttribute('data-post-title', prevPost.title);
-        var prevSpan = document.createElement('span');
-        prevSpan.textContent = '« ' + prevPost.title;
-        prevLink.appendChild(prevSpan);
-        postNav.appendChild(prevLink);
-      }
-
-      if (currentIndex > 0) {
-        var nextPost = featuredPosts[currentIndex - 1];
-        var nextLink = document.createElement('a');
-        nextLink.className = 'next';
-        nextLink.href = nextPost.url;
-        nextLink.setAttribute('data-post-title', nextPost.title);
-        var nextSpan = document.createElement('span');
-        nextSpan.textContent = nextPost.title + ' »';
-        nextLink.appendChild(nextSpan);
-        postNav.appendChild(nextLink);
-      }
-    });
-  </script>
 </article>
 
 {%- if site.disqus.shortname -%}

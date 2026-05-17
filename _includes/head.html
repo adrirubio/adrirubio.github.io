@@ -4,6 +4,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta name="description" content="" />
 	<title>{{ page.title }}</title>
+	<script>
+		(function() {
+			try {
+				var theme = localStorage.getItem('theme');
+				if (theme === 'light' || theme === 'dark') {
+					document.documentElement.setAttribute('data-theme', theme);
+				}
+			} catch (e) {}
+		})();
+	</script>
 
 	<!-- Open Graph Meta -->
 	<meta content="{{ site.title }}" property="og:site_name" />
