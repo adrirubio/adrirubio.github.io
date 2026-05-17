@@ -39,6 +39,7 @@
 	--rule-color: #e6e6e6;
 	--link-color: #1571cd;
 	--link-hover: #0d4c8b;
+	--post-title-color: #1571cd;
 	--code-bg: #343642;
 	--code-text: #c1c2c3;
 	--table-even-bg: #f7f7f7;
@@ -54,6 +55,7 @@
 		--rule-color: #2d3440;
 		--link-color: #7fc8ff;
 		--link-hover: #b5defd;
+		--post-title-color: #1571cd;
 		--code-bg: #20242f;
 		--code-text: #eef2f8;
 		--table-even-bg: #1a1a1a;
@@ -67,6 +69,7 @@
 	--rule-color: #e6e6e6;
 	--link-color: #1571cd;
 	--link-hover: #0d4c8b;
+	--post-title-color: #1571cd;
 	--code-bg: #343642;
 	--code-text: #c1c2c3;
 	--table-even-bg: #f7f7f7;
@@ -79,6 +82,7 @@
 	--rule-color: #2d3440;
 	--link-color: #7fc8ff;
 	--link-hover: #b5defd;
+	--post-title-color: #1571cd;
 	--code-bg: #20242f;
 	--code-text: #eef2f8;
 	--table-even-bg: #1a1a1a;
@@ -112,6 +116,10 @@ a {
 .posts article {
 	&:before {
 		background: var(--rule-color);
+	}
+
+	h3 a.post-link {
+		color: var(--post-title-color);
 	}
 
 	.date {
@@ -169,13 +177,13 @@ tr:nth-child(even) {
 
 :root[data-theme="dark"] .theme-toggle__icon {
 	transform: translateX(1rem);
-	background: #7fc8ff;
+	background: #000000;
 }
 
 @media (prefers-color-scheme: dark) {
 	:root:not([data-theme="light"]) .theme-toggle__icon {
 		transform: translateX(1rem);
-		background: #7fc8ff;
+		background: #000000;
 	}
 }
 

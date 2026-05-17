@@ -21,8 +21,6 @@ paginate: 5
 navigation:
   - title: "Home"
     url: "/index.html"
-  - title: "Featured"
-    url: "/featured"
   - title: "About"
     url: "/about"
   - title: "Contact"
