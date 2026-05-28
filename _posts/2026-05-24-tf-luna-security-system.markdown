@@ -80,8 +80,8 @@ Although the project wasn’t a complete success, since I couldn’t reliably us
 TF-Luna Security System Demo:
 
 <div style="text-align: center; margin: 2em 0;">
-<a href="https://youtu.be/cNV2ZcgS8Qw" target="_blank" style="display: inline-block; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden;">
-    <img src="https://img.youtube.com/vi/cNV2ZcgS8Qw/.jpg" alt="Security System Demo Video" style="width: 720px; max-width: 100%; display: block;">
+<a href="https://youtu.be/43d7Ib5dUhA" target="_blank" style="display: inline-block; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden;">
+    <img src="https://img.youtube.com/vi/43d7Ib5dUhA/0.jpg" alt="Security System Demo Video" style="width: 720px; max-width: 100%; display: block;">
   </a>
 </div>
 
