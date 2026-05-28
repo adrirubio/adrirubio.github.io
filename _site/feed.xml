@@ -5,9 +5,120 @@
     <description>This is my blog where I share my coding journey, my experiences, challenges, and discoveries in the ever-evolving world of programming.</description>
     <link>https://adrirubio.github.io/</link>
     <atom:link href="https://adrirubio.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 17 May 2026 20:00:39 +0200</pubDate>
-    <lastBuildDate>Sun, 17 May 2026 20:00:39 +0200</lastBuildDate>
+    <pubDate>Thu, 28 May 2026 21:51:09 +0200</pubDate>
+    <lastBuildDate>Thu, 28 May 2026 21:51:09 +0200</lastBuildDate>
     <generator>Jekyll v4.3.2</generator><item>
+        <title>TF-Luna Security System</title>
+        <description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! The second project I worked on for Blueprint was a continuation of my Arduino Security System: the TF-Luna Security System.&lt;/p&gt;
+
+&lt;p&gt;The natural evolution of the Arduino Security System was to design a custom PCB, create an enclosure, and make the project completely standalone and easy to use. After some initial brainstorming, I realized that this project would have to work differently and use different sensors than the original Arduino Security System. This was the core idea I built the project around:&lt;/p&gt;
+
+&lt;p&gt;It would use a TF-Luna LiDAR sensor to detect when someone passed through my bedroom door, which would then trigger an ESP32-CAM to take a picture. This image, along with the detection information, would then be displayed on a dashboard hosted on the ESP32 and accessible over Wi-Fi.&lt;/p&gt;
+
+&lt;p&gt;I already had a good idea of the process because I had followed similar steps while building Odin’s Eye. Nevertheless, I still had challenges and setbacks. For a full, detailed breakdown of the project and everything that led to it, refer to the Blueprint journal. You can also find all the project files, including the PCB designs, firmware, 3D case files, demos, and more, on GitHub.&lt;/p&gt;
+
+&lt;p&gt;Security System Blueprint: &lt;a href=&quot;https://blueprint.hackclub.com/projects/7234&quot;&gt;TF-Luna Security System Blueprint&lt;/a&gt;&lt;br /&gt;
+Security System Github: &lt;a href=&quot;https://github.com/adrirubio/tf-luna-security-system&quot;&gt;TF-Luna Security System Github&lt;/a&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;In this journal, I want to give a brief overview of the TF-Luna Security System and explain what I learned while building it.&lt;/p&gt;
+
+&lt;p&gt;The first step was to do some research and choose the sensors and components that the system would use. I decided that the laser and laser receiver from the Arduino Security System would be difficult to implement and would require two separate PCBs, so I settled on using a TF-Luna LiDAR sensor instead. At this stage, I also made some rough sketches of how I wanted the system to function.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/security-system/sketch.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;I decided to use an ESP32-S3-WROOM-1 as the main microcontroller for the project and to handle the image capture. Since I already had one available, I put together a quick proof of concept (POC) to see if the image quality would be good enough. Using the CameraWebServer example included with the Arduino IDE, I eventually got the web server up and running after a bit of trial and error.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/security-system/poc.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Once I had a clear idea of the parts I was going to use, I began work on the schematic for the PCB. I added all the symbols, including the TF-Luna connector, USB-C receptacle, LEDs, resistors, and even designed a custom 40-pin header for the ESP32-S3-WROOM-1. Then, I wired all the symbols together by referencing the pinouts and datasheets of the different components to ensure everything was connected correctly.&lt;/p&gt;
+
+&lt;p&gt;I then ran an ERC to verify that there were no issues in the schematic. It reported three errors, which I fixed by adding power flags.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/security-system/schematic.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;With the ERC errors resolved, I moved on to assigning footprints to each component. I did this by finding the parts on Mouser and assigning the corresponding footprints in KiCad. Most of the footprints were fairly straightforward to assign, but since there was no specific header footprint available for the ESP32-S3, I decided to design my own.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately, after searching all over the internet for a mechanical datasheet for the FREENOVE WROOM-1 and finding nothing, I decided to contact the Freenove support team and ask for an official version. Sure enough, they got back to me with a file containing all the measurements I needed. Using this information, I was able to create an accurate footprint for the header.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/security-system/esp32-header.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;At this point, I started working on the PCB design. I imported the JLCPCB board settings and created an efficient layout for the components, placing most of them on the left side of the board and the ESP32 on the right. After adding the board outline, I routed the PCB traces, which went smoothly. To finish the PCB, I added footprint labels along with a title, date, my name, and two Hack Club logos.&lt;/p&gt;
+
+&lt;p&gt;To verify the PCB design, I ran a DRC. Most of the violations were fixed by changing the text size of the ESP32 header, while the remaining issues were resolved by making four of the USB-C pad connections solid instead of using thermal reliefs.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/security-system/pcb-design.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;The only part of the security system left to design at this point was the 3D-printed case, so I got started on it. The basic shape of the case was similar to the one I designed for Odin’s Eye, including the four holes used to screw the cover onto the base.&lt;/p&gt;
+
+&lt;p&gt;I needed the PCB to be mounted on the base of the case so that the camera, LEDs, and TF-Luna sensor could align with the openings on the cover. The original cutout was too low, so I first padded the base after calculating the height required for the PCB so the LEDs and camera could properly reach the cover. Later on, I added four support pillars inside the case to keep the case stable without wasting too much filament.&lt;/p&gt;
+
+&lt;p&gt;Next, I created the cover, adding cutouts for the two LEDs and the TF-Luna sensor. After contacting the Freenove support team for the camera dimensions and its exact position on the board, I also added a cutout for the ESP32 camera. Finally, to complete the 3D case, I added the USB-C cutout.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/security-system/3d-case.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;To make the 3D case as accurate as possible, I went a step further and downloaded the STEP files for each component. I then imported them into the design and positioned them inside the case. The height I had calculated for the PCB mounting pillars turned out to be perfect, as the ESP32 camera aligned correctly with the cover. However, this process also helped me identify and fix several small measurement issues, such as the camera and USB-C cutouts.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/security-system/complete-3d-case.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now that I had designed, refined, and finalized the PCB and 3D case, and selected all the necessary parts, it was time to start ordering everything. I began by generating the Gerber files and uploading the BOM and CPL files to JLCPCB, where I specified that I wanted JLCPCB to assemble the SMD USB-C connector for me. After confirming that the USB-C connector was the correct component and properly positioned, I received the final quote for the PCB. Since I was already ordering PCBs from JLCPCB for Odin’s Eye, I decided to include this PCB in the same order as well.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/security-system/pcb-order.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;As with Odin’s Eye, I also ordered the 3D case from a teenager in Spain through Printing Legion (a Hack Club initiative where people print parts for others and get reimbursed for filament). Finally, I ordered the remaining PCB components from Mouser.&lt;/p&gt;
+
+&lt;p&gt;Once everything arrived, I moved on to soldering the PCB. Since I had already started soldering Odin’s Eye before working on the security system PCB, I had developed a fairly steady hand by that point. I began with the ESP32 connectors, followed by the resistors, the TF-Luna connector, and finally the LEDs. Overall, I was really happy with how the soldering turned out.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/security-system/soldered-pcb.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Following the PCB assembly, I made sure all the sensors were working correctly. Unfortunately, after some troubleshooting, I discovered that I had to remove the red LED’s 60-ohm resistor because it was connected to the ESP32’s GPIO 4, which caused problems with the camera. Once the camera was fixed, I created the initial version of the project code, which included a web app hosted locally by the ESP32.&lt;/p&gt;
+
+&lt;p&gt;While testing the web app and the detection system, I found that the TF-Luna was not working properly and was producing inaccurate distance measurements. I spent a lot of time troubleshooting the TF-Luna and trying to find the cause of the issue. After almost frying two TF-Lunas and going through multiple rounds of troubleshooting, I managed to get the project mostly functional. Eventually, I came to the conclusion that it was a hardware-related issue because the sensor could only take a few readings before the measurements became unstable, forcing me to reconnect the USB cable each time.&lt;/p&gt;
+
+&lt;p&gt;I modified the web app to give it a clean and polished look, and I also added a picture gallery displaying the last 100 captured images. Lastly, I completed the project by mounting everything inside the case, securing it with screws, and attaching a small power bank to the side of the case to make it completely standalone.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/security-system/web-app.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/security-system/finished-security-system.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Although the project wasn’t a complete success, since I couldn’t reliably use the system due to the TF-Luna measurements becoming inaccurate over time, I still consider it a very rewarding project. I put a great deal of effort into it and significantly improved my PCB design and 3D modelling skills throughout the process. Even with the hardware issues, seeing everything finally come together into a polished final product was really incredible and made me genuinely proud of the project.&lt;/p&gt;
+
+&lt;p&gt;TF-Luna Security System Demo:&lt;/p&gt;
+
+&lt;div style=&quot;text-align: center; margin: 2em 0;&quot;&gt;
+&lt;a href=&quot;https://youtu.be/cNV2ZcgS8Qw&quot; target=&quot;_blank&quot; style=&quot;display: inline-block; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden;&quot;&gt;
+    &lt;img src=&quot;https://img.youtube.com/vi/cNV2ZcgS8Qw/.jpg&quot; alt=&quot;Security System Demo Video&quot; style=&quot;width: 720px; max-width: 100%; display: block;&quot; /&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;For a more in-depth overview of the Security System, I’d recommend checking out the Blueprint page, where I go through the full journey of the project in much greater detail.&lt;/p&gt;
+
+&lt;p&gt;Security System Blueprint: &lt;a href=&quot;https://blueprint.hackclub.com/projects/7234&quot;&gt;Security System Blueprint&lt;/a&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;I also built two smaller hardware-focused projects with the goal of earning enough tickets for a 3D printer, but along the way I ended up developing my 3D design skills far more than I originally expected.&lt;/p&gt;
+
+&lt;p&gt;The first of these was the LED Light Bar. The goal was to design a modular 3D-printed light bar to illuminate my Hack Club posters while keeping the setup clean and practical. Although it was a relatively small project, it helped me improve my 3D design skills and gave me a better understanding of designing parts for real-world use. The finished result worked exactly as intended and looked much better than I had originally expected.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/led-light-bar/light-bar.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/led-light-bar/light-bar-close-up.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;LED Light Bar Blueprint: &lt;a href=&quot;https://blueprint.hackclub.com/projects/10091&quot;&gt;Light Bar Blueprint&lt;/a&gt;&lt;br /&gt;
+LED Light Bar Github: &lt;a href=&quot;https://github.com/adrirubio/posters-led-light-bar&quot;&gt;Light Bar Github&lt;/a&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;The second of these was the Light Switch Covers. For this project, I designed three custom industrial-style light switch covers for my bedroom, featuring labels such as CAUTION, WARNING, and POWER CONTROL. While working on the covers, I learned a lot more about FreeCAD, particularly when it came to creating custom text, symbols, and multi-colour designs. The final covers turned out exactly how I envisioned them and further improved my 3D design skills.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/light-switch-covers/light-switch-covers.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Light Switch Covers Blueprint: &lt;a href=&quot;https://blueprint.hackclub.com/projects/10420&quot;&gt;Light Switch Covers Blueprint&lt;/a&gt;&lt;br /&gt;
+Light Switch Covers Github: &lt;a href=&quot;https://github.com/adrirubio/light-switch-covers&quot;&gt;Light Switch Covers Github&lt;/a&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Blueprint has now ended, and all of my projects are currently being reviewed. Once they are accepted, I should have earned enough tickets to buy a 3D printer, which was one of my main goals when I started. Looking back, it’s amazing to see how much I managed to build and learn over the course of the program.&lt;/p&gt;
+
+&lt;p&gt;Blueprint has been a huge learning experience for me. I now have a solid foundation in hardware design, 3D design, soldering, and troubleshooting that I can continue building on in future projects. Many of these skills are things I do not think I could have learned nearly as well without the hands-on experience of actually designing, building, breaking, and fixing things myself. I’m very grateful for the opportunity, and I feel incredibly accomplished with what I’ve achieved. I’m excited to continue building and applying these skills to future projects.&lt;/p&gt;
+</description><description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! The second project I worked on for Blueprint was a continuation of my Arduino Security System: the TF-Luna Security System.&lt;/p&gt;
+</description><pubDate>Sun, 24 May 2026 00:00:00 +0200</pubDate>
+        <link>https://adrirubio.github.io/blog/tf-luna-security-system/</link>
+        <guid isPermaLink="true">https://adrirubio.github.io/blog/tf-luna-security-system/</guid></item><item>
         <title>Odin&apos;s Eye</title>
         <description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! Over the last few months, I have built four hardware projects for Blueprint which, once accepted, should earn me a 3D printer. The first of these projects was Odin’s Eye.&lt;/p&gt;
 
@@ -15,7 +126,7 @@
 
 &lt;p&gt;Odin’s Eye is a DIY speed camera that detects passing vehicles using a TF-Luna LiDAR sensor and measures their speed. When a vehicle passes, a Raspberry Pi Camera Module 3 takes a picture, which is then processed by a Pi Zero 2 W. Once everything is processed, the data is displayed on a dashboard that can be accessed from your phone over Wi-Fi.&lt;/p&gt;
 
-&lt;p&gt;After more than 40 hours of work on the project, I achieved a result that I am incredibly proud of. However, the process came with plenty of setbacks and disappointments. For a full, detailed breakdown of the project and everything that led to it, refer to the Blueprint journal. You can also find all of the project files, including the PCB designs, firmware, 3D case files, demos, and more, on GitHub.&lt;/p&gt;
+&lt;p&gt;After more than 40 hours of work on the project, I achieved a result that I am incredibly proud of. However, the process came with plenty of setbacks and disappointments. For a full, detailed breakdown of the project and everything that led to it, refer to the Blueprint journal. You can also find all the project files, including the PCB designs, firmware, 3D case files, demos, and more, on GitHub.&lt;/p&gt;
 
 &lt;p&gt;Odin’s Eye Blueprint: &lt;a href=&quot;https://blueprint.hackclub.com/projects/413&quot;&gt;Odin’s Eye Blueprint&lt;/a&gt;&lt;br /&gt;
 Odin’s Eye Github: &lt;a href=&quot;https://github.com/adrirubio/odins-eye&quot;&gt;Odin’s Eye Github&lt;/a&gt;&lt;br /&gt;&lt;/p&gt;
@@ -97,7 +208,7 @@ Odin’s Eye Github: &lt;a href=&quot;https://github.com/adrirubio/odins-eye&quo
 
 &lt;div style=&quot;text-align: center; margin: 2em 0;&quot;&gt;
   &lt;a href=&quot;https://youtu.be/cNV2ZcgS8Qw&quot; target=&quot;_blank&quot; style=&quot;display: inline-block; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden;&quot;&gt;
-    &lt;img src=&quot;https://img.youtube.com/vi/cNV2ZcgS8Qw/0.jpg&quot; alt=&quot;Shipwrecked Video&quot; style=&quot;width: 720px; max-width: 100%; display: block;&quot; /&gt;
+    &lt;img src=&quot;https://img.youtube.com/vi/cNV2ZcgS8Qw/0.jpg&quot; alt=&quot;Odin&apos;s Eye Demo Video&quot; style=&quot;width: 720px; max-width: 100%; display: block;&quot; /&gt;
   &lt;/a&gt;
 &lt;/div&gt;
 
@@ -495,49 +606,5 @@ Once the project was complete I put the project up for review.&lt;/p&gt;
 </description><description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! The past two weeks have been a rollercoaster, but I’m proud to say that I’ve successfully completed 30 hours of work and built two full projects. All of my projects have been accepted, and I’m officially invited to Hack Club Shipwrecked!&lt;/p&gt;
 </description><pubDate>Sat, 05 Jul 2025 00:00:00 +0200</pubDate>
         <link>https://adrirubio.github.io/blog/shipwrecked-invitation/</link>
-        <guid isPermaLink="true">https://adrirubio.github.io/blog/shipwrecked-invitation/</guid></item><item>
-        <title>Finishing Architext-AI and starting QR-Gen</title>
-        <description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! In this post, I&apos;ll take talk about the latest two weeks of my Shipwrecked adventure. From striving to hit 150 stars to receiving a message that changes it all!&lt;/p&gt;
-
-&lt;p&gt;I left it off two weeks ago after just creating the Architext-AI project. I am proud to say that it is now complete, and I am quite pleased with the final result. The experience reminded me of some fun projects I built as a kid using Tkinter. It was quite nice for a young child to see an interesting UI with widgets and entry boxes, knowing he built them!&lt;/p&gt;
-
-&lt;p&gt;After finalizing the UI for the project, with some assistance from Claude and ChatGPT, I developed a Python script that sets the F5 key as the default key bind to automatically open the Architext-AI desktop app. You can find everything on my GitHub if you’d like to give it a try. I recorded my screen and created a short demo video, which I later converted into a GIF and uploaded to my GitHub. With that, I completed the 15-hour requirement for the second Shipwrecked project.&lt;/p&gt;
-
-&lt;p&gt;As I mentioned last week, Architext-AI is a straightforward message enhancer featuring a message input box and a prompt that serves as a guideline for the AI. I developed this small project because I need to complete four projects, each having at least 15 hours, with one achieving viral status to qualify for the Shipwrecked hackathon. During this time, my dad and I were actively posting on social media to see if the AI-PDF-Reader project (originally intended to go viral) could gain some traction. I am quite proud to report that, as of July 22, the AI-PDF-Reader has got 49 stars. It’s still 101 stars short of the 150 needed to attend Shipwrecked, along with the completion of the other three projects of at least 15 hours. However, all of this seems less significant now because two days ago, I read a message that changed everything.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/adrirubio/ai-pdf-reader&quot;&gt;AI-PDF-Reader&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;https://github.com/adrirubio/architext-ai&quot;&gt;Architext-AI&lt;/a&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;Architext-AI Demo:&lt;/p&gt;
-&lt;div style=&quot;text-align: center; margin: 2em 0;&quot;&gt;
-  &lt;video controls=&quot;&quot; width=&quot;720&quot; style=&quot;max-width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);&quot;&gt;
-    &lt;source src=&quot;https://github.com/adrirubio/ai-pdf-reader-demo/raw/main/architext-ai-demo.mp4&quot; type=&quot;video/webm&quot; /&gt;
-    Your browser does not support the video tag.
-  &lt;/video&gt;
-&lt;/div&gt;
-
-&lt;p&gt;The message read the following:&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@channel this is biggest announcement EVER:
-Finish your Shipwrecked project next week, earn a guaranteed invite (no need to go viral)!
-If you complete your 4 projects with at least 15 hours each before next Sunday (June 29), we will waive the virality requirement for you and you’ll earn an invite to Shipwrecked!
-You have until Sunday night to ship all your projects in The Bay to have your virality requirement waived!
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;This was instantly a game-changer. If the virality requirement were waived, it would save me a lot of effort, or would it? Achieving 30 hours in just over a week, when I read the message, would be no easy task. At the time, I had just finished the second project (Architext-AI) and was only halfway through. But, as with most things, I decided to give it a try. For the past two days, I have done practically nothing else but focus on accumulating as many hours as possible.&lt;/p&gt;
-
-&lt;p&gt;Now is probably a good time to mention the third project I’ve been working on for the past two days: the QR-Gen. This is a simple Tkinter project where you input text or a link, and it generates the corresponding QR code. I’ve also added a database feature to store past QR codes, and I think it’s looking nice. So far, I’ve accumulated 9 hours and 48 minutes of work, which isn’t bad for two days.&lt;/p&gt;
-
-&lt;p&gt;I have 20 hours of work to complete in the next six days to secure a guaranteed invitation to Shipwrecked, and I intend on making every hour count!&lt;/p&gt;
-
-&lt;p&gt;I’m looking forward to sharing my journey and the final results of the QR-Gen project next week, along with my next project!&lt;/p&gt;
-
-&lt;p&gt;This post documents the state of the QR-Gen as of July 22, 2025&lt;br /&gt;
-To see the current state of the project visit:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/adrirubio/qr-gen&quot;&gt;qr-gen github&lt;/a&gt;&lt;/p&gt;
-</description><description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;H&lt;/span&gt;ello and welcome! In this post, I&apos;ll take talk about the latest two weeks of my Shipwrecked adventure. From striving to hit 150 stars to receiving a message that changes it all!&lt;/p&gt;
-</description><pubDate>Sun, 22 Jun 2025 00:00:00 +0200</pubDate>
-        <link>https://adrirubio.github.io/blog/finishing-Architext-AI-and-starting-QR-Gen/</link>
-        <guid isPermaLink="true">https://adrirubio.github.io/blog/finishing-Architext-AI-and-starting-QR-Gen/</guid></item></channel>
+        <guid isPermaLink="true">https://adrirubio.github.io/blog/shipwrecked-invitation/</guid></item></channel>
 </rss>

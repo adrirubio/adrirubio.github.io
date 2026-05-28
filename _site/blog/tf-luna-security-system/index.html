@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]--><head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description" content="" />
+	<title>TF-Luna Security System</title>
+	<script>
+		(function() {
+			try {
+				var theme = localStorage.getItem('theme');
+				if (theme === 'light' || theme === 'dark') {
+					document.documentElement.setAttribute('data-theme', theme);
+				}
+			} catch (e) {}
+		})();
+	</script>
+
+	<!-- Open Graph Meta -->
+	<meta content="Adrian Rubio" property="og:site_name" /><meta content="TF-Luna Security System" property="og:title" /><meta content="article" property="og:type" /><meta content="This is my blog where I share my coding journey, my experiences, challenges, and discoveries in the ever-evolving world of programming." property="og:description" /><meta content="https://adrirubio.github.io/blog/tf-luna-security-system/" property="og:url" /><meta
+		content="2026-05-24T00:00:00+02:00"
+		property="article:published_time"
+	/>
+	<meta content="https://adrirubio.github.io/about/" property="article:author" /><meta
+		content="https://adrirubio.github.io/assets/img/touring.jpg"
+		property="og:image"
+	/><!-- Twitter Cards -->
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@" />
+	<meta name="twitter:creator" content="@" /><meta name="twitter:title" content="TF-Luna Security System" /><meta name="twitter:url" content="https://adrirubio.github.io/blog/tf-luna-security-system/" /><meta name="twitter:description" content="This is my blog where I share my coding journey, my experiences, challenges, and discoveries in the ever-evolving world of programming." /><meta
+		name="twitter:image:src"
+		content="https://adrirubio.github.io/assets/img/touring.jpg"
+	/><!-- Favicon --><link rel="stylesheet" href="/assets/css/style.css" />
+
+	<link rel="icon" type="image/x-icon" href=""/>
+
+	<!-- Come and get me RSS readers -->
+	<link rel="alternate" type="application/rss+xml" title="Adrian Rubio"
+	href="https://adrirubio.github.io/feed.xml" />
+
+	<!-- Stylesheet -->
+	<link rel="stylesheet" href="/assets/css/style.css" />
+	
+	<!-- Canonical URL -->
+	<link
+		rel="canonical"
+		href="https://adrirubio.github.io/blog/tf-luna-security-system/"
+	/><!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script>
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-58263416-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+</head>
+<body> <div class="header ">
+     <div class="container">
+         <h1 class="logo"><a href="/">Adrian Rubio</a></h1>
+         <nav class="nav-collapse">
+             <ul class="noList"><li class="elementfirst">
+                     <a href="/index.html">Home</a>
+                 </li><li class="element">
+                     <a href="/about">About</a>
+                 </li><li class="elementlast">
+                     <a href="/contact">Contact</a>
+                 </li><li> <a href="https://github.com/adrirubio" target="_blank">GitHub</a></li>
+                 <li class="theme-switch">
+                     <button class="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">
+                         <span class="theme-toggle__icon" aria-hidden="true"></span>
+                     </button>
+                 </li>
+             </ul>
+         </nav>
+     </div>
+ </div><!-- end .header -->
+<div class="content">
+      <div class="container">
+         <article class="post">
+  <header>
+    <h1 class="postTitle">TF-Luna Security System</h1>
+    <p class="meta">May 24, 2026 | <span class="time">11</span> Minute Read</p>
+  </header>
+
+  <p class="intro"><span class="dropcap">H</span>ello and welcome! The second project I worked on for Blueprint was a continuation of my Arduino Security System: the TF-Luna Security System.</p>
+
+<p>The natural evolution of the Arduino Security System was to design a custom PCB, create an enclosure, and make the project completely standalone and easy to use. After some initial brainstorming, I realized that this project would have to work differently and use different sensors than the original Arduino Security System. This was the core idea I built the project around:</p>
+
+<p>It would use a TF-Luna LiDAR sensor to detect when someone passed through my bedroom door, which would then trigger an ESP32-CAM to take a picture. This image, along with the detection information, would then be displayed on a dashboard hosted on the ESP32 and accessible over Wi-Fi.</p>
+
+<p>I already had a good idea of the process because I had followed similar steps while building Odin’s Eye. Nevertheless, I still had challenges and setbacks. For a full, detailed breakdown of the project and everything that led to it, refer to the Blueprint journal. You can also find all the project files, including the PCB designs, firmware, 3D case files, demos, and more, on GitHub.</p>
+
+<p>Security System Blueprint: <a href="https://blueprint.hackclub.com/projects/7234">TF-Luna Security System Blueprint</a><br />
+Security System Github: <a href="https://github.com/adrirubio/tf-luna-security-system">TF-Luna Security System Github</a><br /></p>
+
+<p>In this journal, I want to give a brief overview of the TF-Luna Security System and explain what I learned while building it.</p>
+
+<p>The first step was to do some research and choose the sensors and components that the system would use. I decided that the laser and laser receiver from the Arduino Security System would be difficult to implement and would require two separate PCBs, so I settled on using a TF-Luna LiDAR sensor instead. At this stage, I also made some rough sketches of how I wanted the system to function.</p>
+
+<p><img src="/assets/img/security-system/sketch.png" alt="" /><br /></p>
+
+<p>I decided to use an ESP32-S3-WROOM-1 as the main microcontroller for the project and to handle the image capture. Since I already had one available, I put together a quick proof of concept (POC) to see if the image quality would be good enough. Using the CameraWebServer example included with the Arduino IDE, I eventually got the web server up and running after a bit of trial and error.</p>
+
+<p><img src="/assets/img/security-system/poc.png" alt="" /><br /></p>
+
+<p>Once I had a clear idea of the parts I was going to use, I began work on the schematic for the PCB. I added all the symbols, including the TF-Luna connector, USB-C receptacle, LEDs, resistors, and even designed a custom 40-pin header for the ESP32-S3-WROOM-1. Then, I wired all the symbols together by referencing the pinouts and datasheets of the different components to ensure everything was connected correctly.</p>
+
+<p>I then ran an ERC to verify that there were no issues in the schematic. It reported three errors, which I fixed by adding power flags.</p>
+
+<p><img src="/assets/img/security-system/schematic.png" alt="" /><br /></p>
+
+<p>With the ERC errors resolved, I moved on to assigning footprints to each component. I did this by finding the parts on Mouser and assigning the corresponding footprints in KiCad. Most of the footprints were fairly straightforward to assign, but since there was no specific header footprint available for the ESP32-S3, I decided to design my own.</p>
+
+<p>Unfortunately, after searching all over the internet for a mechanical datasheet for the FREENOVE WROOM-1 and finding nothing, I decided to contact the Freenove support team and ask for an official version. Sure enough, they got back to me with a file containing all the measurements I needed. Using this information, I was able to create an accurate footprint for the header.</p>
+
+<p><img src="/assets/img/security-system/esp32-header.png" alt="" /><br /></p>
+
+<p>At this point, I started working on the PCB design. I imported the JLCPCB board settings and created an efficient layout for the components, placing most of them on the left side of the board and the ESP32 on the right. After adding the board outline, I routed the PCB traces, which went smoothly. To finish the PCB, I added footprint labels along with a title, date, my name, and two Hack Club logos.</p>
+
+<p>To verify the PCB design, I ran a DRC. Most of the violations were fixed by changing the text size of the ESP32 header, while the remaining issues were resolved by making four of the USB-C pad connections solid instead of using thermal reliefs.</p>
+
+<p><img src="/assets/img/security-system/pcb-design.png" alt="" /><br /></p>
+
+<p>The only part of the security system left to design at this point was the 3D-printed case, so I got started on it. The basic shape of the case was similar to the one I designed for Odin’s Eye, including the four holes used to screw the cover onto the base.</p>
+
+<p>I needed the PCB to be mounted on the base of the case so that the camera, LEDs, and TF-Luna sensor could align with the openings on the cover. The original cutout was too low, so I first padded the base after calculating the height required for the PCB so the LEDs and camera could properly reach the cover. Later on, I added four support pillars inside the case to keep the case stable without wasting too much filament.</p>
+
+<p>Next, I created the cover, adding cutouts for the two LEDs and the TF-Luna sensor. After contacting the Freenove support team for the camera dimensions and its exact position on the board, I also added a cutout for the ESP32 camera. Finally, to complete the 3D case, I added the USB-C cutout.</p>
+
+<p><img src="/assets/img/security-system/3d-case.png" alt="" /><br /></p>
+
+<p>To make the 3D case as accurate as possible, I went a step further and downloaded the STEP files for each component. I then imported them into the design and positioned them inside the case. The height I had calculated for the PCB mounting pillars turned out to be perfect, as the ESP32 camera aligned correctly with the cover. However, this process also helped me identify and fix several small measurement issues, such as the camera and USB-C cutouts.</p>
+
+<p><img src="/assets/img/security-system/complete-3d-case.png" alt="" /><br /></p>
+
+<p>Now that I had designed, refined, and finalized the PCB and 3D case, and selected all the necessary parts, it was time to start ordering everything. I began by generating the Gerber files and uploading the BOM and CPL files to JLCPCB, where I specified that I wanted JLCPCB to assemble the SMD USB-C connector for me. After confirming that the USB-C connector was the correct component and properly positioned, I received the final quote for the PCB. Since I was already ordering PCBs from JLCPCB for Odin’s Eye, I decided to include this PCB in the same order as well.</p>
+
+<p><img src="/assets/img/security-system/pcb-order.png" alt="" /><br /></p>
+
+<p>As with Odin’s Eye, I also ordered the 3D case from a teenager in Spain through Printing Legion (a Hack Club initiative where people print parts for others and get reimbursed for filament). Finally, I ordered the remaining PCB components from Mouser.</p>
+
+<p>Once everything arrived, I moved on to soldering the PCB. Since I had already started soldering Odin’s Eye before working on the security system PCB, I had developed a fairly steady hand by that point. I began with the ESP32 connectors, followed by the resistors, the TF-Luna connector, and finally the LEDs. Overall, I was really happy with how the soldering turned out.</p>
+
+<p><img src="/assets/img/security-system/soldered-pcb.png" alt="" /><br /></p>
+
+<p>Following the PCB assembly, I made sure all the sensors were working correctly. Unfortunately, after some troubleshooting, I discovered that I had to remove the red LED’s 60-ohm resistor because it was connected to the ESP32’s GPIO 4, which caused problems with the camera. Once the camera was fixed, I created the initial version of the project code, which included a web app hosted locally by the ESP32.</p>
+
+<p>While testing the web app and the detection system, I found that the TF-Luna was not working properly and was producing inaccurate distance measurements. I spent a lot of time troubleshooting the TF-Luna and trying to find the cause of the issue. After almost frying two TF-Lunas and going through multiple rounds of troubleshooting, I managed to get the project mostly functional. Eventually, I came to the conclusion that it was a hardware-related issue because the sensor could only take a few readings before the measurements became unstable, forcing me to reconnect the USB cable each time.</p>
+
+<p>I modified the web app to give it a clean and polished look, and I also added a picture gallery displaying the last 100 captured images. Lastly, I completed the project by mounting everything inside the case, securing it with screws, and attaching a small power bank to the side of the case to make it completely standalone.</p>
+
+<p><img src="/assets/img/security-system/web-app.png" alt="" /><br /></p>
+
+<p><img src="/assets/img/security-system/finished-security-system.png" alt="" /><br /></p>
+
+<p>Although the project wasn’t a complete success, since I couldn’t reliably use the system due to the TF-Luna measurements becoming inaccurate over time, I still consider it a very rewarding project. I put a great deal of effort into it and significantly improved my PCB design and 3D modelling skills throughout the process. Even with the hardware issues, seeing everything finally come together into a polished final product was really incredible and made me genuinely proud of the project.</p>
+
+<p>TF-Luna Security System Demo:</p>
+
+<div style="text-align: center; margin: 2em 0;">
+<a href="https://youtu.be/cNV2ZcgS8Qw" target="_blank" style="display: inline-block; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden;">
+    <img src="https://img.youtube.com/vi/cNV2ZcgS8Qw/.jpg" alt="Security System Demo Video" style="width: 720px; max-width: 100%; display: block;" />
+  </a>
+</div>
+
+<p>For a more in-depth overview of the Security System, I’d recommend checking out the Blueprint page, where I go through the full journey of the project in much greater detail.</p>
+
+<p>Security System Blueprint: <a href="https://blueprint.hackclub.com/projects/7234">Security System Blueprint</a><br /></p>
+
+<p>I also built two smaller hardware-focused projects with the goal of earning enough tickets for a 3D printer, but along the way I ended up developing my 3D design skills far more than I originally expected.</p>
+
+<p>The first of these was the LED Light Bar. The goal was to design a modular 3D-printed light bar to illuminate my Hack Club posters while keeping the setup clean and practical. Although it was a relatively small project, it helped me improve my 3D design skills and gave me a better understanding of designing parts for real-world use. The finished result worked exactly as intended and looked much better than I had originally expected.</p>
+
+<p><img src="/assets/img/led-light-bar/light-bar.png" alt="" /><br /></p>
+
+<p><img src="/assets/img/led-light-bar/light-bar-close-up.png" alt="" /><br /></p>
+
+<p>LED Light Bar Blueprint: <a href="https://blueprint.hackclub.com/projects/10091">Light Bar Blueprint</a><br />
+LED Light Bar Github: <a href="https://github.com/adrirubio/posters-led-light-bar">Light Bar Github</a><br /></p>
+
+<p>The second of these was the Light Switch Covers. For this project, I designed three custom industrial-style light switch covers for my bedroom, featuring labels such as CAUTION, WARNING, and POWER CONTROL. While working on the covers, I learned a lot more about FreeCAD, particularly when it came to creating custom text, symbols, and multi-colour designs. The final covers turned out exactly how I envisioned them and further improved my 3D design skills.</p>
+
+<p><img src="/assets/img/light-switch-covers/light-switch-covers.png" alt="" /><br /></p>
+
+<p>Light Switch Covers Blueprint: <a href="https://blueprint.hackclub.com/projects/10420">Light Switch Covers Blueprint</a><br />
+Light Switch Covers Github: <a href="https://github.com/adrirubio/light-switch-covers">Light Switch Covers Github</a><br /></p>
+
+<p>Blueprint has now ended, and all of my projects are currently being reviewed. Once they are accepted, I should have earned enough tickets to buy a 3D printer, which was one of my main goals when I started. Looking back, it’s amazing to see how much I managed to build and learn over the course of the program.</p>
+
+<p>Blueprint has been a huge learning experience for me. I now have a solid foundation in hardware design, 3D design, soldering, and troubleshooting that I can continue building on in future projects. Many of these skills are things I do not think I could have learned nearly as well without the hands-on experience of actually designing, building, breaking, and fixing things myself. I’m very grateful for the opportunity, and I feel incredibly accomplished with what I’ve achieved. I’m excited to continue building and applying these skills to future projects.</p>
+
+
+  <!-- POST NAVIGATION -->
+  <footer class="postNav clearfix"><a class="prev" href="/blog/odins-eye/" data-post-title="Odin's Eye"><span>&laquo;&nbsp;Odin's Eye</span></a></footer>
+</article>
+      </div>
+   </div><!-- end .content --><div class="footer">
+	<div class="container">
+		<p class="copy">
+			&copy; 2026
+			<a </a> Powered by
+			<a href="http://jekyllrb.com">Jekyll</a>
+		</p>
+
+		<div class="footer-links">
+			<ul class="noList"><li>
+	<a href="https://github.com/adrirubio" target="_blank">
+		<svg
+			id="github"
+			class="custom-icon"
+			version="1.1"
+			xmlns="http://www.w3.org/2000/svg"
+			xmlns:xlink="http://www.w3.org/1999/xlink"
+			viewBox="0 0 100 100"
+			style="height: 30px; width: 30px;"
+		>
+			<circle
+				class="outer-shape"
+				cx="50"
+				cy="50"
+				r="48"
+				style="opacity: 1;"
+			></circle>
+			<path
+				class="inner-shape"
+				style="opacity: 1;"
+				transform="translate(25,25) scale(0.5)"
+				d="M50,1C22.938,1,1,22.938,1,50s21.938,49,49,49s49-21.938,49-49S77.062,1,50,1z M79.099,79.099 c-3.782,3.782-8.184,6.75-13.083,8.823c-1.245,0.526-2.509,0.989-3.79,1.387v-7.344c0-3.86-1.324-6.699-3.972-8.517 c1.659-0.16,3.182-0.383,4.57-0.67c1.388-0.287,2.855-0.702,4.402-1.245c1.547-0.543,2.935-1.189,4.163-1.938 c1.228-0.75,2.409-1.723,3.541-2.919s2.082-2.552,2.847-4.067s1.372-3.334,1.818-5.455c0.446-2.121,0.67-4.458,0.67-7.01 c0-4.945-1.611-9.155-4.833-12.633c1.467-3.828,1.308-7.991-0.478-12.489l-1.197-0.143c-0.829-0.096-2.321,0.255-4.474,1.053 c-2.153,0.798-4.57,2.105-7.249,3.924c-3.797-1.053-7.736-1.579-11.82-1.579c-4.115,0-8.039,0.526-11.772,1.579 c-1.69-1.149-3.294-2.097-4.809-2.847c-1.515-0.75-2.727-1.26-3.637-1.532c-0.909-0.271-1.754-0.439-2.536-0.503 c-0.782-0.064-1.284-0.079-1.507-0.048c-0.223,0.031-0.383,0.064-0.478,0.096c-1.787,4.53-1.946,8.694-0.478,12.489 c-3.222,3.477-4.833,7.688-4.833,12.633c0,2.552,0.223,4.889,0.67,7.01c0.447,2.121,1.053,3.94,1.818,5.455 c0.765,1.515,1.715,2.871,2.847,4.067s2.313,2.169,3.541,2.919c1.228,0.751,2.616,1.396,4.163,1.938 c1.547,0.543,3.014,0.957,4.402,1.245c1.388,0.287,2.911,0.511,4.57,0.67c-2.616,1.787-3.924,4.626-3.924,8.517v7.487 c-1.445-0.43-2.869-0.938-4.268-1.53c-4.899-2.073-9.301-5.041-13.083-8.823c-3.782-3.782-6.75-8.184-8.823-13.083 C9.934,60.948,8.847,55.56,8.847,50s1.087-10.948,3.231-16.016c2.073-4.899,5.041-9.301,8.823-13.083s8.184-6.75,13.083-8.823 C39.052,9.934,44.44,8.847,50,8.847s10.948,1.087,16.016,3.231c4.9,2.073,9.301,5.041,13.083,8.823 c3.782,3.782,6.75,8.184,8.823,13.083c2.143,5.069,3.23,10.457,3.23,16.016s-1.087,10.948-3.231,16.016 C85.848,70.915,82.88,75.317,79.099,79.099L79.099,79.099z"
+			></path>
+		</svg>
+	</a>
+</li>
+<li>
+	<a href="mailto:adrian.rubio.punal@gmail.com" target="_blank">
+		<svg
+			id="mail"
+			class="custom-icon"
+			version="1.1"
+			xmlns="http://www.w3.org/2000/svg"
+			xmlns:xlink="http://www.w3.org/1999/xlink"
+			viewBox="0 0 100 100"
+			style="height: 30px; width: 30px;"
+		>
+			<circle
+				class="outer-shape"
+				cx="50"
+				cy="50"
+				r="48"
+				style="opacity: 1;"
+			></circle>
+			<path
+				class="inner-shape"
+				style="opacity: 1;"
+				transform="translate(25,25) scale(0.5)"
+				d="M50,1C22.938,1,1,22.938,1,50s21.938,49,49,49s49-21.938,49-49S77.062,1,50,1z M25.5,25.5h49 c0.874,0,1.723,0.188,2.502,0.542L50,57.544L22.998,26.041C23.777,25.687,24.626,25.499,25.5,25.5L25.5,25.5z M19.375,68.375v-36.75 c0-0.128,0.005-0.256,0.014-0.383l17.96,20.953L19.587,69.958C19.448,69.447,19.376,68.916,19.375,68.375L19.375,68.375z M74.5,74.5 h-49c-0.541,0-1.072-0.073-1.583-0.212l17.429-17.429L50,66.956l8.653-10.096l17.429,17.429C75.572,74.427,75.041,74.5,74.5,74.5 L74.5,74.5z M80.625,68.375c0,0.541-0.073,1.072-0.211,1.583L62.652,52.195l17.96-20.953c0.008,0.127,0.014,0.255,0.014,0.383 L80.625,68.375L80.625,68.375z"
+			></path>
+		</svg>
+	</a>
+</li>
+</ul>
+		</div>
+	</div>
+</div>
+<!-- end .footer -->
+<!-- Add jQuery and other scripts -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src=/assets/js/jquery-1.11.2.min.js><\/script>')</script>
+<script src="/assets/js/dropcap.min.js"></script>
+<script src="/assets/js/responsive-nav.min.js"></script>
+<script src="/assets/js/scripts.js"></script>
+</body>
+
+</html>

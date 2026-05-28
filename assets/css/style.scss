@@ -149,11 +149,12 @@ tr:nth-child(even) {
 	background-color: var(--table-even-bg);
 }
 
-.theme-switch {
+.nav-collapse ul li.theme-switch {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	width: 100%;
+	padding: 0.45rem 0;
 }
 
 .theme-toggle {
@@ -201,6 +202,7 @@ tr:nth-child(even) {
 	.header nav ul li.theme-switch {
 		display: inline-flex;
 		width: auto;
+		padding: 0 5px;
 		vertical-align: middle;
 	}
 }

@@ -10,7 +10,7 @@ I introduced Odin’s Eye in the previous journal, but here’s a quick recap:
 
 Odin’s Eye is a DIY speed camera that detects passing vehicles using a TF-Luna LiDAR sensor and measures their speed. When a vehicle passes, a Raspberry Pi Camera Module 3 takes a picture, which is then processed by a Pi Zero 2 W. Once everything is processed, the data is displayed on a dashboard that can be accessed from your phone over Wi-Fi.
 
-After more than 40 hours of work on the project, I achieved a result that I am incredibly proud of. However, the process came with plenty of setbacks and disappointments. For a full, detailed breakdown of the project and everything that led to it, refer to the Blueprint journal. You can also find all of the project files, including the PCB designs, firmware, 3D case files, demos, and more, on GitHub.
+After more than 40 hours of work on the project, I achieved a result that I am incredibly proud of. However, the process came with plenty of setbacks and disappointments. For a full, detailed breakdown of the project and everything that led to it, refer to the Blueprint journal. You can also find all the project files, including the PCB designs, firmware, 3D case files, demos, and more, on GitHub.
 
 Odin's Eye Blueprint: <a href="https://blueprint.hackclub.com/projects/413">Odin's Eye Blueprint</a><br>
 Odin's Eye Github: <a href="https://github.com/adrirubio/odins-eye">Odin's Eye Github</a><br>
@@ -92,7 +92,7 @@ Odin's Eye Demo:
 
 <div style="text-align: center; margin: 2em 0;">
   <a href="https://youtu.be/cNV2ZcgS8Qw" target="_blank" style="display: inline-block; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden;">
-    <img src="https://img.youtube.com/vi/cNV2ZcgS8Qw/0.jpg" alt="Shipwrecked Video" style="width: 720px; max-width: 100%; display: block;">
+    <img src="https://img.youtube.com/vi/cNV2ZcgS8Qw/0.jpg" alt="Odin's Eye Demo Video" style="width: 720px; max-width: 100%; display: block;">
   </a>
 </div>
 
